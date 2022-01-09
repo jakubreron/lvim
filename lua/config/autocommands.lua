@@ -118,7 +118,7 @@ lvim.autocommands.custom_groups = {
   {
     "VimLeave",
     "$LVIM_CONFIG_DIR/lua/config/autocommands.lua",
-    "!cd $LVIM_CONFIG_DIR; git add .; git commit -m 'config(autocommands): ⚙️ autocommands'; git push",
+    "!cd $LVIM_CONFIG_DIR; git add .; git commit -m 'config(autocommands): ⚙️ auto-commit changes'; git push",
   },
   {
     "VimLeave",
