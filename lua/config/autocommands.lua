@@ -118,31 +118,31 @@ lvim.autocommands.custom_groups = {
   {
     "VimLeave",
     "$LVIM_CONFIG_DIR/lua/config/autocommands.lua",
-    "!cd $LVIM_CONFIG_DIR; git add .; git commit -m 'config: ⚙️ autocommands'; git push",
+    "!cd $LVIM_CONFIG_DIR; git add .; git commit -m 'config(autocommands): ⚙️ autocommands'; git push",
   },
   {
     "VimLeave",
     "$LVIM_CONFIG_DIR/lua/config/builtin.lua",
-    "!cd $LVIM_CONFIG_DIR; git add .; git commit -m 'config: ⚙️ builtin'; git push",
+    "!cd $LVIM_CONFIG_DIR; git add .; git commit -m 'config(builtin): ⚙️ auto-commit changes'; git push",
   },
   {
     "VimLeave",
     "$LVIM_CONFIG_DIR/lua/config/general.lua",
-    "!cd $LVIM_CONFIG_DIR; git add .; git commit -m 'config: ⚙️ general'; git push",
+    "!cd $LVIM_CONFIG_DIR; git add .; git commit -m 'config(general): ⚙️ auto-commit changes'; git push",
   },
   {
     "VimLeave",
     "$LVIM_CONFIG_DIR/lua/config/keymaps.lua",
-    "!cd $LVIM_CONFIG_DIR; git add .; git commit -m 'config: ⚙️ keymaps'; git push",
+    "!cd $LVIM_CONFIG_DIR; git add .; git commit -m 'config(keymaps): ⚙️ auto-commit changes'; git push",
   },
   {
     "VimLeave",
     "$LVIM_CONFIG_DIR/lua/config/lsp.lua",
-    "!cd $LVIM_CONFIG_DIR; git add .; git commit -m 'config: ⚙️ lsp'; git push",
+    "!cd $LVIM_CONFIG_DIR; git add .; git commit -m 'config(lsp): ⚙️ auto-commit changes'; git push",
   },
   {
     "VimLeave",
     "$LVIM_CONFIG_DIR/lua/config/plugins.lua",
-    "!cd $LVIM_CONFIG_DIR; git add .; git commit -m 'config: ⚙️ plugins'; git push",
+    "!cd $LVIM_CONFIG_DIR; git add .; git commit -m 'config(plugins): ⚙️ auto-commit changes'; git push",
   },
 }
