@@ -8,10 +8,10 @@ vim.g.dashboard_disable_statusline = 1
 lvim.plugins = {
 	-- { "kshenoy/vim-signature" }, -- show the marks
 	{ "folke/tokyonight.nvim" }, -- theme
-	{ "rebelot/kanagawa.nvim" }, -- theme
+	-- { "rebelot/kanagawa.nvim" }, -- theme
 	-- { "rose-pine/neovim" }, -- theme
 	{ "editorconfig/editorconfig-vim" }, -- .editorconfig support
-	{ "andweeb/presence.nvim" }, -- flex with VIM on the discord
+	-- { "andweeb/presence.nvim" }, -- flex with VIM on the discord
 	{ "vimwiki/vimwiki" }, -- note taking plugin
 	{ "tpope/vim-repeat" }, -- better "."
 	-- { "tpope/vim-vinegar" }, -- better "netrw"
@@ -96,13 +96,13 @@ lvim.plugins = {
 		end,
 		ft = "json",
 	},
-	{
-		"simrat39/symbols-outline.nvim", -- outline the buffer
-		-- cmd = "SymbolsOutline",
-		config = function()
-			require("plugin.outline").config()
-		end,
-	},
+	-- {
+	-- 	"simrat39/symbols-outline.nvim", -- outline the buffer
+	-- 	-- cmd = "SymbolsOutline",
+	-- 	config = function()
+	-- 		require("plugin.outline").config()
+	-- 	end,
+	-- },
 	{
 		"folke/trouble.nvim", -- diagnostics
 		cmd = "TroubleToggle",
@@ -199,18 +199,18 @@ lvim.plugins = {
 	--   cmd = {"Bracey", "BracyStop", "BraceyReload", "BraceyEval"},
 	--   run = "npm install --prefix server",
 	-- },
-	{
-		"tzachar/cmp-tabnine",
-		config = function()
-			local tabnine = require("cmp_tabnine.config")
-			tabnine:setup({
-				max_lines = 1000,
-				max_num_results = 20,
-				sort = true,
-			})
-		end,
-		run = "./install.sh",
-		requires = "hrsh7th/nvim-cmp",
-		event = "InsertEnter",
-	},
+	-- {
+	-- 	"tzachar/cmp-tabnine",
+	-- 	config = function()
+	-- 		local tabnine = require("cmp_tabnine.config")
+	-- 		tabnine:setup({
+	-- 			max_lines = 1000,
+	-- 			max_num_results = 20,
+	-- 			sort = true,
+	-- 		})
+	-- 	end,
+	-- 	run = "./install.sh",
+	-- 	requires = "hrsh7th/nvim-cmp",
+	-- 	event = "InsertEnter",
+	-- },
 }
