@@ -3,7 +3,7 @@
 vim.g.vimwiki_list = { { path = "~/vimwiki/", syntax = "markdown", ext = ".md" } }
 
 -- debugging 
-vim.g.vimspector_enable_mappings = "HUMAN"
+-- vim.g.vimspector_enable_mappings = "HUMAN"
 
 -- dashboard
 vim.g.dashboard_disable_statusline = 1
@@ -216,5 +216,5 @@ lvim.plugins = {
     requires = "hrsh7th/nvim-cmp",
     event = "InsertEnter",
   },
-  { "puremourning/vimspector"},
+  -- { "puremourning/vimspector"},
 }
