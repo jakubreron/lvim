@@ -50,14 +50,14 @@ local filetypes = {
 }
 
 formatters.setup({
-	{ exe = "eslint_d", filetypes = filetypes.eslint },
+	{ exe = "eslint", filetypes = filetypes.eslint },
 	{ exe = "stylelint", filetypes = filetypes.stylelint },
 	{ exe = "prettierd", filetypes = filetypes.prettier },
 	{ exe = "stylua", filetypes = { "lua" } },
 })
 
 linters.setup({
-	{ exe = "eslint_d", filetypes = filetypes.eslint },
+	{ exe = "eslint", filetypes = filetypes.eslint },
 	{ exe = "stylelint", filetypes = filetypes.stylelint },
 	{ exe = "luacheck", filetypes = { "lua" } },
 })
