@@ -52,6 +52,8 @@ lvim.builtin.which_key.mappings.s.M = nil
 lvim.builtin.which_key.mappings.s.C = nil
 lvim.builtin.which_key.mappings.s.p = { "<cmd>Telescope projects<CR>", "Projects" }
 
+lvim.builtin.which_key.mappings.m = { "<cmd>MaximizerToggle!<CR>", "Maximizer toggle" }
+
 -- git worktrees
 -- NOTE: <Enter> - switches to that worktree
 -- NOTE: <c-d> - deletes that worktree
@@ -144,6 +146,7 @@ lvim.builtin.which_key.mappings.d = {
   k = { "<cmd>call vimspector#StepOut()<cr>", "Step Out" },
   _ = { "<cmd>call vimspector#Restart()<cr>", "Restart" },
   s = { "<cmd>call vimspector#Stop()<cr>", "Stop" },
+  t = { "<cmd>call vimspector#Reset()<cr>", "Terminate" },
   c = { "<cmd>call vimspector#Continue()<cr>", "Continue" },
   p = { "<cmd>call vimspector#Pause()<cr>", "Pause" },
   r = { "<cmd>call vimspector#RunToCursor()<cr>", "Run to cursor" },

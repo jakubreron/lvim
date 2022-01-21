@@ -217,4 +217,5 @@ lvim.plugins = {
     event = "InsertEnter",
   },
   { "puremourning/vimspector"},
+  { "szw/vim-maximizer"},
 }
