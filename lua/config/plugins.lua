@@ -216,5 +216,5 @@ lvim.plugins = {
     requires = "hrsh7th/nvim-cmp",
     event = "InsertEnter",
   },
-  -- { "puremourning/vimspector"},
+  { "puremourning/vimspector"},
 }
