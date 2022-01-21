@@ -76,13 +76,13 @@ end
 lvim.builtin.which_key.mappings["ld"] = { "<cmd>TroubleToggle<cr>", "Diagnostics" }
 lvim.builtin.which_key.mappings["lR"] = { "<cmd>TroubleToggle lsp_references<cr>", "References" }
 
-lvim.builtin.which_key.mappings["l_"] = { ":LspRestart <CR>", "Restart LSP" }
+lvim.builtin.which_key.mappings["l_"] = { "<cmd>LspRestart <CR>", "Restart LSP" }
 
 -- langs
 lvim.builtin.which_key.mappings["o"] = {
   name = "Ortography",
-  e = { ":setlocal spell! spelllang=en<CR>", "English" },
-  p = { ":setlocal spell! spelllang=pl<CR>", "Polish" },
+  e = { "<cmd>setlocal spell! spelllang=en<CR>", "English" },
+  p = { "<cmd>setlocal spell! spelllang=pl<CR>", "Polish" },
   -- j = { ":setlocal spell! spelllang=ja<CR>", "Japanese" } -- NOTE: probably not supported
 }
 
@@ -156,4 +156,10 @@ lvim.builtin.which_key.mappings.d = {
     -- NOTE: try without the parenthesis ()
     -- c = { "<cmd>call vimspector#ToggleConditionalBreakpoint<cr>", "Toggle conditional" },
   },
+}
+
+lvim.builtin.which_key.mappings.c = {
+  name = "Console",
+  v = {"<C-w>v<cmd>term<cr>", "Vertical"},
+  s = {"<C-w>s<cmd>term<cr>", "Horizontal"}
 }
