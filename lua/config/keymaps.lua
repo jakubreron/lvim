@@ -30,7 +30,7 @@ lvim.builtin.which_key.mappings["w"] = nil -- save
 
 lvim.builtin.which_key.mappings.g.j = nil
 lvim.builtin.which_key.mappings.g.k = nil
-lvim.builtin.which_key.mappings.g.d = nil
+-- lvim.builtin.which_key.mappings.g.d = nil
 lvim.builtin.which_key.mappings.g.p = nil
 
 lvim.builtin.which_key.mappings.b.b = nil
