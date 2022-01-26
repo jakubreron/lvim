@@ -2,7 +2,7 @@
 -- NOTE: remove syntac = "markdown" to use "[[]]" instead of "[]()"
 vim.g.vimwiki_list = { { path = "~/Documents/vimwiki/", syntax = "markdown", ext = ".md" } }
 
--- debugging 
+-- debugging
 -- vim.g.vimspector_enable_mappings = "HUMAN"
 
 -- dashboard
@@ -95,7 +95,7 @@ lvim.plugins = {
     "vuki656/package-info.nvim", -- check if the package info is up to date
     requires = "MunifTanjim/nui.nvim",
     config = function()
-      require "plugin.package-info"
+      require("plugin.package-info")
     end,
     ft = "json",
   },
@@ -216,6 +216,6 @@ lvim.plugins = {
     requires = "hrsh7th/nvim-cmp",
     event = "InsertEnter",
   },
-  { "puremourning/vimspector"},
-  { "szw/vim-maximizer"},
+  { "puremourning/vimspector" },
+  { "szw/vim-maximizer" },
 }
