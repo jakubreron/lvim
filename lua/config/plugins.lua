@@ -95,7 +95,7 @@ lvim.plugins = {
     "vuki656/package-info.nvim", -- check if the package info is up to date
     requires = "MunifTanjim/nui.nvim",
     config = function()
-      require("plugin.package-info")
+      require "plugin.package-info"
     end,
     ft = "json",
   },
