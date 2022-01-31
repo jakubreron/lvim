@@ -5,8 +5,9 @@ lvim.lsp.document_highlight = true
 lvim.lsp.code_lens_refresh = true
 
 require("lvim.lsp.manager").setup("emmet_ls")
--- require("lvim.lsp.manager").setup("tailwindcss")
--- require("lvim.lsp.manager").setup("volar")
+require("lvim.lsp.manager").setup("tailwindcss")
+-- NOTE: volar (vue 3) is the default, enable vuels to use Vue 2
+-- require("lvim.lsp.manager").setup("vuels")
 
 -- generic LSP settings
 -- you can set a custom on_attach function that will be used for all the language servers
@@ -50,15 +51,15 @@ local filetypes = {
 }
 
 formatters.setup({
-	-- { exe = "eslint_d", filetypes = filetypes.eslint },
-	{ exe = "prettierd", filetypes = filetypes.eslint },
+	{ exe = "eslint_d", filetypes = filetypes.eslint },
+	-- { exe = "prettierd", filetypes = filetypes.eslint },
 	{ exe = "stylelint", filetypes = filetypes.stylelint },
 	{ exe = "prettierd", filetypes = filetypes.prettier },
 	{ exe = "stylua", filetypes = { "lua" } },
 })
 
 linters.setup({
-	-- { exe = "eslint_d", filetypes = filetypes.eslint },
+	{ exe = "eslint_d", filetypes = filetypes.eslint },
 	{ exe = "stylelint", filetypes = filetypes.stylelint },
 	{ exe = "luacheck", filetypes = { "lua" } },
 })
