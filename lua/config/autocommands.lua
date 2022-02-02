@@ -57,7 +57,7 @@ lvim.autocommands.custom_groups = {
   },
   {
     "VimLeave",
-    "$DOTFILES_DIR/universal/vimwiki/*",
+    "$DOTFILES_DIR/universal/Documents/vimwiki/*",
     "!cd ~/vimwiki; git add *; git commit -m 'docs(vimwiki): ✏️ auto-commit changes'; git push",
   },
   {

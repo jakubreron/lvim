@@ -1,6 +1,9 @@
 -- vimwiki
 -- NOTE: remove syntac = "markdown" to use "[[]]" instead of "[]()"
-vim.g.vimwiki_list = { { path = "~/vimwiki/", syntax = "markdown", ext = ".md" } }
+vim.g.vimwiki_list = { { path = "~/Documents/vimwiki/", syntax = "markdown", ext = ".md" } }
+
+-- debugging
+-- vim.g.vimspector_enable_mappings = "HUMAN"
 
 -- dashboard
 vim.g.dashboard_disable_statusline = 1
