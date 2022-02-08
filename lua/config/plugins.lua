@@ -216,4 +216,6 @@ lvim.plugins = {
 	-- 	requires = "hrsh7th/nvim-cmp",
 	-- 	event = "InsertEnter",
 	-- },
+  -- { "puremourning/vimspector" },
+  { "szw/vim-maximizer" },
 }
