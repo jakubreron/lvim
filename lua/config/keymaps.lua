@@ -1,13 +1,13 @@
 lvim.keys = {
-  insert_mode = {
-    -- inverted ctrl + h (del)
-    ["<C-l>"] = "<Del>",
-  },
+  -- insert_mode = {
+  --   -- inverted ctrl + h (del)
+  --   ["<C-l>"] = "<Del>",
+  -- },
 
   normal_mode = {
     ["Y"] = "y$",
     -- ["0"] = "^",
-    ["Q"] = "<cmd>BufferClose!<cr>",
+    ["Q"] = "<cmd>bdelete!<CR>",
 
     -- ["c"] = '"_c' -- don't store "c" to the register
 
