@@ -7,7 +7,7 @@ lvim.keys = {
   normal_mode = {
     ["Y"] = "y$",
     -- ["0"] = "^",
-    ["Q"] = "<cmd>BufferClose!<CR>",
+    ["Q"] = "<cmd>bdelete!<CR>",
 
     -- ["c"] = '"_c' -- don't store "c" to the register
 
