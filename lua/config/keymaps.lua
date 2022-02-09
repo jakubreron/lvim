@@ -19,6 +19,11 @@ lvim.keys = {
   },
 }
 
+lvim.builtin.terminal.execs = {
+  { "lazygit", "<leader>gg", "LazyGit", "float" },
+  { "lazygit", "<c-g>", "LazyGit", "float" },
+}
+
 -- unmap a default keymapping
 lvim.builtin.which_key.mappings["T"] = nil -- treesitter
 lvim.builtin.which_key.mappings["h"] = nil -- highlight
@@ -160,6 +165,6 @@ lvim.builtin.which_key.mappings.d = {
 
 lvim.builtin.which_key.mappings.c = {
   name = "Console",
-  v = {"<C-w>v<cmd>term<cr>", "Vertical"},
-  s = {"<C-w>s<cmd>term<cr>", "Horizontal"}
+  v = { "<C-w>v<cmd>term<cr>", "Vertical" },
+  s = { "<C-w>s<cmd>term<cr>", "Horizontal" },
 }
