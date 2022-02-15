@@ -1,5 +1,5 @@
 -- appearance
-lvim.colorscheme = "kanagawa"
+-- lvim.colorscheme = "kanagawa"
 -- lvim.transparent_window = true
 
 -- vim.g.tokyonight_transparent = true
