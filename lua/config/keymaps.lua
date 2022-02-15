@@ -1,22 +1,27 @@
 lvim.keys = {
-  insert_mode = {
-    -- inverted ctrl + h (del)
-    ["<C-l>"] = "<Del>",
-  },
+  -- insert_mode = {
+  --   -- inverted ctrl + h (del)
+  --   ["<C-l>"] = "<Del>",
+  -- },
 
   normal_mode = {
     ["Y"] = "y$",
     -- ["0"] = "^",
-    ["Q"] = "<cmd>BufferClose!<cr>",
+    ["Q"] = "<cmd>BufferKill<CR>",
 
     -- ["c"] = '"_c' -- don't store "c" to the register
 
     ["<C-p>"] = "<cmd>Telescope find_files<cr>",
-    ["]e"] = "<cmd>lua vim.lsp.diagnostic.goto_next()<cr>",
-    ["[e"] = "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
+    ["]e"] = "<cmd>lua vim.diagnostic.goto_next()<cr>",
+    ["[e"] = "<cmd>lua vim.diagnostic.goto_prev()<cr>",
     ["]c"] = "<cmd>lua require'gitsigns'.next_hunk()<cr><cmd>lua require 'gitsigns'.preview_hunk()<cr>",
     ["[c"] = "<cmd>lua require'gitsigns'.prev_hunk()<cr><cmd>lua require 'gitsigns'.preview_hunk()<cr>",
   },
+}
+
+lvim.builtin.terminal.execs = {
+  { "lazygit", "<leader>gg", "LazyGit", "float" },
+  { "lazygit", "<c-g>", "LazyGit", "float" },
 }
 
 -- unmap a default keymapping
@@ -28,28 +33,26 @@ lvim.builtin.which_key.mappings["f"] = nil -- find files
 lvim.builtin.which_key.mappings["c"] = nil -- close buffer
 lvim.builtin.which_key.mappings["w"] = nil -- save
 
-lvim.builtin.which_key.mappings.g.j = nil
-lvim.builtin.which_key.mappings.g.k = nil
--- lvim.builtin.which_key.mappings.g.d = nil
-lvim.builtin.which_key.mappings.g.p = nil
+lvim.builtin.which_key.mappings.g.j = nil -- prev change
+lvim.builtin.which_key.mappings.g.k = nil -- next change
 
-lvim.builtin.which_key.mappings.b.b = nil
-lvim.builtin.which_key.mappings.b.h = nil
-lvim.builtin.which_key.mappings.b.l = nil
-lvim.builtin.which_key.mappings.b.w = nil
+lvim.builtin.which_key.mappings.b.b = nil -- buffer prev
+lvim.builtin.which_key.mappings.b.h = nil -- buffer close to left
+lvim.builtin.which_key.mappings.b.l = nil -- buffer close to right
+lvim.builtin.which_key.mappings.b.w = nil -- buffer wipeout
 
-lvim.builtin.which_key.mappings.l.j = nil
-lvim.builtin.which_key.mappings.l.k = nil
-lvim.builtin.which_key.mappings.l.s = nil
-lvim.builtin.which_key.mappings.l.S = nil
+lvim.builtin.which_key.mappings.l.j = nil -- next diagnostic
+lvim.builtin.which_key.mappings.l.k = nil -- prev diagnostic
+lvim.builtin.which_key.mappings.l.s = nil -- TODO: check the "document symbols"
+lvim.builtin.which_key.mappings.l.S = nil -- TODO: check the "workspace symbols"
 
 lvim.builtin.which_key.mappings.s.c = {
   "<cmd>lua require('telescope.builtin.internal').colorscheme({enable_preview = true})<cr>",
   "Colorscheme with Preview",
 }
-lvim.builtin.which_key.mappings.s.b = nil
-lvim.builtin.which_key.mappings.s.M = nil
-lvim.builtin.which_key.mappings.s.C = nil
+lvim.builtin.which_key.mappings.s.b = nil -- search branches
+lvim.builtin.which_key.mappings.s.M = nil -- search man pages
+lvim.builtin.which_key.mappings.s.C = nil -- search commands
 lvim.builtin.which_key.mappings.s.p = { "<cmd>Telescope projects<CR>", "Projects" }
 
 lvim.builtin.which_key.mappings.m = { "<cmd>MaximizerToggle!<CR>", "Maximizer toggle" }
@@ -160,6 +163,6 @@ lvim.builtin.which_key.mappings.d = {
 
 lvim.builtin.which_key.mappings.c = {
   name = "Console",
-  v = {"<C-w>v<cmd>term<cr>", "Vertical"},
-  s = {"<C-w>s<cmd>term<cr>", "Horizontal"}
+  v = { "<C-w>v<cmd>term<cr>", "Vertical" },
+  s = { "<C-w>s<cmd>term<cr>", "Horizontal" },
 }
