@@ -9,24 +9,32 @@ vim.g.vimwiki_list = { { path = "~/Documents/vimwiki/", syntax = "markdown", ext
 vim.g.dashboard_disable_statusline = 1
 
 lvim.plugins = {
-  -- { "kshenoy/vim-signature" }, -- show the marks
-  { "folke/tokyonight.nvim" }, -- theme
-  { "rebelot/kanagawa.nvim" }, -- theme
-  -- { "rose-pine/neovim" }, -- theme
-  { "editorconfig/editorconfig-vim" }, -- .editorconfig support
-  { "andweeb/presence.nvim" }, -- flex with VIM on the discord
+  { "szw/vim-maximizer" }, -- quickly maximize current window
   { "vimwiki/vimwiki" }, -- note taking plugin
+  { "andweeb/presence.nvim" }, -- flex with VIM on the discord
+
+  -- { "puremourning/vimspector" }, -- inspect tool
+  -- { "kshenoy/vim-signature" }, -- show the marks
+
+  -- themes
+  { "folke/tokyonight.nvim" },
+  { "rebelot/kanagawa.nvim" },
+  { "rose-pine/neovim" },
+
+  { "editorconfig/editorconfig-vim" }, -- .editorconfig support
+
   { "tpope/vim-repeat" }, -- better "."
-  -- { "tpope/vim-vinegar" }, -- better "netrw"
   { "tpope/vim-sleuth" }, -- detect the relevant tabs / shifts
   { "tpope/vim-jdaddy" }, -- additional json movements
   { "tpope/vim-surround" }, -- surround movement
+
   -- {
   --   "ThePrimeagen/git-worktree.nvim", -- git worktree integration
   --   config = function ()
   --     require("telescope").load_extension("git_worktree")
   --   end
   -- },
+
   {
     "unblevable/quick-scope", -- highlight the scope after using "t" or "f"
     config = function()
@@ -54,10 +62,6 @@ lvim.plugins = {
       vim.g.matchup_matchparen_offscreen = { method = "popup" }
     end,
   },
-  -- {
-  --   "sindrets/diffview.nvim", -- single tab diffview
-  --   event = "BufRead",
-  -- },
   {
     "nacro90/numb.nvim", -- peek the lines (when typing :12 for example)
     event = "BufRead",
@@ -162,19 +166,6 @@ lvim.plugins = {
       require("plugin.hop").config()
     end,
   },
-  -- {
-  --   "ethanholz/nvim-lastplace", -- open the file at the place where it was closed
-  --   event = "BufRead",
-  --   config = function()
-  --     require("nvim-lastplace").setup({
-  --       lastplace_ignore_buftype = { "quickfix", "nofile", "help" },
-  --       lastplace_ignore_filetype = {
-  --         "gitcommit", "gitrebase", "svn", "hgcommit",
-  --       },
-  --       lastplace_open_folds = true,
-  --     })
-  --   end,
-  -- },
   {
     "folke/persistence.nvim", -- save the last session
     event = "BufReadPre", -- this will only start session saving when an actual file was opened
@@ -216,6 +207,4 @@ lvim.plugins = {
     requires = "hrsh7th/nvim-cmp",
     event = "InsertEnter",
   },
-  { "puremourning/vimspector" },
-  { "szw/vim-maximizer" },
 }
