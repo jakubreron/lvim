@@ -21,7 +21,7 @@ lvim.plugins = {
   { "rebelot/kanagawa.nvim" },
   { "rose-pine/neovim" },
 
-  { "editorconfig/editorconfig-vim" }, -- .editorconfig support
+  -- { "editorconfig/editorconfig-vim" }, -- .editorconfig support
 
   { "tpope/vim-repeat" }, -- better "."
   { "tpope/vim-sleuth" }, -- detect the relevant tabs / shifts
