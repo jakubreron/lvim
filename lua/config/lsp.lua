@@ -4,6 +4,8 @@ lvim.lsp.diagnostics.virtual_text = false
 lvim.lsp.document_highlight = true
 lvim.lsp.code_lens_refresh = true
 
+lvim.lsp.automatic_servers_installation = true
+
 require("lvim.lsp.manager").setup("emmet_ls")
 require("lvim.lsp.manager").setup("tailwindcss")
 -- require("lvim.lsp.manager").setup("angularls")
