@@ -10,6 +10,10 @@ require("lvim.lsp.manager").setup("emmet_ls")
 require("lvim.lsp.manager").setup("tailwindcss")
 -- require("lvim.lsp.manager").setup("angularls")
 
+lvim.lsp.override = vim.tbl_filter(function(name)
+  return name ~= "angularls"
+end, lvim.lsp.override)
+
 -- NOTE: volar (vue 3) is the default, enable vuels to use Vue 2
 -- require("lvim.lsp.manager").setup("vuels")
 
