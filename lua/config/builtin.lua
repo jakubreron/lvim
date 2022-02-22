@@ -70,14 +70,9 @@ lvim.builtin.cmp.sources = {
 -- lvim.builtin.project.detection_methods = { "pattern" }
 -- lvim.builtin.project.patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile" }
 
--- lvim.builtin.nvimtree.setup.filters.custom = {}
-vim.g.nvim_tree_indent_markers = 1
+lvim.builtin.nvimtree.setup.view.width = 40
 
 lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.autotag.enable = true
 
--- telescope
--- lvim.builtin.telescope.defaults.layout_strategy = "horizontal"
--- lvim.builtin.telescope.defaults.layout_config.preview_cutoff = 80
--- lvim.builtin.telescope.defaults.layout_config.width = 0.95
