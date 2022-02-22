@@ -62,13 +62,13 @@ lvim.plugins = {
       vim.g.matchup_matchparen_offscreen = { method = "popup" }
     end,
   },
-  {
-    "nacro90/numb.nvim", -- peek the lines (when typing :12 for example)
-    event = "BufRead",
-    config = function()
-      require("plugin.numb").config()
-    end,
-  },
+  -- {
+  --   "nacro90/numb.nvim", -- peek the lines (when typing :12 for example)
+  --   event = "BufRead",
+  --   config = function()
+  --     require("plugin.numb").config()
+  --   end,
+  -- },
   {
     "monaqa/dial.nvim", -- better C-a, C-x
     event = "BufRead",
