@@ -8,7 +8,6 @@ lvim.lsp.automatic_servers_installation = true
 
 require("lvim.lsp.manager").setup("emmet_ls")
 require("lvim.lsp.manager").setup("tailwindcss")
--- require("lvim.lsp.manager").setup("angularls")
 
 lvim.lsp.override = vim.tbl_filter(function(name)
   return name ~= "angularls"
