@@ -1,5 +1,6 @@
 -- vimwiki
--- NOTE: remove syntac = "markdown" to use "[[]]" instead of "[]()"
+-- NOTE: remove syntax = "markdown" to use "[[]]" instead of "[]()"
+-- TODO: maybe migrate later to the method noted above (in order to be compatible with obsidian)
 vim.g.vimwiki_list = { { path = "~/Documents/vimwiki/", syntax = "markdown", ext = ".md" } }
 
 -- debugging
@@ -17,16 +18,16 @@ lvim.plugins = {
   -- { "kshenoy/vim-signature" }, -- show the marks
 
   -- themes
-  { "folke/tokyonight.nvim" },
-  { "rebelot/kanagawa.nvim" },
   { "rose-pine/neovim" },
+  { "rebelot/kanagawa.nvim" },
+  { "folke/tokyonight.nvim" },
 
   -- { "editorconfig/editorconfig-vim" }, -- .editorconfig support
 
   { "tpope/vim-repeat" }, -- better "."
   { "tpope/vim-sleuth" }, -- detect the relevant tabs / shifts
-  { "tpope/vim-jdaddy" }, -- additional json movements
   { "tpope/vim-surround" }, -- surround movement
+  { "tpope/vim-jdaddy" }, -- additional json movements
 
   -- {
   --   "ThePrimeagen/git-worktree.nvim", -- git worktree integration
@@ -42,19 +43,24 @@ lvim.plugins = {
     end,
   },
   {
-    "lukas-reineke/indent-blankline.nvim", -- helper lines
-    event = "BufReadPre",
-    config = function()
-      require "plugin.blankline"
+    "lukas-reineke/indent-blankline.nvim", -- | characters on blank lines
+    event = "BufRead",
+    setup = function()
+      vim.g.indentLine_enabled = 1
+      vim.g.indent_blankline_char = "▏"
+      vim.g.indent_blankline_filetype_exclude = { "help", "terminal", "dashboard" }
+      vim.g.indent_blankline_buftype_exclude = { "terminal" }
+      vim.g.indent_blankline_show_trailing_blankline_indent = false
+      vim.g.indent_blankline_show_first_indent_level = false
     end,
   },
-  -- {
-  --   "ruifm/gitlinker.nvim", -- quick link to the git snippet
-  --   event = "BufRead",
-  --   config = function()
-  --     require("plugin.gitlinker").config()
-  --   end,
-  -- },
+  {
+    "ruifm/gitlinker.nvim", -- quick link to the git snippet
+    event = "BufRead",
+    config = function()
+      require("plugin.gitlinker").config()
+    end,
+  },
   {
     "andymass/vim-matchup", -- better "%"
     event = "CursorMoved",
