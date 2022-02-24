@@ -1,5 +1,6 @@
 -- vimwiki
--- NOTE: remove syntac = "markdown" to use "[[]]" instead of "[]()"
+-- NOTE: remove syntax = "markdown" to use "[[]]" instead of "[]()"
+-- TODO: maybe migrate later to the method noted above (in order to be compatible with obsidian)
 vim.g.vimwiki_list = { { path = "~/Documents/vimwiki/", syntax = "markdown", ext = ".md" } }
 
 -- debugging

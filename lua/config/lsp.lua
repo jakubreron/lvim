@@ -4,10 +4,15 @@ lvim.lsp.diagnostics.virtual_text = false
 lvim.lsp.document_highlight = true
 lvim.lsp.code_lens_refresh = true
 
-require("lvim.lsp.manager").setup("emmet_ls")
-require("lvim.lsp.manager").setup("tailwindcss")
+lvim.lsp.automatic_servers_installation = true
+
 -- NOTE: volar (vue 3) is the default, enable vuels to use Vue 2
 -- require("lvim.lsp.manager").setup("vuels")
+
+local allowed_servers = { "angularls", "emmet_ls", "tailwindcss" }
+lvim.lsp.override = vim.tbl_filter(function(name)
+	return not vim.tbl_contains(allowed_servers, name)
+end, lvim.lsp.override)
 
 -- generic LSP settings
 -- you can set a custom on_attach function that will be used for all the language servers

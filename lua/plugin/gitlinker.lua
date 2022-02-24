@@ -10,7 +10,6 @@ M.config = function()
     opts = {
       callbacks = {
         ["git.comcast.com"] = require("gitlinker.hosts").get_github_type_url,
-        ["git.mpcreation.net"] = require("gitlinker.hosts").get_gitlab_type_url,
       },
       -- remote = 'github', -- force the use of a specific remote
       -- adds current line nr in the url for normal mode

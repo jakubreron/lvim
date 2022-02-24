@@ -20,7 +20,7 @@ lvim.keys = {
 }
 
 lvim.builtin.terminal.execs = {
-  { "lazygit", "<leader>gg", "LazyGit", "float" },
+  -- { "lazygit", "<leader>gg", "LazyGit", "float" },
   { "lazygit", "<c-g>", "LazyGit", "float" },
 }
 
@@ -35,6 +35,7 @@ lvim.builtin.which_key.mappings["w"] = nil -- save
 
 lvim.builtin.which_key.mappings.g.j = nil -- prev change
 lvim.builtin.which_key.mappings.g.k = nil -- next change
+lvim.builtin.which_key.mappings.g.g = nil -- lazygit
 
 lvim.builtin.which_key.mappings.b.b = nil -- buffer prev
 lvim.builtin.which_key.mappings.b.h = nil -- buffer close to left
