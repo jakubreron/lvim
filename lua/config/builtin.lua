@@ -74,4 +74,3 @@ lvim.builtin.nvimtree.setup.view.width = 40
 lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.autotag.enable = true
-
