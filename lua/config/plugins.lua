@@ -34,13 +34,13 @@ lvim.plugins = {
 			require("plugin.quickscope")
 		end,
 	},
-	{
-		"lukas-reineke/indent-blankline.nvim", -- helper lines
-		event = "BufReadPre",
-		config = function()
-			require("plugin.blankline")
-		end,
-	},
+	-- {
+	-- 	"lukas-reineke/indent-blankline.nvim", -- helper lines
+	-- 	event = "BufReadPre",
+	-- 	config = function()
+	-- 		require("plugin.blankline")
+	-- 	end,
+	-- },
 	-- {
 	--   "ruifm/gitlinker.nvim", -- quick link to the git snippet
 	--   event = "BufRead",
