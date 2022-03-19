@@ -5,7 +5,7 @@ lvim.builtin.autopairs.active = true
 lvim.builtin.comment.active = true
 lvim.builtin.gitsigns.active = true
 lvim.builtin.notify.active = true
--- lvim.builtin.lualine.options.globalstatus = true
+lvim.builtin.lualine.options.globalstatus = true
 
 lvim.builtin.cmp.sources = {
   { name = "cmp_tabnine" },
