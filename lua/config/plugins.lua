@@ -6,9 +6,6 @@ vim.g.vimwiki_list = { { path = "~/Documents/vimwiki/", syntax = "markdown", ext
 -- debugging
 -- vim.g.vimspector_enable_mappings = "HUMAN"
 
--- dashboard
-vim.g.dashboard_disable_statusline = 1
-
 lvim.plugins = {
   { "szw/vim-maximizer" }, -- quickly maximize current window
   { "vimwiki/vimwiki" }, -- note taking plugin

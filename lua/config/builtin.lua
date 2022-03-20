@@ -1,5 +1,4 @@
 -- Configure builtin plugins
-lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.autopairs.active = true
 lvim.builtin.comment.active = true
