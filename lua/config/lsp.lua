@@ -7,7 +7,9 @@ lvim.lsp.code_lens_refresh = true
 lvim.lsp.automatic_servers_installation = true
 
 -- NOTE: volar (vue 3) is the default, enable vuels to use Vue 2
--- require("lvim.lsp.manager").setup("vuels")
+require("lvim.lsp.manager").setup("vuels")
+-- NOTE: disallow volar 
+vim.list_extend(lvim.lsp.override, { "volar" })
 
 local allowed_servers = { "angularls", "emmet_ls", "tailwindcss" }
 lvim.lsp.override = vim.tbl_filter(function(name)
