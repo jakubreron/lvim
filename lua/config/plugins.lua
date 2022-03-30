@@ -92,12 +92,12 @@ lvim.plugins = {
       require("plugin.spectre").config()
     end,
   },
-  {
-    "folke/zen-mode.nvim", -- focus mode
-    config = function()
-      require("plugin.zen").config()
-    end,
-  },
+  -- {
+  --   "folke/zen-mode.nvim", -- focus mode
+  --   config = function()
+  --     require("plugin.zen").config()
+  --   end,
+  -- },
   {
     "vuki656/package-info.nvim", -- check if the package info is up to date
     requires = "MunifTanjim/nui.nvim",
