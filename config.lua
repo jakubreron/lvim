@@ -1,3 +1,5 @@
+require("config.shortcuts")
+
 require("config.general")
 
 require("config.themes")
