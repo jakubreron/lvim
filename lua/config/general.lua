@@ -12,7 +12,7 @@ lvim.leader = "space"
 -- vim
 vim.opt.smarttab = true
 vim.opt.softtabstop = 2
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 vim.opt.hlsearch = false
 vim.opt.colorcolumn = "100"
 vim.opt.incsearch = true
