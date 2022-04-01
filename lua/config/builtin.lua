@@ -1,5 +1,14 @@
--- Configure builtin plugins
+-- activate and configure builtin plugins
 lvim.builtin.terminal.active = true
+lvim.builtin.terminal.direction = "horizontal"
+lvim.builtin.terminal.size = function(term)
+  if term.direction == "horizontal" then
+    return 15
+  elseif term.direction == "vertical" then
+    return vim.o.columns * 0.4
+  end
+end
+
 lvim.builtin.autopairs.active = true
 lvim.builtin.comment.active = true
 lvim.builtin.gitsigns.active = true
