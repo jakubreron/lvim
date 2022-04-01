@@ -1,10 +1,3 @@
--- vimwiki
--- NOTE: remove syntax = "markdown" to use "[[]]" instead of "[]()"
--- TODO: maybe migrate later to the method noted above (in order to be compatible with obsidian)
-vim.g.vimwiki_list = { { path = "~/Documents/vimwiki/", syntax = "markdown", ext = ".md" } }
-
--- vim.g.vimspector_enable_mappings = "HUMAN"
-
 lvim.plugins = {
   { "szw/vim-maximizer" }, -- quickly maximize current window
   { "vimwiki/vimwiki" }, -- note taking plugin
@@ -24,6 +17,9 @@ lvim.plugins = {
   { "tpope/vim-sleuth" }, -- detect the relevant tabs / shifts
   { "tpope/vim-surround" }, -- surround movement
   { "tpope/vim-jdaddy" }, -- additional json movements
+  { "tpope/vim-dispatch" }, -- dispatch tests
+
+  { "vim-test/vim-test" },
 
   -- {
   --   "ThePrimeagen/git-worktree.nvim", -- git worktree integration
@@ -31,8 +27,6 @@ lvim.plugins = {
   --     require("telescope").load_extension("git_worktree")
   --   end
   -- },
-
-  { "vim-test/vim-test" },
   {
     "ruifm/gitlinker.nvim", -- quick link to the git snippet
     event = "BufRead",
@@ -181,3 +175,14 @@ lvim.plugins = {
     event = "InsertEnter",
   },
 }
+
+-- vimwiki
+-- NOTE: remove syntax = "markdown" to use "[[]]" instead of "[]()"
+-- TODO: maybe migrate to the method noted above (in order to be compatible with obsidian)
+vim.g.vimwiki_list = { { path = "~/Documents/vimwiki/", syntax = "markdown", ext = ".md" } }
+
+-- vimspector
+-- vim.g.vimspector_enable_mappings = "HUMAN"
+
+-- make test commands execute using dispatch.vim
+vim.g["test#strategy"] = "dispatch"
