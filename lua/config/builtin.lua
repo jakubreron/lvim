@@ -29,10 +29,10 @@ lvim.builtin.lualine.sections = {
 
 lvim.builtin.lualine.inactive_sections.lualine_a = { components.filename }
 
-vim.g.bufferline = {
-  auto_hide = true,
-  animation = false,
-}
+-- vim.g.bufferline = {
+--   auto_hide = true,
+--   animation = false,
+-- }
 
 lvim.builtin.cmp.completion.completeopt = "menu,menuone,noselect,preview"
 lvim.builtin.cmp.preselect = require("cmp").PreselectMode.None
