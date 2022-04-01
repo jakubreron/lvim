@@ -29,25 +29,8 @@ lvim.builtin.lualine.sections = {
 
 lvim.builtin.lualine.inactive_sections.lualine_a = { components.filename }
 
--- vim.g.bufferline = {
---   auto_hide = true,
---   animation = false,
--- }
-
-lvim.builtin.cmp.completion.completeopt = "menu,menuone,noselect,preview"
-lvim.builtin.cmp.preselect = require("cmp").PreselectMode.None
-lvim.builtin.cmp.sources = {
-  { name = "nvim_lsp" },
-  { name = "path", max_item_count = 5 },
-  { name = "luasnip", max_item_count = 3 },
-  { name = "cmp_tabnine", max_item_count = 3 },
-  { name = "nvim_lua" },
-  { name = "buffer", max_item_count = 5, keyword_length = 5 },
-  { name = "calc" },
-  { name = "emoji" },
-  { name = "treesitter" },
-  { name = "crates" },
-}
+-- lvim.builtin.cmp.completion.completeopt = "menu,menuone,noselect,preview"
+-- lvim.builtin.cmp.preselect = require("cmp").PreselectMode.None
 
 -- TODO: enable these lines only for certain projects
 -- detection patterns (custom nuxt modules fix)
@@ -55,8 +38,8 @@ lvim.builtin.cmp.sources = {
 -- lvim.builtin.project.detection_methods = { "pattern" }
 -- lvim.builtin.project.patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile" }
 
-lvim.builtin.nvimtree.setup.view.width = 40
+-- lvim.builtin.nvimtree.setup.view.width = 40
 
+-- default settings from the repo
 lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.ignore_install = { "haskell" }
-lvim.builtin.treesitter.autotag.enable = true
