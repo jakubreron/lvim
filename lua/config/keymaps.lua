@@ -39,9 +39,6 @@ lvim.builtin.which_key.mappings.g.k = nil -- next change
 --   c = { "<cmd>lua require('telescope').extensions.git_worktree.create_git_worktree()<cr>", "Create a worktree" },
 -- }
 
--- Buffers
-lvim.builtin.which_key.mappings.b.b = nil -- buffer prev
-
 -- lsp
 lvim.builtin.which_key.mappings.l.j = nil -- next diagnostic
 lvim.builtin.which_key.mappings.l.k = nil -- prev diagnostic
@@ -66,13 +63,15 @@ lvim.builtin.telescope.on_config_done = function()
 end
 
 -- trouble diagnostics
-lvim.builtin.which_key.mappings["ld"] = { "<cmd>TroubleToggle<cr>", "Diagnostics" }
-lvim.builtin.which_key.mappings["lR"] = { "<cmd>TroubleToggle lsp_references<cr>", "References" }
-
+lvim.builtin.which_key.mappings["ld"] = { "<cmd>TroubleToggle<cr>", "Document Diagnostics" }
+lvim.builtin.which_key.mappings["lR"] = { "<cmd>TroubleToggle lsp_references<cr>", "Variable/Method References" }
 lvim.builtin.which_key.mappings["l_"] = { "<cmd>LspRestart <CR>", "Restart LSP" }
 
--- langs
-lvim.builtin.which_key.mappings["o"] = {
+-- buffers
+lvim.builtin.which_key.mappings.b.b = nil -- buffer prev
+
+-- buffer / ortography
+lvim.builtin.which_key.mappings["bo"] = {
   name = "Ortography",
   e = { "<cmd>setlocal spell! spelllang=en<CR>", "English" },
   p = { "<cmd>setlocal spell! spelllang=pl<CR>", "Polish" },
@@ -90,7 +89,7 @@ lvim.builtin.which_key.mappings["bs"] = {
   f = { "<cmd>BraceyEval<cr>", "Force Reload" },
 }
 
--- search & replace
+-- replace
 lvim.builtin.which_key.mappings["r"] = {
   name = "Replace",
   r = { ":%s@<c-r><c-w>@<c-r><c-w>@gc<c-f>$F@i", "Find and replace" },
@@ -98,12 +97,14 @@ lvim.builtin.which_key.mappings["r"] = {
   a = { "<cmd>lua require('spectre').open()<cr>", "Replace anything" },
 }
 
+-- session
 lvim.builtin.which_key.mappings["S"] = {
   name = "Session",
   c = { "<cmd>lua require('persistence').load()<cr>", "Restore last session for current dir" },
   l = { "<cmd>lua require('persistence').load({ last = true })<cr>", "Restore last session" },
 }
 
+-- todos
 lvim.builtin.which_key.mappings["t"] = {
   name = "Todo",
   q = { "<cmd>TodoQuickFix<cr>", "Todo Quick Fix" },
@@ -111,6 +112,7 @@ lvim.builtin.which_key.mappings["t"] = {
   s = { "<cmd>TodoTelescope<cr>", "Todo Search" },
 }
 
+-- npm
 lvim.builtin.which_key.mappings["n"] = {
   name = "Package Info",
   f = { "<cmd>lua require('package-info').show({ force = true })<cr>", "Fetch" },
@@ -122,6 +124,7 @@ lvim.builtin.which_key.mappings["n"] = {
   c = { "<cmd>lua require('package-info').change_version()<cr>", "Change version" },
 }
 
+-- debugger
 lvim.builtin.which_key.mappings.d = {
   name = "Debugger",
   d = { "<cmd>call vimspector#Launch()<cr>", "Launch" },
@@ -142,6 +145,7 @@ lvim.builtin.which_key.mappings.d = {
   },
 }
 
+-- console
 lvim.builtin.which_key.mappings.c = {
   name = "Console",
   v = { "<C-w>v<cmd>term<cr>", "Vertical" },
