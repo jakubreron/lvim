@@ -6,19 +6,6 @@ lvim.builtin.gitsigns.active = true
 lvim.builtin.notify.active = true
 -- lvim.builtin.lualine.options.globalstatus = true
 
-lvim.builtin.cmp.sources = {
-  { name = "cmp_tabnine" },
-  { name = "nvim_lsp" },
-  { name = "path" },
-  { name = "luasnip" },
-  { name = "nvim_lua" },
-  { name = "buffer" },
-  { name = "calc" },
-  { name = "emoji" },
-  { name = "treesitter" },
-  { name = "crates" },
-}
-
 local components = require "lvim.core.lualine.components"
 components.filename = {
   "filename",
