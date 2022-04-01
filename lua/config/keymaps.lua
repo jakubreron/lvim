@@ -6,12 +6,10 @@ lvim.keys = {
 
   normal_mode = {
     ["Y"] = "y$",
-    -- ["0"] = "^",
     ["Q"] = "<cmd>BufferKill<CR>",
 
     -- ["c"] = '"_c' -- don't store "c" to the register
 
-    ["<C-p>"] = "<cmd>Telescope find_files<cr>",
     ["]e"] = "<cmd>lua vim.diagnostic.goto_next()<cr>",
     ["[e"] = "<cmd>lua vim.diagnostic.goto_prev()<cr>",
     ["]c"] = "<cmd>lua require'gitsigns'.next_hunk()<cr><cmd>lua require 'gitsigns'.preview_hunk()<cr>",
@@ -19,36 +17,28 @@ lvim.keys = {
   },
 }
 
-lvim.builtin.terminal.execs = {
-  -- { "lazygit", "<leader>gg", "LazyGit", "float" },
-  { "lazygit", "<c-g>", "LazyGit", "float" },
-}
-
 -- unmap a default keymapping
 lvim.builtin.which_key.mappings["T"] = nil -- treesitter
 lvim.builtin.which_key.mappings["h"] = nil -- highlight
 lvim.builtin.which_key.mappings["/"] = nil -- comment
 lvim.builtin.which_key.mappings["q"] = nil -- quit
-lvim.builtin.which_key.mappings["f"] = nil -- find files
 lvim.builtin.which_key.mappings["c"] = nil -- close buffer
 lvim.builtin.which_key.mappings["w"] = nil -- save
 
 lvim.builtin.which_key.mappings.g.j = nil -- prev change
 lvim.builtin.which_key.mappings.g.k = nil -- next change
-lvim.builtin.which_key.mappings.g.g = nil -- lazygit
 
 lvim.builtin.which_key.mappings.b.b = nil -- buffer prev
-lvim.builtin.which_key.mappings.b.h = nil -- buffer close to left
-lvim.builtin.which_key.mappings.b.l = nil -- buffer close to right
-lvim.builtin.which_key.mappings.b.w = nil -- buffer wipeout
+-- lvim.builtin.which_key.mappings.b.h = nil -- buffer close to left
+-- lvim.builtin.which_key.mappings.b.l = nil -- buffer close to right
 
 lvim.builtin.which_key.mappings.l.j = nil -- next diagnostic
 lvim.builtin.which_key.mappings.l.k = nil -- prev diagnostic
-lvim.builtin.which_key.mappings.l.s = nil -- TODO: check the "document symbols"
+-- lvim.builtin.which_key.mappings.l.s = nil -- TODO: check the "document symbols"
 lvim.builtin.which_key.mappings.l.S = nil -- TODO: check the "workspace symbols"
 
 lvim.builtin.which_key.mappings.s.c = {
-  "<cmd>lua require('telescope.builtin.internal').colorscheme({enable_preview = true})<cr>",
+  "<cmd>lua require('telescope.builtin.internal').colorscheme({enable_preview = true})<cr>", -- default is colorscheme without preview
   "Colorscheme with Preview",
 }
 lvim.builtin.which_key.mappings.s.b = nil -- search branches
@@ -109,8 +99,6 @@ lvim.builtin.which_key.mappings["r"] = {
   w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
   a = { "<cmd>lua require('spectre').open()<cr>", "Replace anything" },
 }
-
--- lvim.builtin.which_key.mappings.n = { "<cmd>Lf<cr>", "File manager" }
 
 lvim.builtin.which_key.mappings["S"] = {
   name = "Session",
