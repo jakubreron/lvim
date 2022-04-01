@@ -158,13 +158,6 @@ lvim.plugins = {
   },
   { "christoomey/vim-titlecase" }, -- "gz" movement to toggle the words case
   {
-    "phaazon/hop.nvim", -- quickly go to any line
-    event = "BufRead",
-    config = function()
-      require("plugin.hop").config()
-    end,
-  },
-  {
     "folke/persistence.nvim", -- save the last session
     event = "BufReadPre", -- this will only start session saving when an actual file was opened
     module = "persistence",
