@@ -32,6 +32,7 @@ lvim.plugins = {
   --   end
   -- },
 
+  { "vim-test/vim-test" },
   {
     "ruifm/gitlinker.nvim", -- quick link to the git snippet
     event = "BufRead",

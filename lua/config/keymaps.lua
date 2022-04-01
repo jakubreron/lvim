@@ -104,11 +104,19 @@ lvim.builtin.which_key.mappings["S"] = {
   l = { "<cmd>lua require('persistence').load({ last = true })<cr>", "Restore last session" },
 }
 
--- todos
 lvim.builtin.which_key.mappings["t"] = {
+  name = "Test",
+  n = { "<cmd>TestNearest<cr>", "Nearest" },
+  f = { "<cmd>TestFile<cr>", "File" },
+  s = { "<cmd>TestSuite<cr>", "Suite" },
+  l = { "<cmd>TestLast<cr>", "Last" },
+  v = { "<cmd>TestVisit<cr>", "Visit" },
+}
+
+-- todos
+lvim.builtin.which_key.mappings["T"] = {
   name = "Todo",
   q = { "<cmd>TodoQuickFix<cr>", "Todo Quick Fix" },
-  t = { "<cmd>TodoTrouble<cr>", "Todo Trouble" },
   s = { "<cmd>TodoTelescope<cr>", "Todo Search" },
 }
 
