@@ -29,8 +29,6 @@ lvim.builtin.lualine.sections = {
 
 lvim.builtin.lualine.inactive_sections.lualine_a = { components.filename }
 
-lvim.builtin.cmp.experimental.ghost_text = true
-
 vim.g.bufferline = {
   auto_hide = true,
   animation = false,
