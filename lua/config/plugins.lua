@@ -33,12 +33,6 @@ lvim.plugins = {
   -- },
 
   {
-    "unblevable/quick-scope", -- highlight the scope after using "t" or "f"
-    config = function()
-      require "plugin.quickscope"
-    end,
-  },
-  {
     "ruifm/gitlinker.nvim", -- quick link to the git snippet
     event = "BufRead",
     config = function()
