@@ -102,12 +102,6 @@ lvim.builtin.which_key.mappings["bs"] = {
   f = { "<cmd>BraceyEval<cr>", "Force Reload" },
 }
 
--- buffer / zen
-lvim.builtin.which_key.mappings["bz"] = { "<cmd>ZenMode<cr>", "Zen" }
-
--- buffer / outline
-lvim.builtin.which_key.mappings["bo"] = { "<cmd>SymbolsOutline<cr>", "Outline" }
-
 -- search & replace
 lvim.builtin.which_key.mappings["r"] = {
   name = "Replace",

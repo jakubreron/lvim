@@ -122,13 +122,6 @@ lvim.plugins = {
     ft = "json",
   },
   {
-    "simrat39/symbols-outline.nvim", -- outline the buffer
-    -- cmd = "SymbolsOutline",
-    config = function()
-      require("plugin.outline").config()
-    end,
-  },
-  {
     "folke/trouble.nvim", -- diagnostics
     cmd = "TroubleToggle",
   },
