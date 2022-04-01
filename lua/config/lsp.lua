@@ -1,23 +1,17 @@
--- Disable virtual text
+-- virtual text that shows a message along with the error
 lvim.lsp.diagnostics.virtual_text = false
-
-lvim.lsp.document_highlight = true
-lvim.lsp.code_lens_refresh = true
-
-lvim.lsp.automatic_servers_installation = true
 
 local allowed_servers = { "angularls", "emmet_ls", "tailwindcss" }
 lvim.lsp.override = vim.tbl_filter(function(server)
   return not vim.tbl_contains(allowed_servers, server)
 end, lvim.lsp.override)
 
--- NOTE: enable vuels (vue 2)
+-- enable vuels (vue 2)
 lvim.lsp.override = vim.tbl_filter(function(server)
   return server ~= "vuels"
 end, lvim.lsp.override)
 
--- NOTE: disable volar (vue 3)
--- require("lvim.lsp.manager").setup "vuels"
+-- disable volar (vue 3)
 vim.list_extend(lvim.lsp.override, { "volar" })
 
 -- generic LSP settings
@@ -63,7 +57,6 @@ local filetypes = {
 
 formatters.setup {
   { exe = "eslint_d", filetypes = filetypes.eslint },
-  -- { exe = "prettierd", filetypes = filetypes.eslint },
   { exe = "stylelint", filetypes = filetypes.stylelint },
   { exe = "prettierd", filetypes = filetypes.prettier },
   { exe = "stylua", filetypes = { "lua" } },
