@@ -3,7 +3,6 @@
 -- TODO: maybe migrate later to the method noted above (in order to be compatible with obsidian)
 vim.g.vimwiki_list = { { path = "~/Documents/vimwiki/", syntax = "markdown", ext = ".md" } }
 
--- debugging
 -- vim.g.vimspector_enable_mappings = "HUMAN"
 
 lvim.plugins = {
@@ -11,8 +10,8 @@ lvim.plugins = {
   { "vimwiki/vimwiki" }, -- note taking plugin
   { "andweeb/presence.nvim" }, -- flex with VIM on the discord
 
+  -- TODO: don't uncomment, try out native nvim-dap instead
   -- { "puremourning/vimspector" }, -- inspect tool
-  -- { "kshenoy/vim-signature" }, -- show the marks
 
   -- themes
   { "rose-pine/neovim" },
