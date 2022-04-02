@@ -62,11 +62,6 @@ lvim.autocommands.custom_groups = {
   },
   {
     "VimLeave",
-    "$DOTFILES_DIR/arch/README.md",
-    "!cd $DOTFILES_DIR/arch; git add *; git commit -m 'docs(readme): ✏️ auto-commit changes'; git push",
-  },
-  {
-    "VimLeave",
     "$DOTFILES_DIR/universal/README.md",
     "!cd $DOTFILES_DIR/universal; git add .; git commit -m 'docs(readme): ✏️ auto-commit changes'; git push",
   },
