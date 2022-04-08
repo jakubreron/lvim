@@ -69,6 +69,7 @@ lvim.builtin.which_key.mappings["l_"] = { "<cmd>LspRestart <CR>", "Restart LSP" 
 -- buffers
 lvim.builtin.which_key.mappings.b.b = nil -- buffer prev
 lvim.builtin.which_key.mappings.b.e = nil -- pick buffer to close
+lvim.builtin.which_key.mappings.b.x = { "<cmd>silent !chmod +x %<CR>", "Make file executable" }
 
 -- buffer / ortography
 lvim.builtin.which_key.mappings["bo"] = {
