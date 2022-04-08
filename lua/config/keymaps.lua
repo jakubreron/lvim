@@ -1,14 +1,11 @@
 lvim.keys = {
   -- insert_mode = {
-  --   -- inverted ctrl + h (del)
-  --   ["<C-l>"] = "<Del>",
+  --
   -- },
 
   normal_mode = {
     ["Y"] = "y$",
     ["Q"] = "<cmd>BufferKill<CR>",
-
-    -- ["c"] = '"_c' -- don't store "c" to the register
 
     ["]e"] = "<cmd>lua vim.diagnostic.goto_next()<cr>",
     ["[e"] = "<cmd>lua vim.diagnostic.goto_prev()<cr>",
@@ -69,6 +66,7 @@ lvim.builtin.which_key.mappings["l_"] = { "<cmd>LspRestart <CR>", "Restart LSP" 
 
 -- buffers
 lvim.builtin.which_key.mappings.b.b = nil -- buffer prev
+lvim.builtin.which_key.mappings.b.e = nil -- pick buffer to close
 
 -- buffer / ortography
 lvim.builtin.which_key.mappings["bo"] = {
