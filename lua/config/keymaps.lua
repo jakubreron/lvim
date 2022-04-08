@@ -7,6 +7,9 @@ lvim.keys = {
     ["Y"] = "y$",
     ["Q"] = "<cmd>BufferKill<CR>",
 
+    ["<C-f>"] = "<cmd>silent !tmux neww tmux-sessionizer<CR>",
+    ["<C-m>"] = "<cmd>MaximizerToggle!<CR>",
+
     ["]e"] = "<cmd>lua vim.diagnostic.goto_next()<cr>",
     ["[e"] = "<cmd>lua vim.diagnostic.goto_prev()<cr>",
     ["]c"] = "<cmd>lua require'gitsigns'.next_hunk()<cr><cmd>lua require 'gitsigns'.preview_hunk()<cr>",
@@ -20,7 +23,6 @@ lvim.builtin.which_key.mappings["/"] = nil -- comment
 lvim.builtin.which_key.mappings["q"] = nil -- quit
 lvim.builtin.which_key.mappings["c"] = nil -- close buffer
 lvim.builtin.which_key.mappings["w"] = nil -- save
-lvim.builtin.which_key.mappings.m = { "<cmd>MaximizerToggle!<CR>", "Maximizer toggle" }
 
 -- git
 lvim.builtin.which_key.mappings.g.j = nil -- prev change
