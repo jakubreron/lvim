@@ -99,11 +99,7 @@ lvim.builtin.which_key.mappings["r"] = {
 }
 
 -- session
--- lvim.builtin.which_key.mappings["S"] = {
---   name = "Session",
---   c = { "<cmd>lua require('persistence').load()<cr>", "Restore last session for current dir" },
---   l = { "<cmd>lua require('persistence').load({ last = true })<cr>", "Restore last session" },
--- }
+lvim.builtin.which_key.mappings["S"] = { "<cmd>source Session.vim<cr>", "Restore last session for current dir" }
 
 lvim.builtin.which_key.mappings["t"] = {
   name = "Test",
