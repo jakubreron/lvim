@@ -20,6 +20,7 @@ lvim.plugins = {
   { "tpope/vim-jdaddy" }, -- additional json movements
   { "tpope/vim-dispatch" }, -- dispatch tests
   { "tpope/vim-obsession" }, -- save the session
+  { "tpope/vim-unimpaired" }, -- additional mappings
 
   { "vim-test/vim-test" },
 
