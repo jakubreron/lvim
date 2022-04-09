@@ -38,7 +38,6 @@ lvim.builtin.which_key.mappings["w"] = nil -- save
 -- lsp
 lvim.builtin.which_key.mappings.l.j = nil -- next diagnostic
 lvim.builtin.which_key.mappings.l.k = nil -- prev diagnostic
--- lvim.builtin.which_key.mappings.l.S = nil -- TODO: check the "workspace symbols"
 
 -- search
 lvim.builtin.which_key.mappings.s.b = nil -- branches
