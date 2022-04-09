@@ -9,6 +9,7 @@ lvim.keys = {
 
     ["<C-f>"] = "<cmd>silent !tmux neww tmux-sessionizer<CR>",
     ["<C-m>"] = "<cmd>MaximizerToggle!<CR>",
+    ["<C-s>"] = "<cmd>source Session.vim<cr>",
 
     ["]e"] = "<cmd>lua vim.diagnostic.goto_next()<cr>",
     ["[e"] = "<cmd>lua vim.diagnostic.goto_prev()<cr>",
@@ -18,9 +19,10 @@ lvim.keys = {
 }
 
 -- single which_keys
+lvim.builtin.which_key.mappings["q"] = { "<cmd>qa<cr>", "Quit" }
+
 lvim.builtin.which_key.mappings["T"] = nil -- treesitter
 lvim.builtin.which_key.mappings["/"] = nil -- comment
-lvim.builtin.which_key.mappings["q"] = nil -- quit
 lvim.builtin.which_key.mappings["c"] = nil -- close buffer
 lvim.builtin.which_key.mappings["w"] = nil -- save
 
@@ -97,9 +99,6 @@ lvim.builtin.which_key.mappings["r"] = {
   w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
   a = { "<cmd>lua require('spectre').open()<cr>", "Replace anything" },
 }
-
--- session
-lvim.builtin.which_key.mappings["S"] = { "<cmd>source Session.vim<cr>", "Restore last session for current dir" }
 
 lvim.builtin.which_key.mappings["t"] = {
   name = "Test",
