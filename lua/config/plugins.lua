@@ -19,6 +19,7 @@ lvim.plugins = {
   { "tpope/vim-surround" }, -- surround movement
   { "tpope/vim-jdaddy" }, -- additional json movements
   { "tpope/vim-dispatch" }, -- dispatch tests
+  { "tpope/vim-obsession" }, -- save the session
 
   { "vim-test/vim-test" },
 
