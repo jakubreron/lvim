@@ -2,6 +2,7 @@ lvim.plugins = {
   { "szw/vim-maximizer" }, -- quickly maximize current window
   { "vimwiki/vimwiki" }, -- note taking plugin
   { "andweeb/presence.nvim" }, -- flex with VIM on the discord
+  { "christoomey/vim-tmux-navigator" }, -- easier tmux navigation
 
   -- TODO: don't uncomment, try out native nvim-dap instead
   -- { "puremourning/vimspector" }, -- inspect tool
