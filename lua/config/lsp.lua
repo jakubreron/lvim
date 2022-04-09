@@ -1,7 +1,7 @@
 -- virtual text that shows a message along with the error
 lvim.lsp.diagnostics.virtual_text = false
 
-local allowed_servers = { "angularls", "emmet_ls", "tailwindcss" }
+local allowed_servers = { "emmet_ls", "tailwindcss" }
 lvim.lsp.override = vim.tbl_filter(function(server)
   return not vim.tbl_contains(allowed_servers, server)
 end, lvim.lsp.override)

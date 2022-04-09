@@ -11,10 +11,10 @@ lvim.keys = {
     ["<C-m>"] = "<cmd>MaximizerToggle!<CR>",
     ["<C-s>"] = "<cmd>source Session.vim<cr>",
 
-    ["]e"] = "<cmd>lua vim.diagnostic.goto_next()<cr>",
-    ["[e"] = "<cmd>lua vim.diagnostic.goto_prev()<cr>",
-    ["]c"] = "<cmd>lua require'gitsigns'.next_hunk()<cr><cmd>lua require 'gitsigns'.preview_hunk()<cr>",
-    ["[c"] = "<cmd>lua require'gitsigns'.prev_hunk()<cr><cmd>lua require 'gitsigns'.preview_hunk()<cr>",
+    -- ["]e"] = "<cmd>lua vim.diagnostic.goto_next()<cr>",
+    -- ["[e"] = "<cmd>lua vim.diagnostic.goto_prev()<cr>",
+    -- ["]c"] = "<cmd>lua require'gitsigns'.next_hunk()<cr><cmd>lua require 'gitsigns'.preview_hunk()<cr>",
+    -- ["[c"] = "<cmd>lua require'gitsigns'.prev_hunk()<cr><cmd>lua require 'gitsigns'.preview_hunk()<cr>",
   },
 }
 
