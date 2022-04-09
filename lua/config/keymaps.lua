@@ -11,8 +11,8 @@ lvim.keys = {
     ["<C-m>"] = "<cmd>MaximizerToggle!<CR>",
     ["<C-s>"] = "<cmd>source Session.vim<cr>",
 
-    -- ["]q"] = "<cmd>lua vim.diagnostic.goto_next()<cr>",
-    -- ["[q"] = "<cmd>lua vim.diagnostic.goto_prev()<cr>",
+    ["]q"] = "<cmd>lua vim.diagnostic.goto_next()<cr>",
+    ["[q"] = "<cmd>lua vim.diagnostic.goto_prev()<cr>",
     ["]c"] = "<cmd>lua require'gitsigns'.next_hunk()<cr><cmd>lua require 'gitsigns'.preview_hunk()<cr>",
     ["[c"] = "<cmd>lua require'gitsigns'.prev_hunk()<cr><cmd>lua require 'gitsigns'.preview_hunk()<cr>",
   },
@@ -22,6 +22,7 @@ lvim.keys = {
 lvim.builtin.which_key.mappings["q"] = { "<cmd>qa<cr>", "Quit" }
 
 lvim.builtin.which_key.mappings["T"] = nil -- treesitter
+lvim.builtin.which_key.mappings["f"] = nil -- find file (already binded to sf)
 lvim.builtin.which_key.mappings["/"] = nil -- comment
 lvim.builtin.which_key.mappings["c"] = nil -- close buffer
 lvim.builtin.which_key.mappings["w"] = nil -- save
@@ -71,6 +72,12 @@ lvim.builtin.which_key.mappings["l_"] = { "<cmd>LspRestart <CR>", "Restart LSP" 
 -- buffers
 lvim.builtin.which_key.mappings.b.b = nil -- buffer prev
 lvim.builtin.which_key.mappings.b.e = nil -- pick buffer to close
+lvim.builtin.which_key.mappings.b.h = nil -- close to left
+lvim.builtin.which_key.mappings.b.l = nil -- close to right
+lvim.builtin.which_key.mappings.b.j = nil -- buffer jump
+lvim.builtin.which_key.mappings.b.f = nil -- buffer find
+lvim.builtin.which_key.mappings.b.D = nil -- soft by directory
+lvim.builtin.which_key.mappings.b.L = nil -- soft by language
 lvim.builtin.which_key.mappings.b.x = { "<cmd>silent !chmod +x %<CR>", "Make file executable" }
 
 -- buffer / ortography
