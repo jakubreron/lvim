@@ -13,8 +13,6 @@ lvim.keys = {
 
     ["]q"] = "<cmd>lua vim.diagnostic.goto_next()<cr>",
     ["[q"] = "<cmd>lua vim.diagnostic.goto_prev()<cr>",
-    ["]c"] = "<cmd>lua require'gitsigns'.next_hunk()<cr><cmd>lua require 'gitsigns'.preview_hunk()<cr>",
-    ["[c"] = "<cmd>lua require'gitsigns'.prev_hunk()<cr><cmd>lua require 'gitsigns'.preview_hunk()<cr>",
   },
 }
 
@@ -26,10 +24,6 @@ lvim.builtin.which_key.mappings["f"] = nil -- find file (already binded to sf)
 lvim.builtin.which_key.mappings["/"] = nil -- comment
 lvim.builtin.which_key.mappings["c"] = nil -- close buffer
 lvim.builtin.which_key.mappings["w"] = nil -- save
-
--- git
-lvim.builtin.which_key.mappings.g.j = nil -- prev change
-lvim.builtin.which_key.mappings.g.k = nil -- next change
 
 -- git worktrees
 -- NOTE: <Enter> - switches to that worktree
@@ -47,9 +41,11 @@ lvim.builtin.which_key.mappings.l.k = nil -- prev diagnostic
 -- lvim.builtin.which_key.mappings.l.S = nil -- TODO: check the "workspace symbols"
 
 -- search
-lvim.builtin.which_key.mappings.s.b = nil -- search branches
-lvim.builtin.which_key.mappings.s.M = nil -- search man pages
-lvim.builtin.which_key.mappings.s.C = nil -- search commands
+lvim.builtin.which_key.mappings.s.b = nil -- branches
+lvim.builtin.which_key.mappings.s.M = nil -- man pages
+lvim.builtin.which_key.mappings.s.C = nil -- commands
+lvim.builtin.which_key.mappings.s.R = nil -- registers
+lvim.builtin.which_key.mappings.s.h = nil -- help
 lvim.builtin.which_key.mappings.s.p = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings.s.c = {
   "<cmd>lua require('telescope.builtin.internal').colorscheme({enable_preview = true})<cr>", -- default is colorscheme without preview
@@ -125,7 +121,7 @@ lvim.builtin.which_key.mappings["T"] = {
 
 -- npm
 lvim.builtin.which_key.mappings["n"] = {
-  name = "Package Info",
+  name = "NPM",
   f = { "<cmd>lua require('package-info').show({ force = true })<cr>", "Fetch" },
   h = { "<cmd>lua require('package-info').hide()<cr>", "Hide" },
   d = { "<cmd>lua require('package-info').delete()<cr>", "Delete" },
