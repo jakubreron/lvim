@@ -179,3 +179,6 @@ vim.g.vimwiki_list = { { path = "~/Documents/vimwiki/", syntax = "markdown", ext
 
 -- make test commands execute using dispatch.vim
 vim.g["test#strategy"] = "dispatch"
+
+-- match git conflict markers with %
+vim.b["match_words"] =  '<<<<<<<:=======:>>>>>>>'
