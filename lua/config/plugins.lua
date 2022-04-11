@@ -7,6 +7,7 @@ lvim.plugins = {
 
   -- TODO: don't uncomment, try out native nvim-dap instead
   -- { "puremourning/vimspector" }, -- inspect tool
+  { "vim-test/vim-test" },
 
   -- themes
   { "rose-pine/neovim" },
@@ -22,8 +23,7 @@ lvim.plugins = {
   { "tpope/vim-dispatch" }, -- dispatch tests
   { "tpope/vim-obsession" }, -- save the session
   { "tpope/vim-unimpaired" }, -- additional mappings
-
-  { "vim-test/vim-test" },
+  { "tpope/vim-eunuch" }, -- UNIX commands
 
   -- {
   --   "ThePrimeagen/git-worktree.nvim", -- git worktree integration

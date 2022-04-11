@@ -73,7 +73,6 @@ lvim.builtin.which_key.mappings.b.j = nil -- buffer jump
 lvim.builtin.which_key.mappings.b.f = nil -- buffer find
 lvim.builtin.which_key.mappings.b.D = nil -- soft by directory
 lvim.builtin.which_key.mappings.b.L = nil -- soft by language
-lvim.builtin.which_key.mappings.b.x = { "<cmd>silent !chmod +x %<CR>", "Make file executable" }
 
 -- buffer / ortography
 lvim.builtin.which_key.mappings["bo"] = {
