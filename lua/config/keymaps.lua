@@ -38,6 +38,7 @@ lvim.builtin.which_key.mappings["w"] = nil -- save
 -- lsp
 lvim.builtin.which_key.mappings.l.j = nil -- next diagnostic
 lvim.builtin.which_key.mappings.l.k = nil -- prev diagnostic
+lvim.builtin.which_key.mappings["l_"] = { "<cmd>LspRestart <CR>", "Restart LSP" }
 
 -- search
 lvim.builtin.which_key.mappings.s.b = nil -- branches
@@ -58,11 +59,6 @@ lvim.builtin.telescope.on_config_done = function()
   lvim.builtin.telescope.defaults.mappings.i["<C-n>"] = actions.cycle_history_next
   lvim.builtin.telescope.defaults.mappings.i["<C-p>"] = actions.cycle_history_prev
 end
-
--- trouble diagnostics
-lvim.builtin.which_key.mappings["ld"] = { "<cmd>TroubleToggle<cr>", "Document Diagnostics" }
-lvim.builtin.which_key.mappings["lR"] = { "<cmd>TroubleToggle lsp_references<cr>", "Variable/Method References" }
-lvim.builtin.which_key.mappings["l_"] = { "<cmd>LspRestart <CR>", "Restart LSP" }
 
 -- buffers
 lvim.builtin.which_key.mappings.b.b = nil -- buffer prev

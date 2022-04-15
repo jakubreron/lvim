@@ -2,16 +2,15 @@ lvim.plugins = {
   { "vimwiki/vimwiki" }, -- note taking plugin
   { "szw/vim-maximizer" }, -- quickly maximize current window
   -- { "andweeb/presence.nvim" }, -- flex with VIM on the discord
-  { "christoomey/vim-tmux-navigator" }, -- easier tmux navigation
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
+  { "christoomey/vim-titlecase" }, -- "gz" movement to toggle the words case
+  { "christoomey/vim-tmux-navigator" }, -- easier tmux navigation
 
   -- TODO: don't uncomment, try out native nvim-dap instead
   -- { "puremourning/vimspector" }, -- inspect tool
   { "vim-test/vim-test" },
 
   -- themes
-  { "rose-pine/neovim" },
-  { "rebelot/kanagawa.nvim" },
   { "folke/tokyonight.nvim" },
 
   -- { "editorconfig/editorconfig-vim" }, -- .editorconfig support
@@ -31,13 +30,13 @@ lvim.plugins = {
   --     require("telescope").load_extension("git_worktree")
   --   end
   -- },
-  {
-    "ruifm/gitlinker.nvim", -- quick link to the git snippet
-    event = "BufRead",
-    config = function()
-      require("plugin.gitlinker").config()
-    end,
-  },
+  -- {
+  --   "ruifm/gitlinker.nvim", -- quick link to the git snippet
+  --   event = "BufRead",
+  --   config = function()
+  --     require("plugin.gitlinker").config()
+  --   end,
+  -- },
   {
     "andymass/vim-matchup", -- better "%"
     event = "CursorMoved",
@@ -89,10 +88,6 @@ lvim.plugins = {
     ft = "json",
   },
   {
-    "folke/trouble.nvim", -- diagnostics
-    cmd = "TroubleToggle",
-  },
-  {
     "kevinhwang91/nvim-bqf", -- better quickfix window (preview, search & replace, etc...)
     event = { "BufRead", "BufNew" },
     config = function()
@@ -136,7 +131,6 @@ lvim.plugins = {
       require("autosave").setup()
     end,
   },
-  { "christoomey/vim-titlecase" }, -- "gz" movement to toggle the words case
   {
     "folke/todo-comments.nvim", -- highlight the todo, hack, note, etc... comments
     event = "BufRead",
