@@ -82,16 +82,16 @@ lvim.builtin.which_key.mappings["bo"] = {
 }
 
 -- buffer / markdown
-lvim.builtin.which_key.mappings["bm"] = { "<cmd>MarkdownPreviewToggle<cr>", "Markdown preview" }
+-- lvim.builtin.which_key.mappings["bm"] = { "<cmd>MarkdownPreviewToggle<cr>", "Markdown preview" }
 
 -- buffer / server
-lvim.builtin.which_key.mappings["bs"] = {
-  name = "Server",
-  s = { "<cmd>Bracey<cr>", "Start" },
-  k = { "<cmd>BraceyStop<cr>", "Kill" },
-  r = { "<cmd>BraceyReload<cr>", "Reload" },
-  f = { "<cmd>BraceyEval<cr>", "Force Reload" },
-}
+-- lvim.builtin.which_key.mappings["bs"] = {
+--   name = "Server",
+--   s = { "<cmd>Bracey<cr>", "Start" },
+--   k = { "<cmd>BraceyStop<cr>", "Kill" },
+--   r = { "<cmd>BraceyReload<cr>", "Reload" },
+--   f = { "<cmd>BraceyEval<cr>", "Force Reload" },
+-- }
 
 -- replace
 lvim.builtin.which_key.mappings["r"] = {
