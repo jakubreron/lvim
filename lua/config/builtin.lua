@@ -50,5 +50,5 @@ lvim.builtin.lualine.inactive_sections.lualine_a = { components.filename }
 -- lvim.builtin.nvimtree.setup.view.width = 40
 
 -- default settings from the repo
-lvim.builtin.treesitter.ensure_installed = "maintained"
+lvim.builtin.treesitter.ensure_installed = "all"
 lvim.builtin.treesitter.ignore_install = { "haskell" }
