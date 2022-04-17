@@ -2,17 +2,17 @@
 lvim.lsp.diagnostics.virtual_text = false
 
 local allowed_servers = { "emmet_ls", "tailwindcss" }
-lvim.lsp.override = vim.tbl_filter(function(server)
+lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(server)
   return not vim.tbl_contains(allowed_servers, server)
-end, lvim.lsp.override)
+end, lvim.lsp.automatic_configuration.skipped_servers)
 
 -- enable vuels (vue 2)
-lvim.lsp.override = vim.tbl_filter(function(server)
+lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(server)
   return server ~= "vuels"
-end, lvim.lsp.override)
+end, lvim.lsp.automatic_configuration.skipped_servers)
 
 -- disable volar (vue 3)
-vim.list_extend(lvim.lsp.override, { "volar" })
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "volar" })
 
 -- generic LSP settings
 -- you can set a custom on_attach function that will be used for all the language servers
