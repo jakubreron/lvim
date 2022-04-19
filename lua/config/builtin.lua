@@ -1,4 +1,8 @@
 -- activate and configure builtin plugins
+lvim.builtin.alpha.active = true
+lvim.builtin.alpha.mode = "dashboard"
+lvim.builtin.notify.active = true
+
 lvim.builtin.terminal.active = true
 lvim.builtin.terminal.direction = "horizontal"
 lvim.builtin.terminal.size = function(term)
@@ -9,10 +13,12 @@ lvim.builtin.terminal.size = function(term)
   end
 end
 
+lvim.builtin.nvimtree.setup.view.side = "left"
+lvim.builtin.nvimtree.show_icons.git = 1
+
 lvim.builtin.autopairs.active = true
 lvim.builtin.comment.active = true
 lvim.builtin.gitsigns.active = true
-lvim.builtin.notify.active = true
 -- lvim.builtin.lualine.options.globalstatus = true
 
 local components = require "lvim.core.lualine.components"
@@ -38,17 +44,26 @@ lvim.builtin.lualine.sections = {
 
 lvim.builtin.lualine.inactive_sections.lualine_a = { components.filename }
 
--- lvim.builtin.cmp.completion.completeopt = "menu,menuone,noselect,preview"
--- lvim.builtin.cmp.preselect = require("cmp").PreselectMode.None
-
 -- TODO: enable these lines only for certain projects
 -- detection patterns (custom nuxt modules fix)
 -- lvim.builtin.project.active = false
 -- lvim.builtin.project.detection_methods = { "pattern" }
 -- lvim.builtin.project.patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile" }
 
--- lvim.builtin.nvimtree.setup.view.width = 40
-
 -- default settings from the repo
-lvim.builtin.treesitter.ensure_installed = "all"
+lvim.builtin.treesitter.ensure_installed = {
+  "bash",
+  "c",
+  "javascript",
+  "json",
+  "lua",
+  "python",
+  "typescript",
+  "tsx",
+  "css",
+  "rust",
+  "java",
+  "yaml",
+}
 lvim.builtin.treesitter.ignore_install = { "haskell" }
+lvim.builtin.treesitter.highlight.enabled = true
