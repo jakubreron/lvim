@@ -22,7 +22,7 @@ lvim.plugins = {
   { "tpope/vim-dispatch" }, -- dispatch tests
   { "tpope/vim-obsession" }, -- save the session
   { "tpope/vim-unimpaired" }, -- additional mappings
-  { "tpope/vim-eunuch" }, -- UNIX commands
+  -- { "tpope/vim-eunuch" }, -- UNIX commands
 
   -- {
   --   "ThePrimeagen/git-worktree.nvim", -- git worktree integration
