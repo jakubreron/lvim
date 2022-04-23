@@ -1,10 +1,14 @@
 -- virtual text that shows a message along with the error
 lvim.lsp.diagnostics.virtual_text = false
 
-local allowed_servers = { "emmet_ls", "tailwindcss" }
-lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(server)
-  return not vim.tbl_contains(allowed_servers, server)
-end, lvim.lsp.automatic_configuration.skipped_servers)
+-- TODO: fix it properly after https://github.com/LunarVim/LunarVim/pull/2503
+require("lvim.lsp.manager").setup("tailwindcss", {})
+require("lvim.lsp.manager").setup("emmet_ls", {})
+-- local allowed_servers = { "emmet_ls", "tailwindcss" }
+-- lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(server)
+--   return not vim.tbl_contains(allowed_servers, server)
+-- end, lvim.lsp.automatic_configuration.skipped_servers)
+
 
 -- generic LSP settings
 -- you can set a custom on_attach function that will be used for all the language servers
