@@ -1,6 +1,6 @@
 lvim.plugins = {
-  { "ptzz/lf.vim" }, --
-  { "voldikss/vim-floaterm" }, --
+  -- { "ptzz/lf.vim" }, --
+  -- { "voldikss/vim-floaterm" }, --
 
   { "vimwiki/vimwiki" }, -- note taking plugin
   { "szw/vim-maximizer" }, -- quickly maximize current window
