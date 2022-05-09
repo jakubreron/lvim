@@ -8,8 +8,8 @@ lvim.keys = {
     ["Q"] = "<cmd>BufferKill<CR>",
 
     ["<C-f>"] = "<cmd>silent !tmux neww tmux-sessionizer<CR>",
-    ["<C-m>"] = "<cmd>MaximizerToggle!<CR>",
-    ["<C-s>"] = "<cmd>source Session.vim<cr>",
+    -- ["<C-m>"] = "<cmd>MaximizerToggle!<CR>",
+    -- ["<C-s>"] = "<cmd>source Session.vim<cr>",
 
     ["]q"] = "<cmd>lua vim.diagnostic.goto_next()<cr>",
     ["[q"] = "<cmd>lua vim.diagnostic.goto_prev()<cr>",
