@@ -5,10 +5,12 @@ lvim.plugins = {
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
   { "christoomey/vim-titlecase" }, -- "gz" movement to toggle the words case
   { "christoomey/vim-tmux-navigator" }, -- easier tmux navigation
-  { "felipec/vim-sanegx", event = "BufRead" }, -- go to the url using gX
   -- { "editorconfig/editorconfig-vim" }, -- .editorconfig support
 
-  { "folke/tokyonight.nvim" }, -- theme
+  { "felipec/vim-sanegx", event = "BufRead" }, -- go to the url using gX
+
+  -- themes
+  { "folke/tokyonight.nvim" },
 
   { "tpope/vim-repeat" }, -- better "."
   { "tpope/vim-sleuth" }, -- detect the relevant tabs / shifts
@@ -97,6 +99,14 @@ lvim.plugins = {
       }
     end,
   },
+  -- WARNING: this plugin doesn't work as of 09.05.2022
+  -- {
+  --   "windwp/nvim-ts-autotag", -- complete or replace the open & closing tags
+  --   event = "InsertEnter",
+  --   config = function()
+  --     require("nvim-ts-autotag").setup()
+  --   end,
+  -- },
   {
     "Pocco81/AutoSave.nvim",
     config = function()
@@ -141,16 +151,18 @@ lvim.plugins = {
   --     require("plugin.gitlinker").config()
   --   end,
   -- },
-  -- WARNING: this plugin doesn't work as of 09.05.2022
-  -- {
-  --   "windwp/nvim-ts-autotag", -- complete or replace the open & closing tags
-  --   event = "InsertEnter",
-  --   config = function()
-  --     require("nvim-ts-autotag").setup()
-  --   end,
-  -- },
 }
 
+-- vimwiki
+-- NOTE: remove syntax = "markdown" to use "[[]]" instead of "[]()"
+-- TODO: maybe migrate to the method noted above (in order to be compatible with obsidian)
 vim.g.vimwiki_list = { { path = "~/Documents/vimwiki/", syntax = "markdown", ext = ".md" } }
-vim.g["test#strategy"] = "dispatch" -- make test commands execute using dispatch.vim
-vim.b["match_words"] = "<<<<<<<:=======:>>>>>>>" -- match git conflict markers with %
+
+-- vimspector
+-- vim.g.vimspector_enable_mappings = "HUMAN"
+
+-- make test commands execute using dispatch.vim
+vim.g["test#strategy"] = "dispatch"
+
+-- match git conflict markers with %
+vim.b["match_words"] = "<<<<<<<:=======:>>>>>>>"
