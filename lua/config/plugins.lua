@@ -9,6 +9,8 @@ lvim.plugins = {
   { "christoomey/vim-titlecase" }, -- "gz" movement to toggle the words case
   { "christoomey/vim-tmux-navigator" }, -- easier tmux navigation
 
+  { "posva/vim-vue" }, -- vue syntax highlighting
+
   -- TODO: don't uncomment, try out native nvim-dap instead
   -- { "puremourning/vimspector" }, -- inspect tool
   { "vim-test/vim-test" },
