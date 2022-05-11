@@ -1,7 +1,7 @@
 -- activate and configure builtin plugins
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
-lvim.builtin.notify.active = true
+-- lvim.builtin.notify.active = true
 
 lvim.builtin.terminal.active = true
 lvim.builtin.terminal.direction = "horizontal"

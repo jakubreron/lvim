@@ -25,16 +25,6 @@ lvim.builtin.which_key.mappings["/"] = nil -- comment
 lvim.builtin.which_key.mappings["c"] = nil -- close buffer
 lvim.builtin.which_key.mappings["w"] = nil -- save
 
--- git worktrees
--- NOTE: <Enter> - switches to that worktree
--- NOTE: <c-d> - deletes that worktree
--- NOTE: <c-D> - force deletes that worktree
--- lvim.builtin.which_key.mappings["gw"] = {
---   name = "Worktrees",
---   s = { "<cmd>lua require('telescope').extensions.git_worktree.git_worktrees()<cr>", "Search the worktrees" },
---   c = { "<cmd>lua require('telescope').extensions.git_worktree.create_git_worktree()<cr>", "Create a worktree" },
--- }
-
 -- lsp
 lvim.builtin.which_key.mappings.l.j = nil -- next diagnostic
 lvim.builtin.which_key.mappings.l.k = nil -- prev diagnostic
