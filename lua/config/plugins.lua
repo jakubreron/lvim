@@ -19,7 +19,7 @@ lvim.plugins = {
   { "tpope/vim-unimpaired" }, -- additional mappings
   -- { "tpope/vim-eunuch" }, -- UNIX commands
 
-  -- TODO: ditch after 2 years old https://github.com/andymass/vim-matchup/issues/106 get resolved
+  -- TODO: ditch after this 2 years old issue https://github.com/andymass/vim-matchup/issues/106 gets resolved
   { "posva/vim-vue" }, -- vue syntax highlighting
   {
     "andymass/vim-matchup", -- better "%"
