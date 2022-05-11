@@ -8,8 +8,6 @@ lvim.keys = {
     ["Q"] = "<cmd>BufferKill<cr>",
 
     ["<C-f>"] = "<cmd>silent !tmux neww tmux-sessionizer<cr>",
-    -- ["<C-m>"] = "<cmd>MaximizerToggle!<cr>",
-    -- ["<C-s>"] = "<cmd>source Session.vim<cr>",
 
     ["]q"] = "<cmd>lua vim.diagnostic.goto_next()<cr>",
     ["[q"] = "<cmd>lua vim.diagnostic.goto_prev()<cr>",
@@ -115,28 +113,6 @@ lvim.builtin.which_key.mappings["n"] = {
   r = { "<cmd>lua require('package-info').reinstall()<cr>", "Reinstall all" },
   c = { "<cmd>lua require('package-info').change_version()<cr>", "Change version" },
 }
-
--- TODO: don't uncomment, try out native nvim-dap instead
--- debugger
--- lvim.builtin.which_key.mappings.d = {
---   name = "Debugger",
---   d = { "<cmd>call vimspector#Launch()<cr>", "Launch" },
---   l = { "<cmd>call vimspector#StepInto()<cr>", "Step Into" },
---   j = { "<cmd>call vimspector#StepOver()<cr>", "Step Over" },
---   k = { "<cmd>call vimspector#StepOut()<cr>", "Step Out" },
---   _ = { "<cmd>call vimspector#Restart()<cr>", "Restart" },
---   s = { "<cmd>call vimspector#Stop()<cr>", "Stop" },
---   t = { "<cmd>call vimspector#Reset()<cr>", "Terminate" },
---   c = { "<cmd>call vimspector#Continue()<cr>", "Continue" },
---   p = { "<cmd>call vimspector#Pause()<cr>", "Pause" },
---   r = { "<cmd>call vimspector#RunToCursor()<cr>", "Run to cursor" },
---   b = {
---     name = "Breakpoint",
---     t = { "<cmd>call vimspector#ToggleBreakpoint()<cr>", "Toggle" },
---     -- NOTE: try without the parenthesis ()
---     -- c = { "<cmd>call vimspector#ToggleConditionalBreakpoint<cr>", "Toggle conditional" },
---   },
--- }
 
 -- console
 lvim.builtin.which_key.mappings.c = {
