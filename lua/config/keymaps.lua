@@ -5,10 +5,10 @@ lvim.keys = {
 
   normal_mode = {
     ["Y"] = "y$",
-    ["Q"] = "<cmd>BufferKill<CR>",
+    ["Q"] = "<cmd>BufferKill<cr>",
 
-    ["<C-f>"] = "<cmd>silent !tmux neww tmux-sessionizer<CR>",
-    -- ["<C-m>"] = "<cmd>MaximizerToggle!<CR>",
+    ["<C-f>"] = "<cmd>silent !tmux neww tmux-sessionizer<cr>",
+    -- ["<C-m>"] = "<cmd>MaximizerToggle!<cr>",
     -- ["<C-s>"] = "<cmd>source Session.vim<cr>",
 
     ["]q"] = "<cmd>lua vim.diagnostic.goto_next()<cr>",
@@ -28,7 +28,7 @@ lvim.builtin.which_key.mappings["w"] = nil -- save
 -- lsp
 lvim.builtin.which_key.mappings.l.j = nil -- next diagnostic
 lvim.builtin.which_key.mappings.l.k = nil -- prev diagnostic
-lvim.builtin.which_key.mappings["l_"] = { "<cmd>LspRestart <CR>", "Restart LSP" }
+lvim.builtin.which_key.mappings["l_"] = { "<cmd>LspRestart <cr>", "Restart LSP" }
 
 -- search
 lvim.builtin.which_key.mappings.s.b = nil -- branches
@@ -36,7 +36,8 @@ lvim.builtin.which_key.mappings.s.M = nil -- man pages
 lvim.builtin.which_key.mappings.s.C = nil -- commands
 lvim.builtin.which_key.mappings.s.R = nil -- registers
 lvim.builtin.which_key.mappings.s.h = nil -- help
-lvim.builtin.which_key.mappings.s.p = { "<cmd>Telescope projects<CR>", "Projects" }
+lvim.builtin.which_key.mappings.s.p = { "<cmd>Telescope projects<cr>", "Projects" }
+lvim.builtin.which_key.mappings.s.f = { "<cmd>Telescope find_files hidden=true<cr>", "Find file" }
 lvim.builtin.which_key.mappings.s.c = {
   "<cmd>lua require('telescope.builtin.internal').colorscheme({enable_preview = true})<cr>", -- default is colorscheme without preview
   "Colorscheme with Preview",
@@ -63,8 +64,8 @@ lvim.builtin.which_key.mappings.b.L = nil -- soft by language
 -- buffer / ortography
 lvim.builtin.which_key.mappings["bo"] = {
   name = "Ortography",
-  e = { "<cmd>setlocal spell! spelllang=en<CR>", "English" },
-  p = { "<cmd>setlocal spell! spelllang=pl<CR>", "Polish" },
+  e = { "<cmd>setlocal spell! spelllang=en<cr>", "English" },
+  p = { "<cmd>setlocal spell! spelllang=pl<cr>", "Polish" },
 }
 
 -- buffer / markdown
