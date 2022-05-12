@@ -1,7 +1,5 @@
--- activate and configure builtin plugins
-lvim.builtin.alpha.active = true
-lvim.builtin.alpha.mode = "dashboard"
 -- lvim.builtin.notify.active = true
+lvim.builtin.lualine.options.globalstatus = true
 
 lvim.builtin.terminal.active = true
 lvim.builtin.terminal.direction = "horizontal"
@@ -13,13 +11,7 @@ lvim.builtin.terminal.size = function(term)
   end
 end
 
-lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 1
-
-lvim.builtin.autopairs.active = true
-lvim.builtin.comment.active = true
-lvim.builtin.gitsigns.active = true
--- lvim.builtin.lualine.options.globalstatus = true
 
 local components = require "lvim.core.lualine.components"
 components.filename = {
@@ -65,5 +57,3 @@ lvim.builtin.treesitter.ensure_installed = {
   "java",
   "yaml",
 }
-lvim.builtin.treesitter.ignore_install = { "haskell" }
-lvim.builtin.treesitter.highlight.enabled = true
