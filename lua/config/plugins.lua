@@ -1,3 +1,5 @@
+-- v0.0.1 (2022/02/02)
+
 lvim.plugins = {
   { "vimwiki/vimwiki" }, -- note taking plugin
   { "vim-test/vim-test" }, -- unit tests
@@ -25,13 +27,6 @@ lvim.plugins = {
     event = "CursorMoved",
     config = function()
       vim.g.matchup_matchparen_offscreen = { method = "popup" }
-    end,
-  },
-  {
-    "monaqa/dial.nvim", -- better C-a, C-x
-    event = "BufRead",
-    config = function()
-      require("plugin.dial").config()
     end,
   },
   {
