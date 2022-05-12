@@ -1,4 +1,7 @@
 -- lvim.builtin.notify.active = true
+
+lvim.builtin.bufferline.options.numbers = "buffer_id"
+
 lvim.builtin.lualine.options.globalstatus = true
 
 lvim.builtin.terminal.active = true
