@@ -5,7 +5,7 @@ lvim.keys = {
 
   normal_mode = {
     ["Y"] = "y$",
-    ["Q"] = "bdelete! %d",
+    ["Q"] = "<cmd>BufferKill<cr>",
 
     ["<C-f>"] = "<cmd>silent !tmux neww tmux-sessionizer<cr>",
 

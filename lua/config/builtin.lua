@@ -14,8 +14,6 @@ lvim.builtin.terminal.size = function(term)
   end
 end
 
-lvim.builtin.nvimtree.show_icons.git = 1
-
 local components = require "lvim.core.lualine.components"
 components.filename = {
   "filename",
