@@ -97,6 +97,11 @@ lvim.autocommands.custom_groups = {
   },
   {
     "VimLeave",
+    "$DOTFILES_DIR/voidrice/.config/picom.conf",
+    "!cd $DOTFILES_DIR/voidrice; git add .; git commit -m 'config(picom): ⚙️ auto-commit changes'; git push",
+  },
+  {
+    "VimLeave",
     "$DOTFILES_DIR/voidrice/.config/shell/profile",
     "!cd $DOTFILES_DIR/voidrice; git add .; git commit -m 'config(profile): ⚙️ auto-commit changes'; git push",
   },
