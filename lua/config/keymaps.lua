@@ -40,6 +40,13 @@ lvim.builtin.which_key.mappings.s.c = {
   "<cmd>lua require('telescope.builtin.internal').colorscheme({enable_preview = true})<cr>", -- default is colorscheme without preview
   "Colorscheme with Preview",
 }
+lvim.builtin.which_key.mappings.s.R = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" }
+lvim.builtin.which_key.mappings.s.r = {
+  name = "Replace",
+  r = { ":%s@<c-r><c-w>@<c-r><c-w>@gc<c-f>$F@i", "Find and replace" },
+  w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
+  a = { "<cmd>lua require('spectre').open()<cr>", "Replace anything" },
+}
 
 lvim.builtin.telescope.on_config_done = function()
   local actions = require "telescope.actions"
@@ -78,14 +85,6 @@ lvim.builtin.which_key.mappings["bo"] = {
 --   r = { "<cmd>BraceyReload<cr>", "Reload" },
 --   f = { "<cmd>BraceyEval<cr>", "Force Reload" },
 -- }
-
--- replace
-lvim.builtin.which_key.mappings["r"] = {
-  name = "Replace",
-  r = { ":%s@<c-r><c-w>@<c-r><c-w>@gc<c-f>$F@i", "Find and replace" },
-  w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
-  a = { "<cmd>lua require('spectre').open()<cr>", "Replace anything" },
-}
 
 lvim.builtin.which_key.mappings["t"] = {
   name = "Test",
