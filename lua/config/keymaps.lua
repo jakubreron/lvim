@@ -120,16 +120,3 @@ lvim.builtin.which_key.mappings.c = {
   v = { "<C-w>v<cmd>term<cr>", "Vertical" },
   s = { "<C-w>s<cmd>term<cr>", "Horizontal" },
 }
-
--- Remaps for the refactoring operations currently offered by the plugin
-lvim.builtin.which_key.mappings.r.e = {"<cmd>lua require('refactoring').refactor('Extract Function')<CR>", "Extract Function"}
-lvim.builtin.which_key.mappings.r.f = {"<cmd>lua require('refactoring').refactor('Extract Function To File')<CR>", "Extract Function To File"}
-lvim.builtin.which_key.mappings.r.v = {"<cmd>lua require('refactoring').refactor('Extract Variable')<CR>", "Extract Variable"}
-lvim.builtin.which_key.mappings.r.i = {"<cmd>lua require('refactoring').refactor('Inline Variable')<CR>", "Inline Variable"}
-
--- Extract block doesn't need visual mode
-lvim.builtin.which_key.mappings.r.b = {"lua require('refactoring').refactor('Extract Block')<CR>", "Extract Block"}
-lvim.builtin.which_key.mappings.r.b = {"lua require('refactoring').refactor('Extract Block To File')<CR>", "Extract Block To File"}
-
--- Inline variable can also pick up the identifier currently under the cursor without visual mode
-lvim.builtin.which_key.mappings.r.i = {"lua require('refactoring').refactor('Inline Variable')<CR>", "Inline Variable"}
