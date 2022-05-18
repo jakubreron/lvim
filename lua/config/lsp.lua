@@ -10,16 +10,18 @@ require("lvim.lsp.manager").setup("vuels", {})
 -- you can set a custom on_attach function that will be used for all the language servers
 -- See <https://github.com/neovim/nvim-lspconfig#keybindings-and-completion>
 lvim.lsp.on_attach_callback = function(client, bufnr)
-  local function buf_set_option(...)
-    vim.api.nvim_buf_set_option(bufnr, ...)
-  end
   --Enable completion triggered by <c-x><c-o>
-  buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
+  vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
   if client.name == "tsserver" or client.name == "jsonls" then
     client.resolved_capabilities.document_formatting = false
     client.resolved_capabilities.document_range_formatting = false
   end
+
+  require("lsp_signature").on_attach({
+    floating_window = false, -- show hint in a floating window, set to false for virtual text only mode
+    transparency = 100, -- disabled by default, allow floating win transparent value 1~100
+  }, bufnr)
 end
 
 local formatters = require "lvim.lsp.null-ls.formatters"
