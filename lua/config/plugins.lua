@@ -159,7 +159,7 @@ vim.g.vimwiki_list = { { path = "~/Documents/vimwiki/", syntax = "markdown", ext
 vim.g["test#strategy"] = "dispatch" -- make test commands execute using dispatch.vim
 vim.b["match_words"] = "<<<<<<<:=======:>>>>>>>" -- match git conflict markers with %
 
--- HACK: requiring lsp_signature in packer config function doesn't work as of 09.05.2022
+-- HACK: requiring lsp_signature in packer config function doesn't work as of 18.05.2022
 require("lsp_signature").setup {
   hint_enable = false, -- disable virtual text
   hint_prefix = "", -- remove panda icon from virtual text
