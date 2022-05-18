@@ -120,6 +120,12 @@ lvim.plugins = {
   },
   {
     "ray-x/lsp_signature.nvim",
+    -- config = function()
+    --   require("lsp_signature").setup {
+    --     bind = true,
+    --     handler_opts = { border = "single" },
+    --   }
+    -- end,
     event = "BufRead",
   },
   -- {
@@ -152,3 +158,9 @@ lvim.plugins = {
 vim.g.vimwiki_list = { { path = "~/Documents/vimwiki/", syntax = "markdown", ext = ".md" } }
 vim.g["test#strategy"] = "dispatch" -- make test commands execute using dispatch.vim
 vim.b["match_words"] = "<<<<<<<:=======:>>>>>>>" -- match git conflict markers with %
+
+-- HACK: requiring lsp_signature in packer config function doesn't work as of 09.05.2022
+require("lsp_signature").setup {
+  hint_enable = false,
+  handler_opts = { border = "single" },
+}

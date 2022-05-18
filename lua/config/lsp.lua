@@ -18,10 +18,9 @@ lvim.lsp.on_attach_callback = function(client, bufnr)
     client.resolved_capabilities.document_range_formatting = false
   end
 
-  require("lsp_signature").on_attach({
-    floating_window = false, -- show hint in a floating window, set to false for virtual text only mode
-    transparency = 100, -- disabled by default, allow floating win transparent value 1~100
-  }, bufnr)
+  -- require("lsp_signature").on_attach({
+  --   hint_prefix = "", -- Panda for parameter
+  -- }, bufnr)
 end
 
 local formatters = require "lvim.lsp.null-ls.formatters"

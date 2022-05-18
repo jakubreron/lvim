@@ -26,6 +26,7 @@ local function packageinfo()
   return require("package-info").get_status()
 end
 
+
 lvim.builtin.lualine.sections = {
   lualine_c = {
     components.diff,
