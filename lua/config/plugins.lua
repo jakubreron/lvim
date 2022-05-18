@@ -161,6 +161,7 @@ vim.b["match_words"] = "<<<<<<<:=======:>>>>>>>" -- match git conflict markers w
 
 -- HACK: requiring lsp_signature in packer config function doesn't work as of 09.05.2022
 require("lsp_signature").setup {
-  hint_enable = false,
-  handler_opts = { border = "single" },
+  hint_enable = false, -- disable virtual text
+  hint_prefix = "", -- remove panda icon from virtual text
+  handler_opts = { border = "single" }, -- show current argument in the popup
 }
