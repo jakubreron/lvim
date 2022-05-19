@@ -123,6 +123,8 @@ lvim.plugins = {
     -- config = function()
     --   require("lsp_signature").setup {
     --     bind = true,
+    --     hint_enable = false, -- disable virtual text
+    --     hint_prefix = "", -- remove panda icon from virtual text
     --     handler_opts = { border = "single" },
     --   }
     -- end,
