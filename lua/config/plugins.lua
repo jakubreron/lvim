@@ -1,4 +1,15 @@
--- v0.0.1 (2022/02/02)
+vim.g.vimwiki_list = { { path = "~/Documents/vimwiki/", syntax = "markdown", ext = ".md" } }
+vim.g["test#strategy"] = "dispatch" -- make test commands execute using dispatch.vim
+vim.b["match_words"] = "<<<<<<<:=======:>>>>>>>" -- match git conflict markers with %
+
+-- HACK: requiring lsp_signature in packer config function doesn't work as of 18.05.2022
+local signature_config = {
+  bind = true,
+  hint_enable = false, -- disable virtual text
+  hint_prefix = "", -- remove panda icon from virtual text
+  handler_opts = { border = "single" }, -- show current argument in the popup
+}
+require("lsp_signature").setup(signature_config)
 
 lvim.plugins = {
   { "vimwiki/vimwiki" }, -- note taking plugin
@@ -120,14 +131,9 @@ lvim.plugins = {
   },
   {
     "ray-x/lsp_signature.nvim",
-    -- config = function()
-    --   require("lsp_signature").setup {
-    --     bind = true,
-    --     hint_enable = false, -- disable virtual text
-    --     hint_prefix = "", -- remove panda icon from virtual text
-    --     handler_opts = { border = "single" },
-    --   }
-    -- end,
+    config = function()
+      require("lsp_signature").setup(signature_config)
+    end,
     event = "BufRead",
   },
   -- {
@@ -155,15 +161,4 @@ lvim.plugins = {
   --     require("nvim-ts-autotag").setup()
   --   end,
   -- },
-}
-
-vim.g.vimwiki_list = { { path = "~/Documents/vimwiki/", syntax = "markdown", ext = ".md" } }
-vim.g["test#strategy"] = "dispatch" -- make test commands execute using dispatch.vim
-vim.b["match_words"] = "<<<<<<<:=======:>>>>>>>" -- match git conflict markers with %
-
--- HACK: requiring lsp_signature in packer config function doesn't work as of 18.05.2022
-require("lsp_signature").setup {
-  hint_enable = false, -- disable virtual text
-  hint_prefix = "", -- remove panda icon from virtual text
-  handler_opts = { border = "single" }, -- show current argument in the popup
 }
