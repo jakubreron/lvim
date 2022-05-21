@@ -49,14 +49,14 @@ local filetypes = {
 }
 
 formatters.setup {
-  { exe = "eslint_d", filetypes = filetypes.eslint },
-  { exe = "stylelint", filetypes = filetypes.stylelint },
-  { exe = "prettierd", filetypes = filetypes.prettier },
-  { exe = "stylua", filetypes = { "lua" } },
+  { command = "eslint_d", filetypes = filetypes.eslint },
+  { command = "stylelint", filetypes = filetypes.stylelint },
+  { command = "prettierd", filetypes = filetypes.prettier },
+  { command = "stylua", filetypes = { "lua" } },
 }
 
 linters.setup {
-  { exe = "eslint_d", filetypes = filetypes.eslint },
-  { exe = "stylelint", filetypes = filetypes.stylelint },
-  { exe = "luacheck", filetypes = { "lua" } },
+  { command = "eslint_d", filetypes = filetypes.eslint },
+  { command = "stylelint", filetypes = filetypes.stylelint },
+  { command = "luacheck", filetypes = { "lua" } },
 }
