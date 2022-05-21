@@ -2,14 +2,12 @@ vim.g.vimwiki_list = { { path = "~/Documents/vimwiki/", syntax = "markdown", ext
 vim.g["test#strategy"] = "dispatch" -- make test commands execute using dispatch.vim
 vim.b["match_words"] = "<<<<<<<:=======:>>>>>>>" -- match git conflict markers with %
 
--- HACK: requiring lsp_signature in packer config function doesn't work as of 18.05.2022
--- local signature_config = {
---   bind = true,
---   hint_enable = false, -- disable virtual text
---   hint_prefix = "", -- remove panda icon from virtual text
---   handler_opts = { border = "single" }, -- show current argument in the popup
--- }
--- require("lsp_signature").setup(signature_config)
+local lsp_signature_config = {
+  bind = true,
+  hint_enable = false, -- disable virtual text
+  hint_prefix = "", -- remove panda icon from virtual text
+  handler_opts = { border = "single" }, -- show current argument in the popup
+}
 
 lvim.plugins = {
   { "vimwiki/vimwiki" }, -- note taking plugin
@@ -129,13 +127,13 @@ lvim.plugins = {
     requires = "hrsh7th/nvim-cmp",
     event = "InsertEnter",
   },
-  -- {
-  --   "ray-x/lsp_signature.nvim",
-  --   config = function()
-  --     require("lsp_signature").setup(signature_config)
-  --   end,
-  --   event = "BufRead",
-  -- },
+  {
+    "ray-x/lsp_signature.nvim",
+    config = function()
+      require("lsp_signature").setup(lsp_signature_config)
+    end,
+    event = "BufRead",
+  },
   -- {
   --   "iamcco/markdown-preview.nvim", -- localhost markdown server
   --   run = "cd app && yarn install",
@@ -162,3 +160,6 @@ lvim.plugins = {
   --   end,
   -- },
 }
+
+-- HACK: requiring lsp_signature in packer config function doesn't work as of 18.05.2022
+require("lsp_signature").setup(lsp_signature_config)
