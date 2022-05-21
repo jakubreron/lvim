@@ -17,10 +17,6 @@ lvim.lsp.on_attach_callback = function(client, bufnr)
     client.resolved_capabilities.document_formatting = false
     client.resolved_capabilities.document_range_formatting = false
   end
-
-  -- require("lsp_signature").on_attach({
-  --   hint_prefix = "", -- Panda for parameter
-  -- }, bufnr)
 end
 
 local formatters = require "lvim.lsp.null-ls.formatters"
