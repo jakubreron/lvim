@@ -74,6 +74,11 @@ vim.api.nvim_create_autocmd("VimLeave", {
 })
 
 vim.api.nvim_create_autocmd("VimLeave", {
+  pattern = { vim.fn.expand("$DOTFILES_DIR/universal/.config/git/.gitignore_global") },
+  command = "!cd $DOTFILES_DIR/universal; git add .; git commit -m 'config(gitignore_global): ⚙️ auto-commit changes'; git push"
+})
+
+vim.api.nvim_create_autocmd("VimLeave", {
   pattern = { vim.fn.expand("$DOTFILES_DIR/universal/.ticker.yaml") },
   command = "!cd $DOTFILES_DIR/universal; git add .; git commit -m 'docs(ticker): ✏️ auto-commit changes'; git push"
 })
