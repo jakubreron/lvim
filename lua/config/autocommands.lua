@@ -59,7 +59,7 @@ vim.api.nvim_create_autocmd("VimLeave", {
 })
 
 vim.api.nvim_create_autocmd("VimLeave", {
-  pattern = { vim.fn.expand("$DOTFILES_DIR/universal/Documents/vimwiki/*") },
+  pattern = { vim.fn.expand("$DOTFILES_DIR/universal/Documents/vimwiki/**/*.*") },
   command = "!cd $DOTFILES_DIR/universal/Documents/vimwiki/*; git add *; git commit -m 'docs(vimwiki): ✏️ auto-commit changes'; git push"
 })
 
