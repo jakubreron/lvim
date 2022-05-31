@@ -4,7 +4,7 @@ lvim.lsp.diagnostics.virtual_text = false
 -- TODO: fix it properly after https://github.com/LunarVim/LunarVim/pull/2503
 require("lvim.lsp.manager").setup("tailwindcss", {})
 require("lvim.lsp.manager").setup("emmet_ls", {})
-require("lvim.lsp.manager").setup("vuels", {})
+-- require("lvim.lsp.manager").setup("vuels", {})
 
 -- generic LSP settings
 -- you can set a custom on_attach function that will be used for all the language servers
