@@ -11,6 +11,9 @@ lvim.keys = {
 
     ["]q"] = "<cmd>lua vim.diagnostic.goto_next()<cr>",
     ["[q"] = "<cmd>lua vim.diagnostic.goto_prev()<cr>",
+
+    ["]c"] = "<cmd>lua require'gitsigns'.next_hunk()<cr><cmd>lua require 'gitsigns'.preview_hunk()<cr>",
+    ["[c"] = "<cmd>lua require'gitsigns'.prev_hunk()<cr><cmd>lua require 'gitsigns'.preview_hunk()<cr>",
   },
 }
 
@@ -22,6 +25,10 @@ lvim.builtin.which_key.mappings["f"] = nil -- find file (already binded to sf)
 lvim.builtin.which_key.mappings["/"] = nil -- comment
 lvim.builtin.which_key.mappings["c"] = nil -- close buffer
 lvim.builtin.which_key.mappings["w"] = nil -- save
+
+-- lsp
+lvim.builtin.which_key.mappings.g.j = nil -- next change
+lvim.builtin.which_key.mappings.g.k = nil -- next change
 
 -- lsp
 lvim.builtin.which_key.mappings.l.j = nil -- next diagnostic
