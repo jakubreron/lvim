@@ -20,6 +20,7 @@ lvim.plugins = {
   -- { "editorconfig/editorconfig-vim" }, -- .editorconfig support
 
   { "folke/tokyonight.nvim" }, -- theme
+  { "catppuccin/nvim", as = "catppuccin" }, -- theme
 
   { "tpope/vim-repeat" }, -- better "."
   { "tpope/vim-sleuth" }, -- detect the relevant tabs / shifts
