@@ -2,8 +2,8 @@
 -- lvim.transparent_window = true
 
 -- NOTE: Catppuccin
-lvim.colorscheme = "catppuccin"
-vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
+-- lvim.colorscheme = "catppuccin"
+-- vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
 
 -- NOTE: Tokyonight
 -- lvim.colorscheme = "tokyonight"
