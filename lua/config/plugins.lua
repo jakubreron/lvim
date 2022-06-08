@@ -33,7 +33,8 @@ lvim.plugins = {
 
   {
     "andymass/vim-matchup", -- better "%"
-    requires = "posva/vim-vue", -- vue syntax highlighting and % fix
+    -- requires = "posva/vim-vue", -- vue syntax highlighting and % fix
+    requires = "leafOfTree/vim-vue-plugin", -- vue syntax highlighting and % fix
     event = "CursorMoved",
     config = function()
       vim.g.matchup_matchparen_offscreen = { method = "popup" }
