@@ -44,18 +44,4 @@ lvim.builtin.lualine.inactive_sections.lualine_a = { components.filename }
 -- lvim.builtin.project.detection_methods = { "pattern" }
 -- lvim.builtin.project.patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile" }
 
--- default settings from the repo
-lvim.builtin.treesitter.ensure_installed = {
-  "bash",
-  "c",
-  "javascript",
-  "json",
-  "lua",
-  "python",
-  "typescript",
-  "tsx",
-  "css",
-  "rust",
-  "java",
-  "yaml",
-}
+lvim.builtin.treesitter.ensure_installed = "maintained"
