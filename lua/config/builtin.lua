@@ -44,4 +44,5 @@ lvim.builtin.lualine.inactive_sections.lualine_a = { components.filename }
 -- lvim.builtin.project.detection_methods = { "pattern" }
 -- lvim.builtin.project.patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile" }
 
-lvim.builtin.treesitter.ensure_installed = "maintained"
+-- default settings from the repo
+lvim.builtin.treesitter.ensure_installed = "all"
