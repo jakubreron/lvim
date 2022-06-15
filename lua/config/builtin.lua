@@ -26,7 +26,6 @@ local function packageinfo()
   return require("package-info").get_status()
 end
 
-
 lvim.builtin.lualine.sections = {
   lualine_c = {
     components.diff,
@@ -38,12 +37,7 @@ lvim.builtin.lualine.sections = {
 
 lvim.builtin.lualine.inactive_sections.lualine_a = { components.filename }
 
--- TODO: enable these lines only for certain projects
--- detection patterns (custom nuxt modules fix)
--- lvim.builtin.project.active = false
--- lvim.builtin.project.detection_methods = { "pattern" }
--- lvim.builtin.project.patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile" }
-
 -- default settings from the repo
 lvim.builtin.treesitter.ensure_installed = "all"
+-- TODO: remove phpdoc from ignored after they fix the upstream: https://github.com/nvim-treesitter/nvim-treesitter/issues/2837
 lvim.builtin.treesitter.ignore_install = { "phpdoc" }
