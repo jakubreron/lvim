@@ -18,6 +18,12 @@ lvim.plugins = {
   { "christoomey/vim-tmux-navigator" }, -- easier tmux navigation
   { "felipec/vim-sanegx", event = "BufRead" }, -- go to the url using gX
   -- { "editorconfig/editorconfig-vim" }, -- .editorconfig support
+  {
+    "tiagovla/scope.nvim",
+    config = function()
+      require("scope").setup()
+    end,
+  }, -- better bufferline
 
   { "folke/tokyonight.nvim" }, -- theme
   { "catppuccin/nvim", as = "catppuccin" }, -- theme
