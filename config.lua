@@ -1,4 +1,4 @@
-require("config.shortcuts")
+require("config.shared-with-vim")
 
 require("config.general")
 
