@@ -23,7 +23,7 @@ lvim.plugins = {
     config = function()
       require("scope").setup()
     end,
-  }, -- better bufferline
+  }, -- better bufferline (sort buffers into tabs)
 
   { "folke/tokyonight.nvim" }, -- tokyonight theme
   { "catppuccin/nvim", as = "catppuccin" }, -- catppuccin theme
@@ -40,7 +40,6 @@ lvim.plugins = {
 
   {
     "andymass/vim-matchup", -- better "%"
-    -- requires = "posva/vim-vue", -- vue syntax highlighting and % fix
     requires = "leafOfTree/vim-vue-plugin", -- vue syntax highlighting and % fix
     event = "CursorMoved",
     config = function()
@@ -54,7 +53,7 @@ lvim.plugins = {
     end,
   },
   {
-    "windwp/nvim-spectre", -- search & replace
+    "windwp/nvim-spectre", -- search & replace throughout all the files (without vimgrepping)
     event = "BufRead",
     config = function()
       require("plugin.spectre").config()
@@ -110,7 +109,7 @@ lvim.plugins = {
     end,
   },
   {
-    "Pocco81/AutoSave.nvim",
+    "Pocco81/AutoSave.nvim", -- autosave
     config = function()
       require("autosave").setup()
     end,
@@ -123,7 +122,7 @@ lvim.plugins = {
     end,
   },
   {
-    "tzachar/cmp-tabnine",
+    "tzachar/cmp-tabnine", -- AI autocompletion
     config = function()
       local tabnine = require "cmp_tabnine.config"
       tabnine:setup {
@@ -137,7 +136,7 @@ lvim.plugins = {
     event = "InsertEnter",
   },
   {
-    "ray-x/lsp_signature.nvim",
+    "ray-x/lsp_signature.nvim", -- show function arguments as you type
     config = function()
       require("lsp_signature").setup(lsp_signature_config)
     end,
