@@ -1,8 +1,6 @@
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 
 -- TODO: clean this atrocity later, create a proper array with a loop or check if lvim.autocmds is fixed (it does not work as of 25.05.2022)
--- TODO: find a way to execute a command without !cd (base the directory on current file location)
-
 vim.api.nvim_create_autocmd("VimLeave", {
   pattern = { vim.fn.expand "$DOTFILES_DIR/universal/.ticker.yaml" },
   command = "!git add .; git commit -m 'docs(ticker): ✏️ auto-commit changes'; git push",

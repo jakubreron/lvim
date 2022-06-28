@@ -1,10 +1,5 @@
 lvim.keys = {
-  -- insert_mode = {
-  --
-  -- },
-
   normal_mode = {
-    ["Y"] = "y$",
     ["Q"] = "<cmd>BufferKill<cr>",
 
     ["<C-f>"] = "<cmd>silent !tmux neww tmux-sessionizer<cr>",

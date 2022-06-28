@@ -1,4 +1,4 @@
-require("config.shared-with-vim")
+require("config.native")
 
 require("config.general")
 
