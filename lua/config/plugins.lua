@@ -25,9 +25,9 @@ lvim.plugins = {
     end,
   }, -- better bufferline
 
-  { "folke/tokyonight.nvim" }, -- theme
-  { "catppuccin/nvim", as = "catppuccin" }, -- theme
-  { "Mofiqul/vscode.nvim" }, -- theme
+  { "folke/tokyonight.nvim" }, -- tokyonight theme
+  { "catppuccin/nvim", as = "catppuccin" }, -- catppuccin theme
+  { "christianchiarulli/nvcode-color-schemes.vim" }, -- a bunch of generated thees
 
   { "tpope/vim-repeat" }, -- better "."
   { "tpope/vim-sleuth" }, -- detect the relevant tabs / shifts
