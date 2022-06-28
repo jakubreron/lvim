@@ -1,9 +1,12 @@
 -- NOTE: General theme settings
 -- lvim.transparent_window = true
 
--- NOTE: Catppuccin
+-- NOTE: VSCode
 lvim.colorscheme = "nvcode"
-vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
+
+-- NOTE: Catppuccin
+-- lvim.colorscheme = "catppuccin"
+-- vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
 
 -- NOTE: Tokyonight
 -- lvim.colorscheme = "tokyonight"
