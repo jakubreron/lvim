@@ -43,14 +43,30 @@ local filetypes = {
 }
 
 formatters.setup {
+  { command = "prettierd", filetypes = filetypes.prettier },
   { command = "eslint_d", filetypes = filetypes.eslint },
   { command = "stylelint", filetypes = filetypes.stylelint },
-  { command = "prettierd", filetypes = filetypes.prettier },
   { command = "stylua", filetypes = { "lua" } },
+  {
+    command = "markdownlint",
+    filetypes = { "markdown" },
+    -- cwd = function(params)
+    --   local u = require "null-ls.utils"
+    --   return u.root_pattern ".markdownlintrc"(params.bufname)
+    -- end,
+  },
 }
 
 linters.setup {
   { command = "eslint_d", filetypes = filetypes.eslint },
   { command = "stylelint", filetypes = filetypes.stylelint },
   { command = "luacheck", filetypes = { "lua" } },
+  {
+    command = "markdownlint",
+    filetypes = { "markdown" },
+    -- cwd = function(params)
+    --   local u = require "null-ls.utils"
+    --   return u.root_pattern ".markdownlintrc"(params.bufname)
+    -- end,
+  },
 }
