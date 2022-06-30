@@ -47,12 +47,26 @@ formatters.setup {
   { command = "eslint_d", filetypes = filetypes.eslint },
   { command = "stylelint", filetypes = filetypes.stylelint },
   { command = "stylua", filetypes = { "lua" } },
-  { command = "markdownlint", filetypes = { "markdown", "vimwiki" } },
+  {
+    command = "markdownlint",
+    filetypes = { "markdown", "vimwiki" },
+    cwd = function(params)
+      local u = require "null-ls.utils"
+      return u.root_pattern ".markdownlintrc"(params.bufname)
+    end,
+  },
 }
 
 linters.setup {
   { command = "eslint_d", filetypes = filetypes.eslint },
   { command = "stylelint", filetypes = filetypes.stylelint },
   { command = "luacheck", filetypes = { "lua" } },
-  { command = "markdownlint", filetypes = { "markdown", "vimwiki" } },
+  {
+    command = "markdownlint",
+    filetypes = { "markdown", "vimwiki" },
+    cwd = function(params)
+      local u = require "null-ls.utils"
+      return u.root_pattern ".markdownlintrc"(params.bufname)
+    end,
+  },
 }
