@@ -1,19 +1,22 @@
 lvim.keys = {
   normal_mode = {
-    ["Q"] = "<cmd>BufferKill<cr>",
+    ["<S-l>"] = ":tabnext<CR>",
+    ["<S-h>"] = ":tabprev<CR>",
 
-    ["<C-f>"] = "<cmd>silent !tmux neww tmux-sessionizer<cr>",
+    ["Q"] = ":BufferKill<CR>",
 
-    ["]q"] = "<cmd>lua vim.diagnostic.goto_next()<cr>",
-    ["[q"] = "<cmd>lua vim.diagnostic.goto_prev()<cr>",
+    ["<C-f>"] = ":silent !tmux neww tmux-sessionizer<CR>",
 
-    ["]c"] = "<cmd>lua require'gitsigns'.next_hunk()<cr><cmd>lua require 'gitsigns'.preview_hunk()<cr>",
-    ["[c"] = "<cmd>lua require'gitsigns'.prev_hunk()<cr><cmd>lua require 'gitsigns'.preview_hunk()<cr>",
+    ["]q"] = ":lua vim.diagnostic.goto_next()<CR>",
+    ["[q"] = ":lua vim.diagnostic.goto_prev()<CR>",
+
+    ["]c"] = ":lua require'gitsigns'.next_hunk()<CR>:lua require 'gitsigns'.preview_hunk()<CR>",
+    ["[c"] = ":lua require'gitsigns'.prev_hunk()<CR>:lua require 'gitsigns'.preview_hunk()<CR>",
   },
 }
 
 -- single which_keys
-lvim.builtin.which_key.mappings["q"] = { "<cmd>qa<cr>", "Quit" }
+lvim.builtin.which_key.mappings["q"] = { ":qa<CR>", "Quit" }
 
 lvim.builtin.which_key.mappings["T"] = nil -- treesitter
 lvim.builtin.which_key.mappings["f"] = nil -- find file (already binded to sf)
@@ -28,7 +31,7 @@ lvim.builtin.which_key.mappings.g.k = nil -- next change
 -- lsp
 lvim.builtin.which_key.mappings.l.j = nil -- next diagnostic
 lvim.builtin.which_key.mappings.l.k = nil -- prev diagnostic
-lvim.builtin.which_key.mappings["l_"] = { "<cmd>LspRestart <cr>", "Restart LSP" }
+lvim.builtin.which_key.mappings["l_"] = { ":LspRestart <CR>", "Restart LSP" }
 
 -- search
 lvim.builtin.which_key.mappings.s.b = nil -- branches
@@ -36,18 +39,18 @@ lvim.builtin.which_key.mappings.s.M = nil -- man pages
 lvim.builtin.which_key.mappings.s.C = nil -- commands
 lvim.builtin.which_key.mappings.s.R = nil -- registers
 lvim.builtin.which_key.mappings.s.h = nil -- help
-lvim.builtin.which_key.mappings.s.p = { "<cmd>Telescope projects<cr>", "Projects" }
-lvim.builtin.which_key.mappings.s.f = { "<cmd>Telescope find_files hidden=true<cr>", "Find file" }
+lvim.builtin.which_key.mappings.s.p = { ":Telescope projects<CR>", "Projects" }
+lvim.builtin.which_key.mappings.s.f = { ":Telescope find_files hidden=true<CR>", "Find file" }
 lvim.builtin.which_key.mappings.s.c = {
-  "<cmd>lua require('telescope.builtin.internal').colorscheme({enable_preview = true})<cr>", -- default is colorscheme without preview
+  ":lua require('telescope.builtin.internal').colorscheme({enable_preview = true})<CR>", -- default is colorscheme without preview
   "Colorscheme with Preview",
 }
-lvim.builtin.which_key.mappings.s.R = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" }
+lvim.builtin.which_key.mappings.s.R = { ":Telescope oldfiles<CR>", "Open Recent File" }
 lvim.builtin.which_key.mappings.s.r = {
   name = "Replace",
   r = { ":%s@<c-r><c-w>@<c-r><c-w>@gc<c-f>$F@i", "Find and replace" },
-  w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
-  a = { "<cmd>lua require('spectre').open()<cr>", "Replace anything" },
+  w = { ":lua require('spectre').open_visual({select_word=true})<CR>", "Replace Word" },
+  a = { ":lua require('spectre').open()<CR>", "Replace anything" },
 }
 
 -- lvim.builtin.telescope.on_config_done = function()
@@ -67,58 +70,58 @@ lvim.builtin.which_key.mappings.b.j = nil -- buffer jump
 lvim.builtin.which_key.mappings.b.f = nil -- buffer find
 lvim.builtin.which_key.mappings.b.D = nil -- soft by directory
 lvim.builtin.which_key.mappings.b.L = nil -- soft by language
-lvim.builtin.which_key.mappings.b.c = { "<cmd>%bd!<cr>", "Close all" }
+lvim.builtin.which_key.mappings.b.c = { ":%bd!<CR>", "Close all" }
 
 -- buffer / ortography
 lvim.builtin.which_key.mappings["bo"] = {
   name = "Ortography",
-  e = { "<cmd>setlocal spell! spelllang=en<cr>", "English" },
-  p = { "<cmd>setlocal spell! spelllang=pl<cr>", "Polish" },
+  e = { ":setlocal spell! spelllang=en<CR>", "English" },
+  p = { ":setlocal spell! spelllang=pl<CR>", "Polish" },
 }
 
 -- buffer / markdown
--- lvim.builtin.which_key.mappings["bm"] = { "<cmd>MarkdownPreviewToggle<cr>", "Markdown preview" }
+-- lvim.builtin.which_key.mappings["bm"] = { ":MarkdownPreviewToggle<CR>", "Markdown preview" }
 
 -- buffer / server
 -- lvim.builtin.which_key.mappings["bs"] = {
 --   name = "Server",
---   s = { "<cmd>Bracey<cr>", "Start" },
---   k = { "<cmd>BraceyStop<cr>", "Kill" },
---   r = { "<cmd>BraceyReload<cr>", "Reload" },
---   f = { "<cmd>BraceyEval<cr>", "Force Reload" },
+--   s = { ":Bracey<CR>", "Start" },
+--   k = { ":BraceyStop<CR>", "Kill" },
+--   r = { ":BraceyReload<CR>", "Reload" },
+--   f = { ":BraceyEval<CR>", "Force Reload" },
 -- }
 
 lvim.builtin.which_key.mappings["t"] = {
   name = "Test",
-  n = { "<cmd>TestNearest<cr>", "Nearest" },
-  f = { "<cmd>TestFile<cr>", "File" },
-  s = { "<cmd>TestSuite<cr>", "Suite" },
-  l = { "<cmd>TestLast<cr>", "Last" },
-  v = { "<cmd>TestVisit<cr>", "Visit" },
+  n = { ":TestNearest<CR>", "Nearest" },
+  f = { ":TestFile<CR>", "File" },
+  s = { ":TestSuite<CR>", "Suite" },
+  l = { ":TestLast<CR>", "Last" },
+  v = { ":TestVisit<CR>", "Visit" },
 }
 
 -- todos
 lvim.builtin.which_key.mappings["T"] = {
   name = "Todo",
-  q = { "<cmd>TodoQuickFix<cr>", "Todo Quick Fix" },
-  s = { "<cmd>TodoTelescope<cr>", "Todo Search" },
+  q = { ":TodoQuickFix<CR>", "Todo Quick Fix" },
+  s = { ":TodoTelescope<CR>", "Todo Search" },
 }
 
 -- npm
 lvim.builtin.which_key.mappings["n"] = {
   name = "NPM",
-  f = { "<cmd>lua require('package-info').show({ force = true })<cr>", "Fetch" },
-  h = { "<cmd>lua require('package-info').hide()<cr>", "Hide" },
-  d = { "<cmd>lua require('package-info').delete()<cr>", "Delete" },
-  u = { "<cmd>lua require('package-info').update()<cr>", "Update" },
-  i = { "<cmd>lua require('package-info').install()<cr>", "Install" },
-  r = { "<cmd>lua require('package-info').reinstall()<cr>", "Reinstall all" },
-  c = { "<cmd>lua require('package-info').change_version()<cr>", "Change version" },
+  f = { ":lua require('package-info').show({ force = true })<CR>", "Fetch" },
+  h = { ":lua require('package-info').hide()<CR>", "Hide" },
+  d = { ":lua require('package-info').delete()<CR>", "Delete" },
+  u = { ":lua require('package-info').update()<CR>", "Update" },
+  i = { ":lua require('package-info').install()<CR>", "Install" },
+  r = { ":lua require('package-info').reinstall()<CR>", "Reinstall all" },
+  c = { ":lua require('package-info').change_version()<CR>", "Change version" },
 }
 
 -- console
 lvim.builtin.which_key.mappings.c = {
   name = "Console",
-  v = { "<C-w>v<cmd>term<cr>", "Vertical" },
-  s = { "<C-w>s<cmd>term<cr>", "Horizontal" },
+  v = { "<C-w>v:term<CR>", "Vertical" },
+  s = { "<C-w>s:term<CR>", "Horizontal" },
 }
