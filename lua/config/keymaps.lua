@@ -1,7 +1,7 @@
 lvim.keys = {
   normal_mode = {
-    ["<S-l>"] = ":tabnext<CR>",
-    ["<S-h>"] = ":tabprev<CR>",
+    -- ["<S-l>"] = ":tabnext<CR>",
+    -- ["<S-h>"] = ":tabprev<CR>",
 
     ["Q"] = ":BufferKill<CR>",
 
