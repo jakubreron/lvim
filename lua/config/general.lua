@@ -18,7 +18,3 @@ vim.opt.wildignore:append "**/android/*"
 vim.opt.wildignore:append "**/ios/*"
 vim.opt.wildignore:append "**/.git/*"
 vim.opt.wildignore:append "tags"
-
-vim.g["netrw_liststyle"] = 3
-vim.g["netrw_browse_split "]= 4
-vim.g["netrw_altv"] = 1
