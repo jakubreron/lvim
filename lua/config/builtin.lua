@@ -1,16 +1,8 @@
-lvim.builtin.notify.active = true
-lvim.builtin.bufferline.options.numbers = "buffer_id"
--- lvim.builtin.lualine.options.globalstatus = true
-
 lvim.builtin.terminal.active = true
-lvim.builtin.terminal.direction = "horizontal"
-lvim.builtin.terminal.size = function(term)
-  if term.direction == "horizontal" then
-    return 15
-  elseif term.direction == "vertical" then
-    return vim.o.columns * 0.4
-  end
-end
+lvim.builtin.notify.active = true
+
+lvim.builtin.bufferline.options.numbers = "buffer_id"
+lvim.builtin.bufferline.options.always_show_bufferline = true
 
 local components = require "lvim.core.lualine.components"
 components.filename = {
@@ -24,6 +16,7 @@ local function packageinfo()
   return require("package-info").get_status()
 end
 
+-- lvim.builtin.lualine.options.globalstatus = true
 lvim.builtin.lualine.sections = {
   lualine_c = {
     components.diff,
