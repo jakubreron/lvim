@@ -39,3 +39,6 @@ lvim.builtin.lualine.inactive_sections.lualine_a = { components.filename }
 -- TODO: remove phpdoc from ignored after they fix the upstream: https://github.com/nvim-treesitter/nvim-treesitter/issues/2837
 lvim.builtin.treesitter.ensure_installed = "all"
 lvim.builtin.treesitter.ignore_install = { "phpdoc" }
+
+lvim.builtin.nvimtree.setup.disable_netrw = false
+lvim.builtin.nvimtree.setup.hijack_netrw = false
