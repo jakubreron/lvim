@@ -34,4 +34,3 @@ lvim.builtin.treesitter.ensure_installed = "all"
 lvim.builtin.treesitter.ignore_install = { "phpdoc" }
 
 lvim.builtin.nvimtree.setup.disable_netrw = false
-lvim.builtin.nvimtree.setup.hijack_netrw = false
