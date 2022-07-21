@@ -36,6 +36,7 @@ lvim.plugins = {
   { "tpope/vim-dispatch" }, -- dispatch tests
   { "tpope/vim-obsession" }, -- save the session
   { "tpope/vim-unimpaired" }, -- additional mappings
+  { "tpope/vim-vinegar" }, -- better netrw
   -- { "tpope/vim-eunuch" }, -- UNIX commands
 
   {
