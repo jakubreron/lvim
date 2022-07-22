@@ -16,7 +16,7 @@ lvim.keys = {
 }
 
 lvim.builtin.which_key.mappings["q"] = { ":qa<CR>", "Quit" }
-lvim.builtin.which_key.mappings["e"] = { "<cmd>Ex<CR>", "Explorer" }
+-- lvim.builtin.which_key.mappings["e"] = { "<cmd>Ex<CR>", "Explorer" }
 
 lvim.builtin.which_key.mappings["T"] = nil -- treesitter
 lvim.builtin.which_key.mappings["f"] = nil -- find file (already binded to sf)
