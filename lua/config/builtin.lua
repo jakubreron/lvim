@@ -1,7 +1,7 @@
 lvim.builtin.terminal.active = true
 lvim.builtin.notify.active = true
-lvim.builtin.nvimtree.active = false
--- lvim.builtin.nvimtree.setup.disable_netrw = false
+-- lvim.builtin.nvimtree.active = false
+lvim.builtin.nvimtree.setup.disable_netrw = false
 
 lvim.builtin.bufferline.options.numbers = "buffer_id"
 lvim.builtin.bufferline.options.always_show_bufferline = true
