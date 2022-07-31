@@ -109,12 +109,13 @@ lvim.plugins = {
       }
     end,
   },
-  {
-    "Pocco81/AutoSave.nvim", -- autosave
-    config = function()
-      require("autosave").setup()
-    end,
-  },
+  -- WARNING: this plugin doesn't work as of 31.07.2022
+  -- {
+  --   "Pocco81/auto-save.nvim", -- autosave
+  --   config = function()
+  --     require("autosave").setup()
+  --   end,
+  -- },
   {
     "folke/todo-comments.nvim", -- highlight the todo, hack, note, etc... comments
     event = "BufRead",
