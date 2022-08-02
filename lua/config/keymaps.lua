@@ -63,6 +63,7 @@ lvim.builtin.which_key.mappings.s.r = {
 
 -- buffers
 lvim.builtin.which_key.mappings.b.b = nil -- buffer prev
+lvim.builtin.which_key.mappings.b.n = nil -- buffer prev
 lvim.builtin.which_key.mappings.b.e = nil -- pick buffer to close
 lvim.builtin.which_key.mappings.b.h = nil -- close to left
 lvim.builtin.which_key.mappings.b.l = nil -- close to right
