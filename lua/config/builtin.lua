@@ -6,7 +6,7 @@ lvim.builtin.nvimtree.setup.disable_netrw = false
 lvim.builtin.bufferline.options.numbers = "buffer_id"
 lvim.builtin.bufferline.options.always_show_bufferline = true
 
-lvim.builtin.project.patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile" }
+-- lvim.builtin.project.silent_chdir = false
 
 local components = require "lvim.core.lualine.components"
 components.filename = {

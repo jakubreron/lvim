@@ -3,7 +3,7 @@ lvim.lsp.diagnostics.virtual_text = false
 
 -- TODO: fix it properly after https://github.com/LunarVim/LunarVim/pull/2503
 require("lvim.lsp.manager").setup("emmet_ls", {})
-require("lvim.lsp.manager").setup("angularls", {})
+-- require("lvim.lsp.manager").setup("angularls", {})
 -- require("lvim.lsp.manager").setup("tailwindcss", {})
 -- require("lvim.lsp.manager").setup("vuels", {})
 
