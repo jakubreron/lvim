@@ -17,7 +17,7 @@ lvim.plugins = {
   { "christoomey/vim-titlecase" }, -- "gz" movement to toggle the words case
   { "christoomey/vim-tmux-navigator" }, -- easier tmux navigation
   { "felipec/vim-sanegx", event = "BufRead" }, -- go to the url using gX
-  -- { "editorconfig/editorconfig-vim" }, -- .editorconfig support
+
   {
     "tiagovla/scope.nvim",
     config = function()
@@ -144,6 +144,13 @@ lvim.plugins = {
     end,
     event = "BufRead",
   },
+  {
+    "windwp/nvim-ts-autotag", -- complete or replace the open & closing tags
+    event = "InsertEnter",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
   -- {
   --   "iamcco/markdown-preview.nvim", -- localhost markdown server
   --   run = "cd app && yarn install",
@@ -159,14 +166,6 @@ lvim.plugins = {
   --   event = "BufRead",
   --   config = function()
   --     require("plugin.gitlinker").config()
-  --   end,
-  -- },
-  -- WARNING: this plugin doesn't work as of 09.05.2022
-  -- {
-  --   "windwp/nvim-ts-autotag", -- complete or replace the open & closing tags
-  --   event = "InsertEnter",
-  --   config = function()
-  --     require("nvim-ts-autotag").setup()
   --   end,
   -- },
 }
