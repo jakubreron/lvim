@@ -1,5 +1,5 @@
--- virtual text that shows a message along with the error
 lvim.lsp.diagnostics.virtual_text = false
+lvim.lsp.diagnostics.update_in_insert = true
 
 -- TODO: fix it properly after https://github.com/LunarVim/LunarVim/pull/2503
 require("lvim.lsp.manager").setup("emmet_ls", {})
@@ -17,6 +17,10 @@ lvim.lsp.on_attach_callback = function(client, bufnr)
     client.resolved_capabilities.document_range_formatting = false
   end
 end
+
+local path = require("null-ls.utils").path
+local root_pattern = require("null-ls.utils").root_pattern
+local nls_cache = require("null-ls.helpers").cache
 
 local formatters = require "lvim.lsp.null-ls.formatters"
 local linters = require "lvim.lsp.null-ls.linters"
@@ -41,38 +45,61 @@ local filetypes = {
     "yaml",
     "json",
   },
+  lua = {
+    "lua",
+  },
 }
 
-local detect_markdown = function(params)
-  local u = require "null-ls.utils"
-  return u.root_pattern ".markdownlintrc"(params.bufname)
-end
-
-formatters.setup {
-  { command = "prettierd", filetypes = filetypes.prettier },
-  { command = "eslint_d", filetypes = filetypes.eslint },
-  { command = "stylelint", filetypes = filetypes.stylelint },
-  { command = "stylua", filetypes = { "lua" } },
-  {
+local shared_servers = {
+  eslintd = {
+    command = "eslint_d",
+    filetypes = filetypes.eslint,
+  },
+  stylelint = {
+    command = "stylelint",
+    filetypes = filetypes.stylelint,
+    condition = function(utils)
+      return utils.root_has_file "stylelint.config.js"
+    end,
+  },
+  markdown = {
     command = "markdownlint",
     filetypes = { "markdown", "vimwiki" },
     cwd = function(params)
-      local u = require "null-ls.utils"
-      return u.root_pattern ".markdownlintrc"(params.bufname)
+      return root_pattern ".markdownlintrc"(params.bufname)
     end,
   },
+}
+
+local formatters_servers = {
+  stylua = { command = "stylua", filetypes = filetypes.lua },
+  prettierd = { command = "prettierd", filetypes = filetypes.prettier },
+}
+
+local linters_servers = {
+  luacheck = {
+    command = "luacheck",
+    filetypes = filetypes.lua,
+    cwd = nls_cache.by_bufnr(function(params)
+      return root_pattern ".luacheckrc"(params.bufname)
+    end),
+    runtime_condition = nls_cache.by_bufnr(function(params)
+      return path.exists(path.join(params.root, ".luacheckrc"))
+    end),
+  },
+}
+
+formatters.setup {
+  shared_servers.eslintd,
+  shared_servers.stylelint,
+  shared_servers.markdown,
+  formatters_servers.stylua,
+  formatters_servers.prettierd,
 }
 
 linters.setup {
-  { command = "eslint_d", filetypes = filetypes.eslint },
-  { command = "stylelint", filetypes = filetypes.stylelint },
-  { command = "luacheck", filetypes = { "lua" } },
-  {
-    command = "markdownlint",
-    filetypes = { "markdown", "vimwiki" },
-    cwd = function(params)
-      local u = require "null-ls.utils"
-      return u.root_pattern ".markdownlintrc"(params.bufname)
-    end,
-  },
+  shared_servers.eslintd,
+  shared_servers.stylelint,
+  shared_servers.markdown,
+  linters_servers.luacheck,
 }
