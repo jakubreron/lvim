@@ -43,6 +43,11 @@ local filetypes = {
   },
 }
 
+local detect_markdown = function(params)
+  local u = require "null-ls.utils"
+  return u.root_pattern ".markdownlintrc"(params.bufname)
+end
+
 formatters.setup {
   { command = "prettierd", filetypes = filetypes.prettier },
   { command = "eslint_d", filetypes = filetypes.eslint },
