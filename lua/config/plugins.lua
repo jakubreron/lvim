@@ -12,6 +12,7 @@ local lsp_signature_config = {
 lvim.plugins = {
   { "vimwiki/vimwiki" }, -- note taking plugin
   { "vim-test/vim-test" }, -- unit tests
+  { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
 
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
   { "christoomey/vim-titlecase" }, -- "gz" movement to toggle the words case
