@@ -12,11 +12,24 @@ lvim.keys = {
 
     ["]c"] = ":lua require'gitsigns'.next_hunk()<CR>:lua require 'gitsigns'.preview_hunk()<CR>",
     ["[c"] = ":lua require'gitsigns'.prev_hunk()<CR>:lua require 'gitsigns'.preview_hunk()<CR>",
+
+    ["yoe"] = ":set eventignore=all<CR>", -- quick toggle like in tpope/vim-unimpaired
   },
 }
 
 lvim.builtin.which_key.mappings["q"] = { ":qa<CR>", "Quit" }
 -- lvim.builtin.which_key.mappings["e"] = { "<cmd>Ex<CR>", "Explorer" }
+
+lvim.builtin.which_key.mappings["p"] = { "\"_dP", "Paste without copying" }
+lvim.builtin.which_key.mappings["P"] = {
+  name = "Packer",
+  c = { "<cmd>PackerCompile<cr>", "Compile" },
+  i = { "<cmd>PackerInstall<cr>", "Install" },
+  r = { "<cmd>lua require('lvim.plugin-loader').recompile()<cr>", "Re-compile" },
+  s = { "<cmd>PackerSync<cr>", "Sync" },
+  S = { "<cmd>PackerStatus<cr>", "Status" },
+  u = { "<cmd>PackerUpdate<cr>", "Update" },
+}
 
 lvim.builtin.which_key.mappings["T"] = nil -- treesitter
 lvim.builtin.which_key.mappings["f"] = nil -- find file (already binded to sf)
