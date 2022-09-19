@@ -1,4 +1,4 @@
-lvim.lsp.diagnostics.virtual_text = false
+lvim.lsp.diagnostics.virtual_text = true
 lvim.lsp.diagnostics.update_in_insert = true
 
 -- TODO: fix it properly after https://github.com/LunarVim/LunarVim/pull/2503
