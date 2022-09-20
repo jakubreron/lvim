@@ -132,5 +132,5 @@ lvim.builtin.which_key.mappings.c = {
   v = { "<C-w>v:term<CR>", "Vertical" },
   s = { "<C-w>s:term<CR>", "Horizontal" },
   d = { "Oconsole.log('%cdebugging', 'font-size: 24px; color: skyblue;');<ESC>", "Insert a debugging log" },
-  p = { "yiwOconst t0 = performance.now();<ESC>oconst t1 = performance.now();<ESC>oconsole.log(`%c<ESC>pi call took ${t1 - t0} miliseconds`, 'font-size: 24px; color: green;');<ESC>dkp", "Insert a performance log" }
+  p = { "yiwOconst t0 = performance.now();<ESC>oconst t1 = performance.now();<ESC>oconsole.log(`%c<ESC>picall took ${t1 - t0} miliseconds`, 'font-size: 24px; color: green;');<ESC>dkp", "Insert a performance log" }
 }

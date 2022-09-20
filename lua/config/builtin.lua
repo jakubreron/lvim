@@ -1,5 +1,5 @@
 lvim.builtin.terminal.active = true
-lvim.builtin.notify.active = true
+-- lvim.builtin.notify.active = true
 -- lvim.builtin.nvimtree.active = false
 lvim.builtin.nvimtree.setup.disable_netrw = false
 
