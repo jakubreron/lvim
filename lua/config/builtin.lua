@@ -21,14 +21,14 @@ local function packageinfo()
 end
 
 -- lvim.builtin.lualine.options.globalstatus = true
-lvim.builtin.lualine.sections = {
-  lualine_c = {
-    components.diff,
-    components.python_env,
-    packageinfo,
-  },
-  -- lualine_z = { "location" }
-}
+-- lvim.builtin.lualine.sections = {
+--   lualine_c = {
+--     components.diff,
+--     components.python_env,
+--     packageinfo,
+--   },
+--   -- lualine_z = { "location" }
+-- }
 
 lvim.builtin.lualine.inactive_sections.lualine_a = { components.filename }
 
