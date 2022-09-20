@@ -131,4 +131,5 @@ lvim.builtin.which_key.mappings.c = {
   name = "Console",
   v = { "<C-w>v:term<CR>", "Vertical" },
   s = { "<C-w>s:term<CR>", "Horizontal" },
+  l = { "Oconsole.log('%ctest', 'font-size: 24px; font-weight: bold;');<ESC>", "Insert a console.log" },
 }
