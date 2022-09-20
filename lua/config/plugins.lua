@@ -26,8 +26,6 @@ lvim.plugins = {
     end,
   }, -- better bufferline (sort buffers into tabs)
 
-  { "folke/tokyonight.nvim" }, -- tokyonight theme
-  { "catppuccin/nvim", as = "catppuccin" }, -- catppuccin theme
   { "christianchiarulli/nvcode-color-schemes.vim" }, -- a bunch of generated thees
 
   { "tpope/vim-repeat" }, -- better "."
