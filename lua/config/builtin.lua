@@ -7,24 +7,13 @@ lvim.builtin.bufferline.options.always_show_bufferline = true
 lvim.builtin.project.silent_chdir = false
 
 local components = require "lvim.core.lualine.components"
-components.filename = {
-  "filename",
-  path = 1, -- 0 = just filename, 1 = relative path, 2 = absolute path
-  color = {},
-  cond = nil,
-}
-
 local function packageinfo()
   return require("package-info").get_status()
 end
-
--- lvim.builtin.lualine.options.globalstatus = true
--- lvim.builtin.lualine.sections.lualine_a = {
---   components.diff,
---   components.python_env,
---   packageinfo,
--- }
--- lvim.builtin.lualine.inactive_sections.lualine_a = { components.filename }
+lvim.builtin.lualine.sections.lualine_a = {
+  components.mode, -- NOTE: default from lvim
+  packageinfo, -- added
+}
 
 -- TODO: remove phpdoc from ignored after they fix the upstream: https://github.com/nvim-treesitter/nvim-treesitter/issues/2837
 lvim.builtin.treesitter.ensure_installed = "all"
