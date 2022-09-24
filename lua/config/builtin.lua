@@ -1,7 +1,6 @@
-lvim.builtin.terminal.active = true
 lvim.builtin.breadcrumbs.active = true
-lvim.builtin.treesitter.autotag.enable = true
 
+lvim.builtin.bufferline.active = false
 lvim.builtin.bufferline.options.numbers = "buffer_id"
 lvim.builtin.bufferline.options.always_show_bufferline = true
 

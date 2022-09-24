@@ -46,13 +46,14 @@ lvim.builtin.which_key.mappings.s.C = nil -- commands
 lvim.builtin.which_key.mappings.s.R = nil -- registers
 lvim.builtin.which_key.mappings.s.h = nil -- help
 lvim.builtin.which_key.mappings.s.p = { "<cmd>Telescope projects<CR>", "Projects" }
-lvim.builtin.which_key.mappings.s.f = { "<cmd>Telescope find_files hidden=true<CR>", "Find file" }
+lvim.builtin.which_key.mappings.s.b = { "<cmd>Telescope buffers<CR>", "Buffers" }
+lvim.builtin.which_key.mappings.s.f = { "<cmd>Telescope find_files hidden=true<CR>", "Files" }
 lvim.builtin.which_key.mappings.s.c = {
   "<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>",
-  "Colorscheme with Preview",
+  "Colorscheme",
 }
-lvim.builtin.which_key.mappings.s.R = { "<cmd>Telescope oldfiles<CR>", "Open Recent File" }
-lvim.builtin.which_key.mappings.s.r = {
+lvim.builtin.which_key.mappings.s.r = { "<cmd>Telescope oldfiles<CR>", "Open Recent File" }
+lvim.builtin.which_key.mappings.s.s = {
   name = "Replace",
   r = { "<cmd>%s@<c-r><c-w>@<c-r><c-w>@gc<c-f>$F@i", "Find and replace" },
   w = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", "Replace Word" },
@@ -66,7 +67,7 @@ lvim.builtin.which_key.mappings.b.e = nil -- pick buffer to close
 lvim.builtin.which_key.mappings.b.h = nil -- close to left
 lvim.builtin.which_key.mappings.b.l = nil -- close to right
 lvim.builtin.which_key.mappings.b.j = nil -- buffer jump
--- lvim.builtin.which_key.mappings.b.f = nil -- buffer find
+lvim.builtin.which_key.mappings.b.f = nil -- buffer find
 lvim.builtin.which_key.mappings.b.D = nil -- soft by directory
 lvim.builtin.which_key.mappings.b.L = nil -- soft by language
 lvim.builtin.which_key.mappings.b.c = { "<cmd>%bd | e#<CR>", "Close all except the current one" }
