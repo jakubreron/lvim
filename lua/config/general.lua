@@ -1,4 +1,4 @@
-lvim.format_on_save = true
+lvim.format_on_save = false -- TODO: skip for "C" files
 lvim.lint_on_save = true
 
 -- vim
