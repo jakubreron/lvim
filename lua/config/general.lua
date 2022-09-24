@@ -1,8 +1,8 @@
--- on save
 lvim.format_on_save = true
 lvim.lint_on_save = true
 
 -- vim
+vim.opt.updatetime = 50
 vim.opt.relativenumber = true
 vim.opt.spelllang:append "cjk" -- NOTE: disable spellchecking for asian characters
 
