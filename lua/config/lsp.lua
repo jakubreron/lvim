@@ -1,5 +1,5 @@
-lvim.lsp.diagnostics.virtual_text = true
-lvim.lsp.diagnostics.update_in_insert = true
+lvim.lsp.diagnostics.virtual_text = false
+lvim.builtin.cmp.experimental.ghost_text = false
 
 -- TODO: fix it properly after https://github.com/LunarVim/LunarVim/pull/2503
 require("lvim.lsp.manager").setup("emmet_ls", {})

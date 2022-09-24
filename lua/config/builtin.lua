@@ -3,6 +3,9 @@ lvim.builtin.breadcrumbs.active = true
 lvim.builtin.bufferline.options.numbers = "buffer_id"
 lvim.builtin.bufferline.options.always_show_bufferline = true
 
+lvim.builtin.which_key.setup.plugins.marks = true
+lvim.builtin.which_key.setup.plugins.registers = true
+
 lvim.builtin.project.silent_chdir = false
 
 local components = require "lvim.core.lualine.components"
