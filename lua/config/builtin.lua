@@ -1,6 +1,5 @@
 lvim.builtin.breadcrumbs.active = true
 
-lvim.builtin.bufferline.active = false
 lvim.builtin.bufferline.options.numbers = "buffer_id"
 lvim.builtin.bufferline.options.always_show_bufferline = true
 
@@ -11,7 +10,7 @@ local function packageinfo()
   return require("package-info").get_status()
 end
 lvim.builtin.lualine.sections.lualine_a = {
-  components.mode, -- NOTE: default from lvim
+  components.mode, -- default from lvim
   packageinfo, -- added
 }
 
