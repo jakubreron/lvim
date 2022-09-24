@@ -83,18 +83,6 @@ lvim.builtin.which_key.mappings["bo"] = {
   p = { ":setlocal spell! spelllang=pl<CR>", "Polish" },
 }
 
--- buffer / markdown
--- lvim.builtin.which_key.mappings["bm"] = { ":MarkdownPreviewToggle<CR>", "Markdown preview" }
-
--- buffer / server
--- lvim.builtin.which_key.mappings["bs"] = {
---   name = "Server",
---   s = { ":Bracey<CR>", "Start" },
---   k = { ":BraceyStop<CR>", "Kill" },
---   r = { ":BraceyReload<CR>", "Reload" },
---   f = { ":BraceyEval<CR>", "Force Reload" },
--- }
-
 lvim.builtin.which_key.mappings["t"] = {
   name = "Test",
   n = { ":TestNearest<CR>", "Nearest" },

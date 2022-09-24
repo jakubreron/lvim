@@ -31,7 +31,6 @@ lvim.plugins = {
   { "tpope/vim-dispatch" }, -- dispatch tests
   { "tpope/vim-obsession" }, -- save the session
   { "tpope/vim-unimpaired" }, -- additional mappings
-  -- { "tpope/vim-vinegar" }, -- better netrw
   {
     "andymass/vim-matchup", -- better "%"
     requires = "leafOfTree/vim-vue-plugin", -- vue syntax highlighting and % fix
@@ -57,22 +56,7 @@ lvim.plugins = {
     "vuki656/package-info.nvim", -- check if the package info is up to date
     requires = "MunifTanjim/nui.nvim",
     config = function()
-      require("package-info").setup {
-        {
-          colors = {
-            up_to_date = "#3C4048", -- Text color for up to date package virtual text
-            outdated = "#6ec0fa", -- Text color for outdated package virtual text
-          },
-          icons = {
-            enable = true, -- Whether to display icons
-            style = {
-              up_to_date = "|  ", -- Icon for up to date packages
-              outdated = "|  ", -- Icon for outdated packages
-            },
-          },
-          autostart = true, -- Whether to autostart when `package.json` is opened
-        },
-      }
+      require("package-info").setup()
     end,
     ft = "json",
   },
@@ -109,6 +93,13 @@ lvim.plugins = {
       require("todo-comments").setup()
     end,
   },
+  {
+    "windwp/nvim-ts-autotag", -- complete or replace the open & closing tags
+    event = "InsertEnter",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
   -- {
   --   "tzachar/cmp-tabnine", -- AI autocompletion
   --   config = function()
@@ -123,13 +114,6 @@ lvim.plugins = {
   --   requires = "hrsh7th/nvim-cmp",
   --   event = "InsertEnter",
   -- },
-  -- {
-  --   "windwp/nvim-ts-autotag", -- complete or replace the open & closing tags
-  --   event = "InsertEnter",
-  --   config = function()
-  --     require("nvim-ts-autotag").setup()
-  --   end,
-  -- },
   -- WARNING: this plugin doesn't work as of 31.07.2022
   -- {
   --   "Pocco81/auto-save.nvim", -- autosave
@@ -143,23 +127,6 @@ lvim.plugins = {
   --     require("lsp_signature").setup(lsp_signature_config)
   --   end,
   --   event = "BufRead",
-  -- },
-  -- {
-  --   "iamcco/markdown-preview.nvim", -- localhost markdown server
-  --   run = "cd app && yarn install",
-  --   ft = "markdown",
-  -- },
-  -- {
-  --   "turbio/bracey.vim",
-  --   cmd = {"Bracey", "BracyStop", "BraceyReload", "BraceyEval"},
-  --   run = "npm install --prefix server",
-  -- },
-  -- {
-  --   "ruifm/gitlinker.nvim", -- quick link to the git snippet
-  --   event = "BufRead",
-  --   config = function()
-  --     require("plugin.gitlinker").config()
-  --   end,
   -- },
 }
 
