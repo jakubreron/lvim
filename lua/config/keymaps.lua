@@ -1,8 +1,5 @@
 lvim.keys = {
   normal_mode = {
-    -- ["<S-l>"] = ":tabnext<CR>",
-    -- ["<S-h>"] = ":tabprev<CR>",
-
     ["Q"] = ":BufferKill<CR>",
 
     ["<C-f>"] = ":silent !tmux neww tmux-sessionizer<CR>",
@@ -17,7 +14,7 @@ lvim.keys = {
   },
 
   visual_mode = {
-    ["<leader>p"] = "\"_dP",
+    ["<leader>p"] = '"_dP',
   },
 }
 
@@ -74,7 +71,7 @@ lvim.builtin.which_key.mappings.b.e = nil -- pick buffer to close
 lvim.builtin.which_key.mappings.b.h = nil -- close to left
 lvim.builtin.which_key.mappings.b.l = nil -- close to right
 lvim.builtin.which_key.mappings.b.j = nil -- buffer jump
-lvim.builtin.which_key.mappings.b.f = nil -- buffer find
+-- lvim.builtin.which_key.mappings.b.f = nil -- buffer find
 lvim.builtin.which_key.mappings.b.D = nil -- soft by directory
 lvim.builtin.which_key.mappings.b.L = nil -- soft by language
 lvim.builtin.which_key.mappings.b.c = { ":%bd!<CR>", "Close all" }
@@ -132,5 +129,8 @@ lvim.builtin.which_key.mappings.c = {
   v = { "<C-w>v:term<CR>", "Vertical" },
   s = { "<C-w>s:term<CR>", "Horizontal" },
   d = { "Oconsole.log('%cdebugging', 'font-size: 24px; color: skyblue;');<ESC>", "Insert a debugging log" },
-  p = { "yiwOconst t0 = performance.now();<ESC>oconst t1 = performance.now();<ESC>oconsole.log(`%c<ESC>pi call took ${t1 - t0} miliseconds`, 'font-size: 24px; color: green;');<ESC>dkp", "Insert a performance log" }
+  p = {
+    "yiwOconst t0 = performance.now();<ESC>oconst t1 = performance.now();<ESC>oconsole.log(`%c<ESC>pi call took ${t1 - t0} miliseconds`, 'font-size: 24px; color: green;');<ESC>dkp",
+    "Insert a performance log",
+  },
 }
