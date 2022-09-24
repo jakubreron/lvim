@@ -10,19 +10,18 @@ vim.b["match_words"] = "<<<<<<<:=======:>>>>>>>" -- match git conflict markers w
 -- }
 
 lvim.plugins = {
-  { "vimwiki/vimwiki" }, -- note taking plugin
+  { "vimwiki/vimwiki" },
   { "vim-test/vim-test" }, -- unit tests
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
   { "christoomey/vim-titlecase" }, -- "gz" movement to toggle the words case
   { "christoomey/vim-tmux-navigator" }, -- easier tmux navigation
-  { "felipec/vim-sanegx", event = "BufRead" }, -- go to the url using gX
   {
     "tiagovla/scope.nvim", -- better bufferline (sort buffers into tabs)
     config = function()
       require("scope").setup()
     end,
   },
-  { "christianchiarulli/nvcode-color-schemes.vim" }, -- a bunch of generated thees
+  { "christianchiarulli/nvcode-color-schemes.vim" }, -- a bunch of generated themes (vscode theme included)
   { "tpope/vim-repeat" }, -- better "."
   { "tpope/vim-sleuth" }, -- detect the relevant tabs / shifts
   { "tpope/vim-surround" }, -- surround movement
@@ -31,6 +30,7 @@ lvim.plugins = {
   { "tpope/vim-obsession" }, -- save the session
   { "tpope/vim-unimpaired" }, -- additional mappings
   { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
+  { "mbbill/undotree" },
   {
     "andymass/vim-matchup", -- better "%"
     requires = "leafOfTree/vim-vue-plugin", -- vue syntax highlighting and % fix
