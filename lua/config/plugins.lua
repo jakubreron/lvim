@@ -123,13 +123,13 @@ lvim.plugins = {
   --   requires = "hrsh7th/nvim-cmp",
   --   event = "InsertEnter",
   -- },
-  {
-    "windwp/nvim-ts-autotag", -- complete or replace the open & closing tags
-    event = "InsertEnter",
-    config = function()
-      require("nvim-ts-autotag").setup()
-    end,
-  },
+  -- {
+  --   "windwp/nvim-ts-autotag", -- complete or replace the open & closing tags
+  --   event = "InsertEnter",
+  --   config = function()
+  --     require("nvim-ts-autotag").setup()
+  --   end,
+  -- },
   -- WARNING: this plugin doesn't work as of 31.07.2022
   -- {
   --   "Pocco81/auto-save.nvim", -- autosave
