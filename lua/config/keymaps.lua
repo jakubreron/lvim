@@ -22,7 +22,7 @@ lvim.builtin.which_key.mappings["q"] = { ":qa<CR>", "Quit" }
 -- lvim.builtin.which_key.mappings["e"] = { "<cmd>Ex<CR>", "Explorer" }
 
 lvim.builtin.which_key.mappings["T"] = nil -- treesitter
-lvim.builtin.which_key.mappings["f"] = nil -- find file (already binded to sf)
+lvim.builtin.which_key.mappings["f"] = nil -- find file (already bind to "sf")
 lvim.builtin.which_key.mappings["/"] = nil -- comment
 lvim.builtin.which_key.mappings["c"] = nil -- close buffer
 lvim.builtin.which_key.mappings["w"] = nil -- save
@@ -45,7 +45,7 @@ lvim.builtin.which_key.mappings.s.h = nil -- help
 lvim.builtin.which_key.mappings.s.p = { ":Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings.s.f = { ":Telescope find_files hidden=true<CR>", "Find file" }
 lvim.builtin.which_key.mappings.s.c = {
-  ":lua require('telescope.builtin.internal').colorscheme({enable_preview = true})<CR>", -- default is colorscheme without preview
+  "<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>",
   "Colorscheme with Preview",
 }
 lvim.builtin.which_key.mappings.s.R = { ":Telescope oldfiles<CR>", "Open Recent File" }
