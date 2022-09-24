@@ -2,7 +2,7 @@
 -- lvim.transparent_window = true
 
 -- NOTE: VSCode
-lvim.colorscheme = "nvcode"
+-- lvim.colorscheme = "nvcode"
 
 -- NOTE: Catppuccin
 -- lvim.colorscheme = "catppuccin"
