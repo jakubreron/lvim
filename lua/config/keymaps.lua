@@ -1,19 +1,19 @@
 lvim.keys = {
   normal_mode = {
-    ["Q"] = ":BufferKill<CR>",
+    ["Q"] = "<cmd>BufferKill<CR>",
 
-    ["<C-f>"] = ":silent !tmux neww tmux-sessionizer<CR>",
+    ["<C-f>"] = "<cmd>silent !tmux neww tmux-sessionizer<CR>",
 
-    ["]q"] = ":lua vim.diagnostic.goto_next()<CR>",
-    ["[q"] = ":lua vim.diagnostic.goto_prev()<CR>",
+    ["]q"] = "<cmd>lua vim.diagnostic.goto_next()<CR>",
+    ["[q"] = "<cmd>lua vim.diagnostic.goto_prev()<CR>",
 
-    ["]c"] = ":lua require'gitsigns'.next_hunk()<CR>:lua require 'gitsigns'.preview_hunk()<CR>",
-    ["[c"] = ":lua require'gitsigns'.prev_hunk()<CR>:lua require 'gitsigns'.preview_hunk()<CR>",
+    ["]c"] = "<cmd>lua require'gitsigns'.next_hunk()<CR>:lua require 'gitsigns'.preview_hunk()<CR>",
+    ["[c"] = "<cmd>lua require'gitsigns'.prev_hunk()<CR>:lua require 'gitsigns'.preview_hunk()<CR>",
 
-    ["yoe"] = ":set eventignore=all<CR>", -- quick toggle like in tpope/vim-unimpaired
-    ["yoss"] = ":setlocal spell!<CR>", -- quick spelling toggle adjustements
-    ["yose"] = ":setlocal spell! spelllang=en<CR>", -- English
-    ["yosp"] = ":setlocal spell! spelllang=pl<CR>", -- Polish
+    ["yoe"] = "<cmd>set eventignore=all<CR>", -- quick toggle like in tpope/vim-unimpaired
+    ["yoss"] = "<cmd>setlocal spell!<CR>", -- quick spelling toggle adjustements
+    ["yose"] = "<cmd>setlocal spell! spelllang=en<CR>", -- English
+    ["yosp"] = "<cmd>setlocal spell! spelllang=pl<CR>", -- Polish
   },
 
   visual_mode = {
@@ -21,7 +21,7 @@ lvim.keys = {
   },
 }
 
-lvim.builtin.which_key.mappings["q"] = { ":qa<CR>", "Quit" }
+lvim.builtin.which_key.mappings["q"] = { "<cmd>qa<CR>", "Quit" }
 -- lvim.builtin.which_key.mappings["e"] = { "<cmd>Ex<CR>", "Explorer" }
 
 lvim.builtin.which_key.mappings["T"] = nil -- treesitter
@@ -37,7 +37,7 @@ lvim.builtin.which_key.mappings.g.k = nil -- next change
 -- lsp
 lvim.builtin.which_key.mappings.l.j = nil -- next diagnostic
 lvim.builtin.which_key.mappings.l.k = nil -- prev diagnostic
-lvim.builtin.which_key.mappings["l_"] = { ":LspRestart <CR>", "Restart LSP" }
+lvim.builtin.which_key.mappings["l_"] = { "<cmd>LspRestart <CR>", "Restart LSP" }
 
 -- search
 lvim.builtin.which_key.mappings.s.b = nil -- branches
@@ -45,18 +45,18 @@ lvim.builtin.which_key.mappings.s.M = nil -- man pages
 lvim.builtin.which_key.mappings.s.C = nil -- commands
 lvim.builtin.which_key.mappings.s.R = nil -- registers
 lvim.builtin.which_key.mappings.s.h = nil -- help
-lvim.builtin.which_key.mappings.s.p = { ":Telescope projects<CR>", "Projects" }
-lvim.builtin.which_key.mappings.s.f = { ":Telescope find_files hidden=true<CR>", "Find file" }
+lvim.builtin.which_key.mappings.s.p = { "<cmd>Telescope projects<CR>", "Projects" }
+lvim.builtin.which_key.mappings.s.f = { "<cmd>Telescope find_files hidden=true<CR>", "Find file" }
 lvim.builtin.which_key.mappings.s.c = {
   "<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>",
   "Colorscheme with Preview",
 }
-lvim.builtin.which_key.mappings.s.R = { ":Telescope oldfiles<CR>", "Open Recent File" }
+lvim.builtin.which_key.mappings.s.R = { "<cmd>Telescope oldfiles<CR>", "Open Recent File" }
 lvim.builtin.which_key.mappings.s.r = {
   name = "Replace",
-  r = { ":%s@<c-r><c-w>@<c-r><c-w>@gc<c-f>$F@i", "Find and replace" },
-  w = { ":lua require('spectre').open_visual({select_word=true})<CR>", "Replace Word" },
-  a = { ":lua require('spectre').open()<CR>", "Replace anything" },
+  r = { "<cmd>%s@<c-r><c-w>@<c-r><c-w>@gc<c-f>$F@i", "Find and replace" },
+  w = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", "Replace Word" },
+  a = { "<cmd>lua require('spectre').open()<CR>", "Replace anything" },
 }
 
 -- buffers
@@ -69,34 +69,35 @@ lvim.builtin.which_key.mappings.b.j = nil -- buffer jump
 -- lvim.builtin.which_key.mappings.b.f = nil -- buffer find
 lvim.builtin.which_key.mappings.b.D = nil -- soft by directory
 lvim.builtin.which_key.mappings.b.L = nil -- soft by language
-lvim.builtin.which_key.mappings.b.c = { ":%bd | e#<CR>", "Close all except the current one" }
+lvim.builtin.which_key.mappings.b.c = { "<cmd>%bd | e#<CR>", "Close all except the current one" }
+lvim.builtin.which_key.mappings.b.u = { "<cmd>UndotreeToggle<CR>", "Undotree Toggle" }
 
 lvim.builtin.which_key.mappings["t"] = {
   name = "Test",
-  n = { ":TestNearest<CR>", "Nearest" },
-  f = { ":TestFile<CR>", "File" },
-  s = { ":TestSuite<CR>", "Suite" },
-  l = { ":TestLast<CR>", "Last" },
-  v = { ":TestVisit<CR>", "Visit" },
+  n = { "<cmd>TestNearest<CR>", "Nearest" },
+  f = { "<cmd>TestFile<CR>", "File" },
+  s = { "<cmd>TestSuite<CR>", "Suite" },
+  l = { "<cmd>TestLast<CR>", "Last" },
+  v = { "<cmd>TestVisit<CR>", "Visit" },
 }
 
 -- todos
 lvim.builtin.which_key.mappings["T"] = {
   name = "Todo",
-  q = { ":TodoQuickFix<CR>", "Todo Quick Fix" },
-  s = { ":TodoTelescope<CR>", "Todo Search" },
+  q = { "<cmd>TodoQuickFix<CR>", "Todo Quick Fix" },
+  s = { "<cmd>TodoTelescope<CR>", "Todo Search" },
 }
 
 -- npm
 lvim.builtin.which_key.mappings["n"] = {
   name = "NPM",
-  f = { ":lua require('package-info').show({ force = true })<CR>", "Fetch" },
-  h = { ":lua require('package-info').hide()<CR>", "Hide" },
-  d = { ":lua require('package-info').delete()<CR>", "Delete" },
-  u = { ":lua require('package-info').update()<CR>", "Update" },
-  i = { ":lua require('package-info').install()<CR>", "Install" },
-  r = { ":lua require('package-info').reinstall()<CR>", "Reinstall all" },
-  c = { ":lua require('package-info').change_version()<CR>", "Change version" },
+  f = { "<cmd>lua require('package-info').show({ force = true })<CR>", "Fetch" },
+  h = { "<cmd>lua require('package-info').hide()<CR>", "Hide" },
+  d = { "<cmd>lua require('package-info').delete()<CR>", "Delete" },
+  u = { "<cmd>lua require('package-info').update()<CR>", "Update" },
+  i = { "<cmd>lua require('package-info').install()<CR>", "Install" },
+  r = { "<cmd>lua require('package-info').reinstall()<CR>", "Reinstall all" },
+  c = { "<cmd>lua require('package-info').change_version()<CR>", "Change version" },
 }
 
 -- console
