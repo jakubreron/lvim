@@ -25,8 +25,6 @@ lvim.plugins = {
   { "tpope/vim-repeat" }, -- better "."
   { "tpope/vim-sleuth" }, -- detect the relevant tabs / shifts
   { "tpope/vim-surround" }, -- surround movement
-  { "tpope/vim-jdaddy" }, -- additional json movements
-  { "tpope/vim-dispatch" }, -- dispatch tests
   { "tpope/vim-obsession" }, -- save the session
   { "tpope/vim-unimpaired" }, -- additional mappings
   { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
