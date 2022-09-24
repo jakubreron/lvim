@@ -11,6 +11,9 @@ lvim.keys = {
     ["[c"] = ":lua require'gitsigns'.prev_hunk()<CR>:lua require 'gitsigns'.preview_hunk()<CR>",
 
     ["yoe"] = ":set eventignore=all<CR>", -- quick toggle like in tpope/vim-unimpaired
+    ["yoss"] = ":setlocal spell!<CR>", -- quick spelling toggle adjustements
+    ["yose"] = ":setlocal spell! spelllang=en<CR>", -- English
+    ["yosp"] = ":setlocal spell! spelllang=pl<CR>", -- Polish
   },
 
   visual_mode = {
@@ -56,14 +59,6 @@ lvim.builtin.which_key.mappings.s.r = {
   a = { ":lua require('spectre').open()<CR>", "Replace anything" },
 }
 
--- lvim.builtin.telescope.on_config_done = function()
---   local actions = require "telescope.actions"
---   lvim.builtin.telescope.defaults.mappings.i["<C-j>"] = actions.move_selection_next
---   lvim.builtin.telescope.defaults.mappings.i["<C-k>"] = actions.move_selection_previous
---   lvim.builtin.telescope.defaults.mappings.i["<C-n>"] = actions.cycle_history_next
---   lvim.builtin.telescope.defaults.mappings.i["<C-p>"] = actions.cycle_history_prev
--- end
-
 -- buffers
 lvim.builtin.which_key.mappings.b.b = nil -- buffer prev
 lvim.builtin.which_key.mappings.b.n = nil -- buffer prev
@@ -74,14 +69,7 @@ lvim.builtin.which_key.mappings.b.j = nil -- buffer jump
 -- lvim.builtin.which_key.mappings.b.f = nil -- buffer find
 lvim.builtin.which_key.mappings.b.D = nil -- soft by directory
 lvim.builtin.which_key.mappings.b.L = nil -- soft by language
-lvim.builtin.which_key.mappings.b.c = { ":%bd!<CR>", "Close all" }
-
--- buffer / ortography
-lvim.builtin.which_key.mappings["bo"] = {
-  name = "Ortography",
-  e = { ":setlocal spell! spelllang=en<CR>", "English" },
-  p = { ":setlocal spell! spelllang=pl<CR>", "Polish" },
-}
+lvim.builtin.which_key.mappings.b.c = { ":%bd | e#<cmd>BufferLineCloseRight<CR>", "Close all" }
 
 lvim.builtin.which_key.mappings["t"] = {
   name = "Test",
