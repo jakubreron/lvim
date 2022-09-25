@@ -1,3 +1,4 @@
+lvim.builtin.terminal.active = true
 lvim.builtin.breadcrumbs.active = true
 
 lvim.builtin.bufferline.options.numbers = "buffer_id"
