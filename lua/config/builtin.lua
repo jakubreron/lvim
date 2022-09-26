@@ -1,6 +1,8 @@
-lvim.builtin.terminal.active = true
+lvim.builtin.terminal.active = true -- needed for lazygit
 lvim.builtin.breadcrumbs.active = true
-lvim.builtin.illuminate.active = false
+
+lvim.builtin.illuminate.active = false -- word highlight
+lvim.builtin.autopairs.active = false
 
 lvim.builtin.bufferline.options.numbers = "buffer_id"
 lvim.builtin.bufferline.options.always_show_bufferline = true
