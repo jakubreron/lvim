@@ -21,7 +21,7 @@ lvim.keys = {
   },
 }
 
-lvim.builtin.which_key.mappings["q"] = { "<cmd>qa<CR>", "Quit" }
+lvim.builtin.which_key.mappings["q"] = { "<cmd>qa!<CR>", "Quit" }
 -- lvim.builtin.which_key.mappings["e"] = { "<cmd>Ex<CR>", "Explorer" }
 
 lvim.builtin.which_key.mappings["T"] = nil -- treesitter
