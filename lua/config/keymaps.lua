@@ -24,8 +24,8 @@ lvim.keys = {
 lvim.builtin.which_key.mappings["q"] = { "<cmd>qa!<CR>", "Quit" }
 -- lvim.builtin.which_key.mappings["e"] = { "<cmd>Ex<CR>", "Explorer" }
 
+lvim.builtin.which_key.mappings["f"] = { "<cmd>lua require('lf').start()", "Lf" } -- find file (already bind to "sf")
 lvim.builtin.which_key.mappings["T"] = nil -- treesitter
-lvim.builtin.which_key.mappings["f"] = nil -- find file (already bind to "sf")
 lvim.builtin.which_key.mappings["/"] = nil -- comment
 lvim.builtin.which_key.mappings["c"] = nil -- close buffer
 lvim.builtin.which_key.mappings["w"] = nil -- save
