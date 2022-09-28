@@ -85,6 +85,21 @@ lvim.plugins = {
       require("nvim-ts-autotag").setup()
     end,
   },
+  {
+    "lmburns/lf.nvim",
+    config = function()
+      -- This feature will not work if the plugin is lazy-loaded
+      vim.g.lf_netrw = 1
+
+      require("lf").setup {
+        default_cmd = "lfrun", -- default `lf` command
+        escape_quit = false,
+      }
+
+      vim.keymap.set("n", "<C-o>", ":Lf<CR>")
+    end,
+    requires = { "plenary.nvim", "toggleterm.nvim" },
+  },
   -- {
   --   "tzachar/cmp-tabnine", -- AI autocompletion
   --   config = function()
