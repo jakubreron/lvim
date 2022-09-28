@@ -11,7 +11,6 @@ vim.b["match_words"] = "<<<<<<<:=======:>>>>>>>" -- match git conflict markers w
 
 lvim.plugins = {
   { "vimwiki/vimwiki" },
-  { "vim-test/vim-test" }, -- unit tests
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
   { "christoomey/vim-titlecase" }, -- "gz" movement to toggle the words case
   { "christoomey/vim-tmux-navigator" }, -- easier tmux navigation
@@ -64,7 +63,6 @@ lvim.plugins = {
     config = function()
       require("package-info").setup()
     end,
-    ft = "json",
   },
   {
     "kevinhwang91/nvim-bqf", -- better quickfix window (preview, search & replace, etc...)
@@ -101,17 +99,16 @@ lvim.plugins = {
   --   requires = "hrsh7th/nvim-cmp",
   --   event = "InsertEnter",
   -- },
-  -- WARNING: this plugin doesn't work as of 31.07.2022
-  -- {
-  --   "Pocco81/auto-save.nvim", -- autosave
-  --   config = function()
-  --     require("autosave").setup()
-  --   end,
-  -- },
+  {
+    "Pocco81/auto-save.nvim",
+    config = function()
+      require("auto-save").setup {}
+    end,
+  },
   -- {
   --   "ray-x/lsp_signature.nvim", -- show function arguments as you type
   --   config = function()
-  --     require("lsp_signature").setup(lsp_signature_config)
+  --     require("lsp_signature").setup()
   --   end,
   --   event = "BufRead",
   -- },

@@ -75,15 +75,6 @@ lvim.builtin.which_key.mappings.b.L = nil -- soft by language
 lvim.builtin.which_key.mappings.b.c = { "<cmd>%bd | e#<CR>", "Close all except the current one" }
 lvim.builtin.which_key.mappings.b.u = { "<cmd>UndotreeToggle<CR>", "Undotree Toggle" }
 
-lvim.builtin.which_key.mappings["t"] = {
-  name = "Test",
-  n = { "<cmd>TestNearest<CR>", "Nearest" },
-  f = { "<cmd>TestFile<CR>", "File" },
-  s = { "<cmd>TestSuite<CR>", "Suite" },
-  l = { "<cmd>TestLast<CR>", "Last" },
-  v = { "<cmd>TestVisit<CR>", "Visit" },
-}
-
 -- todos
 lvim.builtin.which_key.mappings["T"] = {
   name = "Todo",
