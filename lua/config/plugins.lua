@@ -92,7 +92,7 @@ lvim.plugins = {
       vim.g.lf_netrw = 1
 
       require("lf").setup {
-        default_cmd = "lfrun", -- default `lf` command
+        default_cmd = vim.fn.expand "$CLI_FILE_EXPLORER", -- default `lf` command
         escape_quit = false,
       }
 
