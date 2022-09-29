@@ -95,8 +95,6 @@ lvim.plugins = {
         default_cmd = vim.fn.expand "$CLI_FILE_EXPLORER", -- default `lf` command
         escape_quit = false,
       }
-
-      vim.keymap.set("n", "<C-o>", ":Lf<CR>")
     end,
     requires = { "plenary.nvim", "toggleterm.nvim" },
   },
