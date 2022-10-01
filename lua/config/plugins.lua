@@ -1,14 +1,3 @@
-vim.g.vimwiki_list = { { path = "~/Documents/vimwiki/", syntax = "markdown", ext = ".md" } }
-vim.g["test#strategy"] = "dispatch" -- make test commands execute using dispatch.vim
-vim.b["match_words"] = "<<<<<<<:=======:>>>>>>>" -- match git conflict markers with %
-
--- local lsp_signature_config = {
---   bind = true,
---   hint_enable = false, -- disable virtual text
---   hint_prefix = "", -- remove panda icon from virtual text
---   handler_opts = { border = "single" }, -- show current argument in the popup
--- }
-
 lvim.plugins = {
   { "vimwiki/vimwiki" },
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
@@ -118,14 +107,10 @@ lvim.plugins = {
       require("auto-save").setup {}
     end,
   },
-  -- {
-  --   "ray-x/lsp_signature.nvim", -- show function arguments as you type
-  --   config = function()
-  --     require("lsp_signature").setup()
-  --   end,
-  --   event = "BufRead",
-  -- },
 }
 
--- HACK: requiring lsp_signature in packer config function doesn't work as of 18.05.2022
--- require("lsp_signature").setup(lsp_signature_config)
+vim.g.vimwiki_list = {{
+  path = vim.fn.expand "$VIMWIKI_DIR",
+  syntax = "markdown",
+  ext = ".md",
+}}

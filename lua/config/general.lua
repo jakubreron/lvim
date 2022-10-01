@@ -18,3 +18,5 @@ vim.opt.wildignore:append "**/android/*"
 vim.opt.wildignore:append "**/ios/*"
 vim.opt.wildignore:append "**/.git/*"
 vim.opt.wildignore:append "tags"
+
+vim.b.match_words = "<<<<<<<:=======:>>>>>>>" -- match git conflict markers with %
