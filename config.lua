@@ -6,8 +6,6 @@ require("config.themes")
 
 require("config.keymaps")
 
-require("config.builtin")
-
 require("config.lsp")
 
 require("config.plugins")
