@@ -10,6 +10,4 @@ require("config.builtin")
 
 require("config.lsp")
 
-require("config.autocommands")
-
 require("config.plugins")
