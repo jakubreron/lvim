@@ -57,7 +57,7 @@ lvim.builtin.which_key.mappings.s.c = {
 lvim.builtin.which_key.mappings.s.r = { "<cmd>Telescope oldfiles<CR>", "Open Recent File" }
 lvim.builtin.which_key.mappings.s.s = {
   name = "Replace",
-  r = { "<cmd>%s@<c-r><c-w>@<c-r><c-w>@gc<c-f>$F@i", "Find and replace" },
+  r = { "<cmd>%s@<c-r><c-w>@<c-r><c-w>@gc<c-f>$F@i<CR>", "Find and replace" },
   w = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", "Replace Word" },
   a = { "<cmd>lua require('spectre').open()<CR>", "Replace anything" },
 }
