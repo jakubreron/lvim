@@ -3,6 +3,8 @@ lvim.keys = {
     ["Q"] = "<cmd>BufferKill<CR>",
 
     ["<C-f>"] = "<cmd>silent !tmux neww tmux-sessionizer<CR>",
+    ["<C-c>"] = "<cmd>%y+<CR>", -- copy whole file
+    ["<C-b>"] = "mm<cmd>%norm gggcG<CR>`m", -- comment whole file and preserve the cursor position with mark hack
 
     ["]q"] = "<cmd>lua vim.diagnostic.goto_next()<CR>",
     ["[q"] = "<cmd>lua vim.diagnostic.goto_prev()<CR>",
@@ -24,7 +26,8 @@ lvim.keys = {
 lvim.builtin.which_key.mappings["q"] = { "<cmd>qa!<CR>", "Quit" }
 -- lvim.builtin.which_key.mappings["e"] = { "<cmd>Ex<CR>", "Explorer" }
 
-lvim.builtin.which_key.mappings["f"] = { "<cmd>lua require('lf').start()<CR>", "Lf" } -- find file (already bind to "sf")
+-- lvim.builtin.which_key.mappings["f"] = { "<cmd>lua require('lf').start()<CR>", "Lf" } -- find file (already bind to "sf")
+lvim.builtin.which_key.mappings["f"] = nil -- find file (already bind to "sf")
 lvim.builtin.which_key.mappings["T"] = nil -- treesitter
 lvim.builtin.which_key.mappings["/"] = nil -- comment
 lvim.builtin.which_key.mappings["c"] = nil -- close buffer
