@@ -3,6 +3,7 @@ lvim.keys = {
     ["Q"] = "<cmd>BufferKill<CR>",
 
     ["<C-f>"] = "<cmd>silent !tmux neww tmux-sessionizer<CR>",
+    ["<C-c>"] = "<cmd>%y+<CR>", -- copy whole file
 
     ["]q"] = "<cmd>lua vim.diagnostic.goto_next()<CR>",
     ["[q"] = "<cmd>lua vim.diagnostic.goto_prev()<CR>",
