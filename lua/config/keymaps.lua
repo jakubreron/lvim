@@ -4,7 +4,7 @@ lvim.keys = {
 
     ["<C-f>"] = "<cmd>silent !tmux neww tmux-sessionizer<CR>",
     ["<C-c>"] = "<cmd>%y+<CR>", -- copy whole file
-    ["<C-b>"] = "mm<cmd>%norm gggcG<CR>`m", -- comment whole file and preserve the cursor position with mark hack
+    ["<C-b>"] = "mmggVG<Plug>(comment_toggle_linewise_visual)`m", -- comment whole file and preserve the cursor position with mark hack
 
     ["]q"] = "<cmd>lua vim.diagnostic.goto_next()<CR>",
     ["[q"] = "<cmd>lua vim.diagnostic.goto_prev()<CR>",
