@@ -1,10 +1,10 @@
-lvim.format_on_save = false -- TODO: skip for "C" files
+lvim.format_on_save = false -- TODO: skip for "C" files, enable for anything else
 lvim.lint_on_save = true
 
-lvim.builtin.terminal.active = true -- needed for lazygit
 lvim.builtin.breadcrumbs.active = false
-
 lvim.builtin.illuminate.active = false -- word highlight
+lvim.builtin.dap.active = false -- debugging
+lvim.builtin.notify.active = false
 
 lvim.builtin.bufferline.options.numbers = "buffer_id"
 lvim.builtin.bufferline.options.always_show_bufferline = true
