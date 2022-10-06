@@ -47,12 +47,10 @@ lvim.builtin.which_key.mappings.s.b = nil -- branches
 lvim.builtin.which_key.mappings.s.M = nil -- man pages
 lvim.builtin.which_key.mappings.s.C = nil -- commands
 lvim.builtin.which_key.mappings.s.R = nil -- registers
-lvim.builtin.which_key.mappings.s.h = nil -- help
 lvim.builtin.which_key.mappings.s.H = nil -- highlight groups
 lvim.builtin.which_key.mappings.s.k = nil -- keymaps
 lvim.builtin.which_key.mappings.s.p = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings.s.b = { "<cmd>Telescope buffers<CR>", "Buffers" }
-lvim.builtin.which_key.mappings.s.f = { "<cmd>Telescope find_files hidden=true<CR>", "Files" }
 lvim.builtin.which_key.mappings.s.c = {
   "<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>",
   "Colorscheme",

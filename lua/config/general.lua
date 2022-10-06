@@ -26,3 +26,41 @@ lvim.builtin.lualine.sections.lualine_a = {
 -- TODO: remove phpdoc from ignored after they fix the upstream: https://github.com/nvim-treesitter/nvim-treesitter/issues/2837
 lvim.builtin.treesitter.ensure_installed = "all"
 lvim.builtin.treesitter.ignore_install = { "phpdoc" }
+
+-- TODO: find better settings & themes
+lvim.builtin.telescope.pickers = {
+  find_files = {
+    hidden = true,
+  },
+  live_grep = {
+    only_sort_text = true,
+  },
+  grep_string = {
+    only_sort_text = true,
+  },
+  buffers = {
+    previewer = false,
+    initial_mode = "normal",
+  },
+  planets = {
+    show_pluto = true,
+    show_moon = true,
+  },
+  git_files = {
+    hidden = true,
+    previewer = false,
+    show_untracked = true,
+  },
+  lsp_references = {
+    initial_mode = "normal",
+  },
+  lsp_definitions = {
+    initial_mode = "normal",
+  },
+  lsp_declarations = {
+    initial_mode = "normal",
+  },
+  lsp_implementations = {
+    initial_mode = "normal",
+  },
+}
