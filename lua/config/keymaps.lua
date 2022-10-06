@@ -102,7 +102,7 @@ lvim.builtin.which_key.mappings.c = {
   name = "Console",
   v = { "<C-w>v:term<CR>", "Vertical" },
   s = { "<C-w>s:term<CR>", "Horizontal" },
-  d = { "Oconsole.log('%c', 'font-size: 24px; color: skyblue;');<ESC>02fca ", "Insert a debugging log" },
+  d = { "Oconsole.log(`%c`, 'font-size: 24px; color: skyblue;');<ESC>02fca ", "Insert a debugging log" },
   p = {
     "yiwOconst t0 = performance.now();<ESC>oconst t1 = performance.now();<ESC>oconsole.log(`%c <ESC>pa call took ${t1 - t0} milliseconds`, 'font-size: 24px; color: green;');<ESC>dkp",
     "Insert a performance log",
