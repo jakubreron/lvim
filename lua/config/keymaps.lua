@@ -9,8 +9,8 @@ lvim.keys = {
     ["]q"] = "<cmd>lua vim.diagnostic.goto_next()<CR>",
     ["[q"] = "<cmd>lua vim.diagnostic.goto_prev()<CR>",
 
-    ["]c"] = "<cmd>lua require'gitsigns'.next_hunk()<CR>:lua require 'gitsigns'.preview_hunk()<CR>",
-    ["[c"] = "<cmd>lua require'gitsigns'.prev_hunk()<CR>:lua require 'gitsigns'.preview_hunk()<CR>",
+    ["]c"] = "<cmd>lua require'gitsigns'.next_hunk()<CR>",
+    ["[c"] = "<cmd>lua require'gitsigns'.prev_hunk()<CR>",
 
     ["yoe"] = "<cmd>set eventignore=all<CR>", -- quick toggle like in tpope/vim-unimpaired
     ["yoss"] = "<cmd>setlocal spell!<CR>", -- quick spelling toggle adjustements
