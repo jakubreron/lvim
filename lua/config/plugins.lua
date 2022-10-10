@@ -1,21 +1,43 @@
 lvim.plugins = {
-  { "vimwiki/vimwiki" },
-  { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
-  { "christoomey/vim-titlecase" }, -- "gz" movement to toggle the words case
-  { "christoomey/vim-tmux-navigator" }, -- easier tmux navigation
+  {
+    "vimwiki/vimwiki",
+  },
+  {
+    "AndrewRadev/splitjoin.vim",
+  }, -- gJ, gS movements
+  {
+    "christoomey/vim-titlecase",
+  }, -- "gz" movement to toggle the words case
+  {
+    "christoomey/vim-tmux-navigator",
+  }, -- easier tmux navigation
   {
     "tiagovla/scope.nvim", -- better bufferline (sort buffers into tabs)
     config = function()
       require("scope").setup()
     end,
   },
-  { "christianchiarulli/nvcode-color-schemes.vim" }, -- a bunch of generated themes (vscode theme included)
-  { "tpope/vim-repeat" }, -- better "."
-  { "tpope/vim-sleuth" }, -- detect the relevant tabs / shifts
-  { "tpope/vim-surround" }, -- surround movement
-  { "tpope/vim-obsession" }, -- save the session
-  { "tpope/vim-unimpaired" }, -- additional mappings
-  { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
+  {
+    "christianchiarulli/nvcode-color-schemes.vim",
+  }, -- a bunch of generated themes (vscode theme included)
+  {
+    "tpope/vim-repeat",
+  }, -- better "."
+  {
+    "tpope/vim-sleuth",
+  }, -- detect the relevant tabs / shifts
+  {
+    "tpope/vim-surround",
+  }, -- surround movement
+  {
+    "tpope/vim-obsession",
+  }, -- save the session
+  {
+    "tpope/vim-unimpaired",
+  }, -- additional mappings
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+  }, -- sticky scroll context
   { "mbbill/undotree" },
   {
     "andymass/vim-matchup", -- better "%"
@@ -74,19 +96,6 @@ lvim.plugins = {
       require("nvim-ts-autotag").setup()
     end,
   },
-  -- {
-  --   "lmburns/lf.nvim",
-  --   config = function()
-  --     -- This feature will not work if the plugin is lazy-loaded
-  --     vim.g.lf_netrw = 1
-
-  --     require("lf").setup {
-  --       default_cmd = vim.fn.expand "$CLI_FILE_EXPLORER", -- default `lf` command
-  --       escape_quit = false,
-  --     }
-  --   end,
-  --   requires = { "plenary.nvim", "toggleterm.nvim" },
-  -- },
   {
     "tzachar/cmp-tabnine", -- AI autocompletion
     config = function()
@@ -109,8 +118,8 @@ lvim.plugins = {
   },
 }
 
-vim.g.vimwiki_list = {{
+vim.g.vimwiki_list = { {
   path = vim.fn.expand "$VIMWIKI_DIR",
   syntax = "markdown",
   ext = ".md",
-}}
+} }
