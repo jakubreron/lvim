@@ -1,4 +1,4 @@
-lvim.format_on_save = false -- TODO: skip for "C" files, enable for anything else
+lvim.format_on_save = true -- TODO: skip for "C" files, enable for anything else
 lvim.lint_on_save = true
 
 lvim.builtin.breadcrumbs.active = false
