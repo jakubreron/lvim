@@ -51,8 +51,8 @@ local filetypes = {
 }
 
 local shared_servers = {
-  eslintd = {
-    command = "eslint_d",
+  eslint = {
+    command = "eslint",
     filetypes = filetypes.eslint,
   },
   stylelint = {
@@ -73,7 +73,7 @@ local shared_servers = {
 
 local formatters_servers = {
   stylua = { command = "stylua", filetypes = filetypes.lua },
-  prettierd = { command = "prettierd", filetypes = filetypes.prettier },
+  prettier = { command = "prettier", filetypes = filetypes.prettier },
 }
 
 local linters_servers = {
@@ -90,15 +90,15 @@ local linters_servers = {
 }
 
 formatters.setup {
-  shared_servers.eslintd,
+  shared_servers.eslint,
   shared_servers.stylelint,
   shared_servers.markdown,
   formatters_servers.stylua,
-  formatters_servers.prettierd,
+  formatters_servers.prettier,
 }
 
 linters.setup {
-  shared_servers.eslintd,
+  shared_servers.eslint,
   shared_servers.stylelint,
   shared_servers.markdown,
   linters_servers.luacheck,
