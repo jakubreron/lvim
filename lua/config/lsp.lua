@@ -52,7 +52,7 @@ local filetypes = {
 
 local shared_servers = {
   eslint = {
-    command = "eslint",
+    command = "eslint_d",
     filetypes = filetypes.eslint,
   },
   stylelint = {
@@ -73,7 +73,7 @@ local shared_servers = {
 
 local formatters_servers = {
   stylua = { command = "stylua", filetypes = filetypes.lua },
-  prettier = { command = "prettier", filetypes = filetypes.prettier },
+  prettier = { command = "prettierd", filetypes = filetypes.prettier },
 }
 
 local linters_servers = {
