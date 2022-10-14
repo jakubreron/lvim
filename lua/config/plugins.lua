@@ -69,13 +69,6 @@ lvim.plugins = {
     end,
   },
   {
-    "folke/todo-comments.nvim", -- highlight the todo, hack, note, etc... comments
-    event = "BufRead",
-    config = function()
-      require("todo-comments").setup()
-    end,
-  },
-  {
     "windwp/nvim-ts-autotag", -- complete or replace the open & closing tags
     event = "InsertEnter",
     config = function()

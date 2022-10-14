@@ -76,13 +76,6 @@ lvim.builtin.which_key.mappings.b.L = nil -- soft by language
 lvim.builtin.which_key.mappings.b.c = { "<cmd>%bd | e#<CR>", "Close all except the current one" }
 lvim.builtin.which_key.mappings.b.u = { "<cmd>UndotreeToggle<CR>", "Undotree Toggle" }
 
--- todos
-lvim.builtin.which_key.mappings["T"] = {
-  name = "Todo",
-  q = { "<cmd>TodoQuickFix<CR>", "Todo Quick Fix" },
-  s = { "<cmd>TodoTelescope<CR>", "Todo Search" },
-}
-
 -- npm
 lvim.builtin.which_key.mappings["n"] = {
   name = "NPM",
