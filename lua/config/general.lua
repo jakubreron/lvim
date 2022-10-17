@@ -1,5 +1,6 @@
 lvim.format_on_save = false
 lvim.lint_on_save = true
+lvim.reload_config_on_save = false
 
 lvim.builtin.breadcrumbs.active = false
 lvim.builtin.illuminate.active = false -- word highlight
