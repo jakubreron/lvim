@@ -38,7 +38,6 @@ lvim.plugins = {
   {
     "nvim-treesitter/nvim-treesitter-context",
   }, -- sticky scroll context
-  { "mbbill/undotree" },
   {
     "andymass/vim-matchup", -- better "%"
     requires = "leafOfTree/vim-vue-plugin", -- vue syntax highlighting and % fix

@@ -74,7 +74,6 @@ lvim.builtin.which_key.mappings.b.f = nil -- buffer find
 lvim.builtin.which_key.mappings.b.D = nil -- soft by directory
 lvim.builtin.which_key.mappings.b.L = nil -- soft by language
 lvim.builtin.which_key.mappings.b.c = { "<cmd>%bd | e#<CR>", "Close all except the current one" }
-lvim.builtin.which_key.mappings.b.u = { "<cmd>UndotreeToggle<CR>", "Undotree Toggle" }
 
 -- npm
 lvim.builtin.which_key.mappings["n"] = {
