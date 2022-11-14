@@ -18,9 +18,6 @@ lvim.plugins = {
     end,
   },
   {
-    "christianchiarulli/nvcode-color-schemes.vim",
-  }, -- a bunch of generated themes (vscode theme included)
-  {
     "tpope/vim-repeat",
   }, -- better "."
   {
