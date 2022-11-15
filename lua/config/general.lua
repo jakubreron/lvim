@@ -2,10 +2,9 @@ lvim.format_on_save = false
 lvim.lint_on_save = true
 lvim.reload_config_on_save = false
 
-lvim.builtin.breadcrumbs.active = false
+lvim.builtin.breadcrumbs.active = false -- context
 lvim.builtin.illuminate.active = false -- word highlight
 lvim.builtin.dap.active = false -- debugging
-lvim.builtin.notify.active = false
 
 lvim.builtin.bufferline.options.numbers = "buffer_id"
 lvim.builtin.bufferline.options.always_show_bufferline = true
@@ -16,10 +15,14 @@ lvim.builtin.which_key.setup.plugins.registers = true
 
 lvim.builtin.project.silent_chdir = false
 
+-- TODO: find a way to create project specific ignore...
+lvim.builtin.telescope.defaults.file_ignore_patterns = { "src/components/*" }
+
 local components = require "lvim.core.lualine.components"
 local function packageinfo()
   return require("package-info").get_status()
 end
+
 lvim.builtin.lualine.sections.lualine_c = {
   components.filename,
   components.diff,
