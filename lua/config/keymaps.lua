@@ -1,30 +1,30 @@
 lvim.keys = {
   normal_mode = {
-    ["Q"] = "<cmd>BufferKill<CR>",
+    ["Q"] = "<cmd>BufferKill<CR>", -- kill buffer
 
-    ["<C-f>"] = "<cmd>silent !tmux neww tmux-sessionizer<CR>",
+    ["<C-f>"] = "<cmd>silent !tmux neww tmux-sessionizer<CR>", -- new tmux session
     ["<C-c>"] = "<cmd>%y+<CR>", -- copy whole file
     ["<C-b>"] = "mmggVG<Plug>(comment_toggle_linewise_visual)`m", -- comment whole file and preserve the cursor position with mark hack
 
-    ["]q"] = "<cmd>lua vim.diagnostic.goto_next()<CR>",
-    ["[q"] = "<cmd>lua vim.diagnostic.goto_prev()<CR>",
+    ["]q"] = "<cmd>lua vim.diagnostic.goto_next()<CR>", -- next diagnostic
+    ["[q"] = "<cmd>lua vim.diagnostic.goto_prev()<CR>", -- prev diagnostic
 
-    ["]c"] = "<cmd>lua require'gitsigns'.next_hunk({navigation_message = false})<CR>",
-    ["[c"] = "<cmd>lua require'gitsigns'.prev_hunk({navigation_message = false})<CR>",
+    ["]c"] = "<cmd>lua require'gitsigns'.next_hunk({navigation_message = false})<CR>", -- next change
+    ["[c"] = "<cmd>lua require'gitsigns'.prev_hunk({navigation_message = false})<CR>", -- prev change
 
-    ["yoe"] = "<cmd>set eventignore=all<CR>", -- quick toggle like in tpope/vim-unimpaired
+    ["yoea"] = "<cmd>set eventignore=all<CR>", -- quick toggle like in tpope/vim-unimpaired
+    ["yoen"] = "<cmd>set eventignore=<CR>", -- quick toggle like in tpope/vim-unimpaired
     ["yoss"] = "<cmd>setlocal spell!<CR>", -- quick spelling toggle adjustements
     ["yose"] = "<cmd>setlocal spell! spelllang=en<CR>", -- English
     ["yosp"] = "<cmd>setlocal spell! spelllang=pl<CR>", -- Polish
   },
 
   visual_mode = {
-    ["<leader>p"] = '"_dP',
+    ["<leader>p"] = '"_dP', -- paste without cluttering the register
   },
 }
 
-lvim.builtin.which_key.mappings["q"] = { "<cmd>qa!<CR>", "Quit" }
--- lvim.builtin.which_key.mappings["e"] = { "<cmd>Ex<CR>", "Explorer" }
+lvim.builtin.which_key.mappings["q"] = { "<cmd>qa!<CR>", "Quit" } -- force quit all
 
 lvim.builtin.which_key.mappings["f"] = nil -- find file (already bound to "sf")
 lvim.builtin.which_key.mappings["T"] = nil -- treesitter (not useful)
@@ -57,9 +57,8 @@ lvim.builtin.which_key.mappings.s.c = {
 lvim.builtin.which_key.mappings.s.r = { "<cmd>Telescope oldfiles<CR>", "Open Recent File" }
 lvim.builtin.which_key.mappings.s.s = {
   name = "Replace",
-  r = { "<cmd>%s@<c-r><c-w>@<c-r><c-w>@gc<c-f>$F@i<CR>", "Find and replace" },
+  s = { "<cmd>lua require('spectre').open()<CR>", "Replace anything" },
   w = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", "Replace Word" },
-  a = { "<cmd>lua require('spectre').open()<CR>", "Replace anything" },
 }
 
 -- buffers
@@ -76,7 +75,7 @@ lvim.builtin.which_key.mappings.b.c = { "<cmd>%bd | e#<CR>", "Close all except t
 
 -- npm
 lvim.builtin.which_key.mappings["n"] = {
-  name = "NPM",
+  name = "Node",
   f = { "<cmd>lua require('package-info').show({ force = true })<CR>", "Fetch" },
   h = { "<cmd>lua require('package-info').hide()<CR>", "Hide" },
   d = { "<cmd>lua require('package-info').delete()<CR>", "Delete" },
