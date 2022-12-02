@@ -36,6 +36,9 @@ lvim.plugins = {
     "nvim-treesitter/nvim-treesitter-context",
   }, -- sticky scroll context
   {
+    "szw/vim-maximizer",
+  }, -- maximize current window
+  {
     "andymass/vim-matchup", -- better "%"
     requires = "leafOfTree/vim-vue-plugin", -- vue syntax highlighting and % fix
     event = "CursorMoved",
