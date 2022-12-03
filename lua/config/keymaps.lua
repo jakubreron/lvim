@@ -6,9 +6,6 @@ lvim.keys = {
     ["<C-c>"] = "<cmd>%y+<CR>", -- copy whole file
     ["<C-b>"] = "mmggVG<Plug>(comment_toggle_linewise_visual)`m", -- comment whole file and preserve the cursor position with mark hack
 
-    ["<C-d>"] = "<C-d>zz", -- center the jump
-    ["<C-u>"] = "<C-u>zz", -- center the jump
-
     ["<C-m>"] = "<cmd>MaximizerToggle!<CR>", -- comment whole file and preserve the cursor position with mark hack
 
     ["]q"] = "<cmd>lua vim.diagnostic.goto_next()<CR>", -- next diagnostic
