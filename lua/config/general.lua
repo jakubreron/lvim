@@ -1,4 +1,9 @@
-lvim.format_on_save = false
+lvim.format_on_save = {
+  enabled = true,
+  pattern = "*.lua",
+  timeout = 1000,
+}
+
 lvim.lint_on_save = true
 lvim.reload_config_on_save = false
 
@@ -31,8 +36,10 @@ lvim.builtin.lualine.sections.lualine_c = {
 }
 lvim.builtin.lualine.inactive_sections.lualine_c = lvim.builtin.lualine.sections.lualine_c
 
--- TODO: remove phpdoc from ignored after they fix the upstream: https://github.com/nvim-treesitter/nvim-treesitter/issues/2837
+-- Automatically install missing parsers when entering buffer
+lvim.builtin.treesitter.auto_install = true
 lvim.builtin.treesitter.ensure_installed = "all"
+-- TODO: remove phpdoc from ignored after they fix the upstream: https://github.com/nvim-treesitter/nvim-treesitter/issues/2837
 lvim.builtin.treesitter.ignore_install = { "phpdoc" }
 
 -- TODO: find better settings & themes

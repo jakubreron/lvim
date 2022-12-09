@@ -98,8 +98,12 @@ linters.setup {
   linters_servers.luacheck,
 }
 
--- might be helpful https://github.com/LunarVim/LunarVim/pull/2503
+lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(server)
+  return server ~= "emmet_ls"
+end, lvim.lsp.automatic_configuration.skipped_servers)
+
 require("lvim.lsp.manager").setup("emmet_ls", {})
 -- require("lvim.lsp.manager").setup("angularls", {})
 -- require("lvim.lsp.manager").setup("tailwindcss", {})
 -- require("lvim.lsp.manager").setup("vuels", {}) -- NOTE: Vue 2
+
