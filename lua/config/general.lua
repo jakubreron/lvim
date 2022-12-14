@@ -1,9 +1,4 @@
-lvim.format_on_save = {
-  enabled = true,
-  pattern = "*.lua",
-  timeout = 1000,
-}
-
+lvim.format_on_save = false
 lvim.lint_on_save = true
 lvim.reload_config_on_save = false
 
