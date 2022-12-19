@@ -1,11 +1,11 @@
-require("config.native")
+reload("config.native")
 
-require("config.general")
+reload("config.general")
 
-require("config.themes")
+reload("config.themes")
 
-require("config.keymaps")
+reload("config.keymaps")
 
-require("config.lsp")
+reload("config.lsp")
 
 require("config.plugins")
