@@ -1,4 +1,4 @@
-reload("config.native")
+require("config.native")
 
 reload("config.general")
 
