@@ -17,6 +17,7 @@ lvim.builtin.project.silent_chdir = false
 
 -- TODO: find a way to create project specific ignore...
 lvim.builtin.telescope.defaults.file_ignore_patterns = { "src/components/*" }
+lvim.builtin.telescope.defaults.file_ignore_patterns = { "src/old_store/*" }
 
 local components = require "lvim.core.lualine.components"
 local function packageinfo()
