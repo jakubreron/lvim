@@ -27,6 +27,11 @@ lvim.keys = {
 }
 
 lvim.builtin.which_key.mappings["q"] = { "<cmd>qa!<CR>", "Quit" } -- force quit all
+lvim.builtin.which_key.mappings["tn"] = { "<cmd>tabnew<CR>", "New" }
+lvim.builtin.which_key.mappings["tc"] = { "<cmd>tabclose<CR>", "Close" }
+lvim.builtin.which_key.mappings["to"] = { "<cmd>tabonly<CR>", "Only" }
+lvim.builtin.which_key.mappings["tm"] = { ":tabmove", "Move" }
+lvim.builtin.which_key.mappings["te"] = { ":tabedit <C-r>=expand('%:p:h')<cr>/", "Edit" }
 
 lvim.builtin.which_key.mappings["f"] = nil -- find file (already bound to "sf")
 lvim.builtin.which_key.mappings["T"] = nil -- treesitter (not useful)
@@ -57,9 +62,9 @@ lvim.builtin.which_key.mappings.s.c = {
   "Colorscheme",
 }
 lvim.builtin.which_key.mappings.s.r = { "<cmd>Telescope oldfiles<CR>", "Open Recent File" }
-lvim.builtin.which_key.mappings.s.s = {
+lvim.builtin.which_key.mappings["/"] = {
   name = "Replace",
-  s = { "<cmd>lua require('spectre').open()<CR>", "Replace anything" },
+  s = { "<cmd>lua require('spectre').open()<CR>", "Replace All" },
   w = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", "Replace Word" },
 }
 
@@ -74,6 +79,11 @@ lvim.builtin.which_key.mappings.b.f = nil -- buffer find (:b id_or_name)
 lvim.builtin.which_key.mappings.b.D = nil -- soft by directory (not useful)
 lvim.builtin.which_key.mappings.b.L = nil -- soft by language (not useful)
 lvim.builtin.which_key.mappings.b.c = { "<cmd>%bd | e#<CR>", "Close all except the current one" }
+lvim.builtin.which_key.mappings.b.d = { "<cmd>cd %:p:h<cr><cmd>pwd<cr>", "Change Directory" }
+
+-- lunarvim
+lvim.builtin.which_key.mappings.L.n = nil -- notifications
+lvim.builtin.which_key.mappings.L.l = nil -- logs
 
 -- npm
 lvim.builtin.which_key.mappings["n"] = {
