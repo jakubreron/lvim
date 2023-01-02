@@ -102,8 +102,22 @@ lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(serve
   return server ~= "emmet_ls"
 end, lvim.lsp.automatic_configuration.skipped_servers)
 
-require("lvim.lsp.manager").setup("emmet_ls", {})
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+require("lvim.lsp.manager").setup("emmet_ls", {
+  -- on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "vue" },
+  init_options = {
+    html = {
+      options = {
+        -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+        ["bem.enabled"] = true,
+      },
+    },
+  },
+})
 -- require("lvim.lsp.manager").setup("angularls", {})
 -- require("lvim.lsp.manager").setup("tailwindcss", {})
 -- require("lvim.lsp.manager").setup("vuels", {}) -- NOTE: Vue 2
-

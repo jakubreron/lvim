@@ -2,7 +2,7 @@ lvim.format_on_save = false
 lvim.lint_on_save = true
 lvim.reload_config_on_save = false
 
-lvim.builtin.breadcrumbs.active = false -- context
+-- lvim.builtin.breadcrumbs.active = false -- context
 lvim.builtin.illuminate.active = false -- word highlight
 lvim.builtin.dap.active = false -- debugging
 
