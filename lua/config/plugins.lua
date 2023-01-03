@@ -64,9 +64,9 @@ lvim.plugins = {
       }
     end,
   }, -- easier conflicts
-  {
-    "szw/vim-maximizer",
-  }, -- maximize current window
+  -- {
+  --   "szw/vim-maximizer",
+  -- }, -- maximize current window
   {
     "andymass/vim-matchup", -- better "%"
     requires = "leafOfTree/vim-vue-plugin", -- vue syntax highlighting and % fix
