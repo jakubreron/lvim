@@ -7,9 +7,9 @@ lvim.builtin.illuminate.active = false -- word highlight
 lvim.builtin.dap.active = false -- debugging
 
 lvim.builtin.bufferline.active = false -- top bar with buffers
-lvim.builtin.bufferline.options.numbers = "buffer_id"
+-- lvim.builtin.bufferline.options.numbers = "buffer_id"
 -- lvim.builtin.bufferline.options.always_show_bufferline = true
-lvim.builtin.bufferline.options.show_close_icon = false
+-- lvim.builtin.bufferline.options.show_close_icon = false
 
 lvim.builtin.which_key.setup.plugins.marks = true
 lvim.builtin.which_key.setup.plugins.registers = true
