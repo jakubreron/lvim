@@ -71,9 +71,8 @@ lvim.builtin.which_key.mappings["/"] = {
 }
 
 -- buffers
-lvim.builtin.which_key.mappings.b = nil -- buffers
 lvim.builtin.which_key.mappings.b.b = nil -- buffer prev (]b)
-lvim.builtin.which_key.mappings.b.n = nil -- buffer next ([b)
+lvim.builtin.which_key.mappings.b.n = nil -- buffer prev ([b)
 lvim.builtin.which_key.mappings.b.e = nil -- pick buffer to close (:bd number)
 lvim.builtin.which_key.mappings.b.h = nil -- close to left (not useful)
 lvim.builtin.which_key.mappings.b.l = nil -- close to right (not useful)
