@@ -26,6 +26,8 @@ lvim.keys = {
   },
 }
 
+
+lvim.builtin.which_key.mappings["d"] = { "<cmd>cd %:p:h<cr><cmd>pwd<cr>", "Change Directory" }
 lvim.builtin.which_key.mappings["q"] = { "<cmd>qa!<CR>", "Quit" } -- force quit all
 lvim.builtin.which_key.mappings["tn"] = { "<cmd>tabnew<CR>", "New" }
 lvim.builtin.which_key.mappings["tc"] = { "<cmd>tabclose<CR>", "Close" }
@@ -78,8 +80,6 @@ lvim.builtin.which_key.mappings.b.j = nil -- buffer jump (:b id_or_name)
 lvim.builtin.which_key.mappings.b.f = nil -- buffer find (:b id_or_name)
 lvim.builtin.which_key.mappings.b.D = nil -- soft by directory (not useful)
 lvim.builtin.which_key.mappings.b.L = nil -- soft by language (not useful)
-lvim.builtin.which_key.mappings.b.c = { "<cmd>%bd | e#<CR>", "Close all except the current one" }
-lvim.builtin.which_key.mappings.b.d = { "<cmd>cd %:p:h<cr><cmd>pwd<cr>", "Change Directory" }
 
 -- lunarvim
 lvim.builtin.which_key.mappings.L.n = nil -- notifications
