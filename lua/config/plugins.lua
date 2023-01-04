@@ -30,6 +30,12 @@ lvim.plugins = {
     "nvim-treesitter/nvim-treesitter-context",
   }, -- sticky scroll context
   {
+    "petertriho/nvim-scrollbar",
+    config = function()
+      require("scrollbar").setup()
+    end,
+  },
+  {
     "norcalli/nvim-colorizer.lua", -- highlight the hex / rgb colors
     config = function()
       require("colorizer").setup({ "css", "scss", "html", "javascript" }, {
