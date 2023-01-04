@@ -11,12 +11,6 @@ lvim.plugins = {
   {
     "christoomey/vim-tmux-navigator",
   }, -- easier tmux navigation
-  -- {
-  --   "tiagovla/scope.nvim", -- better bufferline (sort buffers into tabs)
-  --   config = function()
-  --     require("scope").setup()
-  --   end,
-  -- },
   {
     "tpope/vim-repeat",
   }, -- better "."
@@ -123,6 +117,12 @@ lvim.plugins = {
       require("auto-save").setup {}
     end,
   },
+  -- {
+  --   "tiagovla/scope.nvim", -- better bufferline (sort buffers into tabs)
+  --   config = function()
+  --     require("scope").setup()
+  --   end,
+  -- },
 }
 
 vim.g.vimwiki_list = { {

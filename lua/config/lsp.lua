@@ -1,17 +1,6 @@
 lvim.lsp.diagnostics.virtual_text = false
 lvim.builtin.cmp.experimental.ghost_text = false
 
--- See <https://github.com/neovim/nvim-lspconfig#keybindings-and-completion>
-lvim.lsp.on_attach_callback = function(client, bufnr)
-  --Enable completion triggered by <c-x><c-o>
-  vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
-
-  if client.name == "tsserver" or client.name == "jsonls" then
-    client.resolved_capabilities.document_formatting = false
-    client.resolved_capabilities.document_range_formatting = false
-  end
-end
-
 local path = require("null-ls.utils").path
 local root_pattern = require("null-ls.utils").root_pattern
 local nls_cache = require("null-ls.helpers").cache
