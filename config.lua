@@ -1,11 +1,15 @@
+lvim.format_on_save = false
+lvim.lint_on_save = true
+lvim.reload_config_on_save = false
+
 require("config.native")
 
-reload("config.general")
+require("config.builtin")
 
-reload("config.themes")
+require("config.keymaps")
 
-reload("config.keymaps")
+require("config.themes")
 
-reload("config.lsp")
+require("config.lsp")
 
 require("config.plugins")
