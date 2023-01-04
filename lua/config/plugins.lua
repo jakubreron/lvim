@@ -31,6 +31,9 @@ lvim.plugins = {
   }, -- sticky scroll context
   {
     "kevinhwang91/nvim-hlslens",
+    config = function()
+      require('hlslens').setup()
+    end,
   }, -- highlight search count
   {
     "petertriho/nvim-scrollbar",
@@ -126,12 +129,6 @@ lvim.plugins = {
       require("auto-save").setup {}
     end,
   },
-  -- {
-  --   "tiagovla/scope.nvim", -- better bufferline (sort buffers into tabs)
-  --   config = function()
-  --     require("scope").setup()
-  --   end,
-  -- },
 }
 
 vim.g.vimwiki_list = { {
@@ -139,3 +136,15 @@ vim.g.vimwiki_list = { {
   syntax = "markdown",
   ext = ".md",
 } }
+
+local kopts = {noremap = true, silent = true}
+vim.api.nvim_set_keymap('n', 'n',
+    [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]],
+    kopts)
+vim.api.nvim_set_keymap('n', 'N',
+    [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]],
+    kopts)
+vim.api.nvim_set_keymap('n', '*', [[*<Cmd>lua require('hlslens').start()<CR>]], kopts)
+vim.api.nvim_set_keymap('n', '#', [[#<Cmd>lua require('hlslens').start()<CR>]], kopts)
+vim.api.nvim_set_keymap('n', 'g*', [[g*<Cmd>lua require('hlslens').start()<CR>]], kopts)
+vim.api.nvim_set_keymap('n', 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]], kopts)
