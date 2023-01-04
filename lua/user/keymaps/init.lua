@@ -25,3 +25,5 @@ lvim.keys = {
     ["<leader>p"] = '"_dP', -- paste without cluttering the register
   },
 }
+
+require "user.keymaps.which_key"

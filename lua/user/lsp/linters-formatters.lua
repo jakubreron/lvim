@@ -1,5 +1,3 @@
-lvim.lsp.diagnostics.virtual_text = false
-
 local path = require("null-ls.utils").path
 local root_pattern = require("null-ls.utils").root_pattern
 local nls_cache = require("null-ls.helpers").cache

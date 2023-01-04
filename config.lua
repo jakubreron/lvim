@@ -1,14 +1,12 @@
 -- lvim.format_on_save = false
 lvim.reload_config_on_save = false
 
-require("config.native")
+require "user.native"
 
-require("config.builtin")
+require "user.builtin"
 
-require("config.keymaps")
+require "user.keymaps"
 
-require("config.themes")
+require "user.lsp"
 
-require("config.lsp")
-
-require("config.plugins")
+require "user.plugins"
