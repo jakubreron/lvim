@@ -1,5 +1,4 @@
 lvim.lsp.diagnostics.virtual_text = false
-lvim.builtin.cmp.experimental.ghost_text = false
 
 local path = require("null-ls.utils").path
 local root_pattern = require("null-ls.utils").root_pattern
@@ -54,12 +53,12 @@ local shared_servers = {
   },
 }
 
-local formatters_servers = {
+local formater_servers = {
   stylua = { command = "stylua", filetypes = filetypes.lua },
   prettier = { command = "prettierd", filetypes = filetypes.prettier },
 }
 
-local linters_servers = {
+local linter_servers = {
   luacheck = {
     command = "luacheck",
     filetypes = filetypes.lua,
@@ -76,37 +75,17 @@ formatters.setup {
   shared_servers.eslint,
   shared_servers.stylelint,
   shared_servers.markdown,
-  formatters_servers.stylua,
-  formatters_servers.prettier,
+  formater_servers.stylua,
+  formater_servers.prettier,
 }
 
 linters.setup {
   shared_servers.eslint,
   shared_servers.stylelint,
   shared_servers.markdown,
-  linters_servers.luacheck,
+  linter_servers.luacheck,
 }
 
 lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(server)
   return server ~= "emmet_ls"
 end, lvim.lsp.automatic_configuration.skipped_servers)
-
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-require("lvim.lsp.manager").setup("emmet_ls", {
-  -- on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "vue" },
-  init_options = {
-    html = {
-      options = {
-        -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
-        ["bem.enabled"] = true,
-      },
-    },
-  },
-})
--- require("lvim.lsp.manager").setup("angularls", {})
--- require("lvim.lsp.manager").setup("tailwindcss", {})
--- require("lvim.lsp.manager").setup("vuels", {}) -- NOTE: Vue 2

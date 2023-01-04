@@ -19,6 +19,7 @@ lvim.builtin.project.silent_chdir = false
 -- TODO: find a way to create project specific ignore...
 lvim.builtin.telescope.defaults.file_ignore_patterns = { "src/components/*" }
 lvim.builtin.telescope.defaults.file_ignore_patterns = { "src/old_store/*" }
+lvim.builtin.telescope.defaults.file_ignore_patterns = { "static/charting_library/*" }
 
 local components = require "lvim.core.lualine.components"
 local function packageinfo()
@@ -33,10 +34,8 @@ lvim.builtin.lualine.sections.lualine_c = {
 }
 lvim.builtin.lualine.inactive_sections.lualine_c = lvim.builtin.lualine.sections.lualine_c
 
--- Automatically install missing parsers when entering buffer
 lvim.builtin.treesitter.auto_install = true
 lvim.builtin.treesitter.ensure_installed = "all"
--- TODO: remove phpdoc from ignored after they fix the upstream: https://github.com/nvim-treesitter/nvim-treesitter/issues/2837
 lvim.builtin.treesitter.ignore_install = { "phpdoc" }
 
 -- TODO: find better settings & themes
