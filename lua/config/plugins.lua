@@ -30,6 +30,9 @@ lvim.plugins = {
     "nvim-treesitter/nvim-treesitter-context",
   }, -- sticky scroll context
   {
+    "kevinhwang91/nvim-hlslens",
+  }, -- highlight search count
+  {
     "petertriho/nvim-scrollbar",
     config = function()
       require("scrollbar").setup()
