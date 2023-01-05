@@ -23,7 +23,7 @@ local filetypes = {
     "html",
     "markdown",
     "yaml",
-    -- "json",
+    "json",
   },
   lua = {
     "lua",
