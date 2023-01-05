@@ -136,3 +136,4 @@ lvim.plugins = {
 
 require "user.plugins.settings.vimwiki"
 require "user.plugins.settings.hlslens"
+require "user.plugins.settings.nvim-tree"

@@ -26,4 +26,4 @@ lvim.keys = {
   },
 }
 
-require "user.keymaps.which_key"
+require "user.keymaps.which-key"
