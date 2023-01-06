@@ -33,6 +33,17 @@ lvim.plugins = {
     "stevearc/dressing.nvim",
   }, -- better default nvim interfaces
   {
+    "nvim-neotest/neotest",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "haydenmeade/neotest-jest",
+    }, -- run tests directly from the file
+    adapters = {
+      require "neotest-jest" {},
+    },
+  },
+  {
     "kevinhwang91/nvim-hlslens",
     config = function()
       require("hlslens").setup()
@@ -138,5 +149,6 @@ lvim.plugins = {
 }
 
 require "user.plugins.settings.vimwiki"
+---@diagnostic disable-next-line: different-requires
 require "user.plugins.settings.hlslens"
 require "user.plugins.settings.nvim-tree"
