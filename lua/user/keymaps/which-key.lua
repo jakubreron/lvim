@@ -1,4 +1,3 @@
-lvim.builtin.which_key.mappings.o = { "<cmd>Obsession<CR>", "Track Session" }
 lvim.builtin.which_key.mappings.d = { "<cmd>cd %:p:h<cr><cmd>pwd<cr>", "Change Directory" }
 lvim.builtin.which_key.mappings.q = { "<cmd>qa!<CR>", "Quit all" } -- force quit all
 lvim.builtin.which_key.mappings.f = nil -- find file (already bound to "sf")
@@ -71,4 +70,10 @@ lvim.builtin.which_key.mappings.t = {
   o = { "<cmd>tabonly<CR>", "Only" },
   m = { ":tabmove", "Move" },
   e = { ":tabedit <C-r>=expand('%:p:h')<cr>/", "Edit" },
+}
+
+lvim.builtin.which_key.mappings.o = {
+  name = "Obsession",
+  t = { "<cmd>Obsession<CR>", "Track" },
+  r = { "<cmd>source Session.vim<CR>", "Restore" },
 }
