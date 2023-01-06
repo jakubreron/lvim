@@ -30,6 +30,9 @@ lvim.plugins = {
     "nvim-treesitter/nvim-treesitter-context",
   }, -- sticky scroll context
   {
+    "stevearc/dressing.nvim",
+  }, -- better default nvim interfaces
+  {
     "kevinhwang91/nvim-hlslens",
     config = function()
       require("hlslens").setup()
