@@ -77,3 +77,8 @@ lvim.builtin.which_key.mappings.o = {
   t = { "<cmd>Obsession<CR>", "Track" },
   r = { "<cmd>source Session.vim<CR>", "Restore" },
 }
+
+lvim.builtin.which_key.mappings.T = {
+  name = "Tests",
+  w = { "<cmd>lua require('neotest').run.run({ jestCommand = 'jest --watch ' })<CR>", "Watch" },
+}

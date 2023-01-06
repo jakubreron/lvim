@@ -39,8 +39,13 @@ lvim.plugins = {
       "nvim-treesitter/nvim-treesitter",
       "haydenmeade/neotest-jest",
     }, -- run tests directly from the file
-    adapters = {
-      require "neotest-jest" {},
+    require("neotest").setup {
+      adapters = {
+        require "neotest-jest" {
+          -- ...
+          -- jestCommand = "jest --watch ",
+        },
+      },
     },
   },
   {
