@@ -4,7 +4,12 @@ local function package_info()
 end
 
 local function obsession_status()
-  return '%{ObsessionStatus("", "")}'
+  local status = vim.api.nvim_call_function("ObsessionStatus", { "", "" })
+  if status == nil or status == "" then
+    return ""
+  else
+    return status
+  end
 end
 
 lvim.builtin.lualine.sections.lualine_c = {
