@@ -5,11 +5,6 @@ lvim.builtin.which_key.mappings.T = nil -- treesitter (not useful)
 lvim.builtin.which_key.mappings.c = nil -- close buffer (Q)
 lvim.builtin.which_key.mappings.w = nil -- save (not useful because of autosave) + vimwiki took it
 
-lvim.builtin.which_key.mappings.g.j = nil -- next change (]c)
-lvim.builtin.which_key.mappings.g.k = nil -- prev change ([c)
-
-lvim.builtin.which_key.mappings.l.j = nil -- next diagnostic (]q)
-lvim.builtin.which_key.mappings.l.k = nil -- prev diagnostic [[q]]
 lvim.builtin.which_key.mappings["l_"] = { "<cmd>LspRestart <CR>", "Restart LSP" }
 lvim.builtin.which_key.mappings.l.n = {
   name = "NPM",

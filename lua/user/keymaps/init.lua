@@ -8,11 +8,8 @@ lvim.keys = {
     -- TODO: find another bind
     -- ["<C-m>"] = "<cmd>MaximizerToggle!<CR>", -- comment whole file and preserve the cursor position with mark hack
 
-    ["]q"] = "<cmd>lua vim.diagnostic.goto_next()<CR>", -- next diagnostic
-    ["[q"] = "<cmd>lua vim.diagnostic.goto_prev()<CR>", -- prev diagnostic
-
-    ["]c"] = "<cmd>lua require'gitsigns'.next_hunk({navigation_message = false})<CR>", -- next change
-    ["[c"] = "<cmd>lua require'gitsigns'.prev_hunk({navigation_message = false})<CR>", -- prev change
+    -- ["]c"] = "<cmd>lua require'gitsigns'.next_hunk({navigation_message = false})<CR>", -- next change
+    -- ["[c"] = "<cmd>lua require'gitsigns'.prev_hunk({navigation_message = false})<CR>", -- prev change
 
     ["yoea"] = "<cmd>set eventignore=all<CR>", -- quick toggle like in tpope/vim-unimpaired
     ["yoen"] = "<cmd>set eventignore=<CR>", -- quick toggle like in tpope/vim-unimpaired
