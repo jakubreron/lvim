@@ -1,40 +1,19 @@
 lvim.plugins = {
-  {
-    "vimwiki/vimwiki",
-  },
-  {
-    "AndrewRadev/splitjoin.vim",
-  }, -- gJ, gS movements
-  {
-    "christoomey/vim-titlecase",
-  }, -- "gz" movement to toggle the words case
-  {
-    "christoomey/vim-tmux-navigator",
-  }, -- easier tmux navigation
-  {
-    "tpope/vim-repeat",
-  }, -- better "."
-  {
-    "tpope/vim-sleuth",
-  }, -- detect the relevant tabs / shifts
-  {
-    "tpope/vim-surround",
-  }, -- surround movement
-  {
-    "tpope/vim-obsession",
-  }, -- save the session
-  {
-    "tpope/vim-unimpaired",
-  }, -- additional mappings
-  {
-    "nvim-treesitter/nvim-treesitter-context",
-  }, -- sticky scroll context
-  {
-    "stevearc/dressing.nvim",
-  }, -- better default nvim interfaces
-  {
-    "ThePrimeagen/harpoon",
-  }, -- better file navigation since bufferline is disabled
+  { "vimwiki/vimwiki" }, -- notes
+  { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
+  { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
+  { "stevearc/dressing.nvim" }, -- better default nvim interfaces
+  { "ThePrimeagen/harpoon" }, -- better file navigation since bufferline is disabled
+
+  { "christoomey/vim-titlecase" }, -- "gz" movement to toggle the words case
+  { "christoomey/vim-tmux-navigator" }, -- tmux navigation from within nvim
+
+  { "tpope/vim-repeat" }, -- better "."
+  -- { "tpope/vim-sleuth" }, -- detect the relevant tabs / shifts
+  { "tpope/vim-surround" }, -- surround movement
+  { "tpope/vim-obsession" }, -- save the session
+  { "tpope/vim-unimpaired" }, -- additional mappings
+
   {
     "nvim-neotest/neotest",
     requires = {
@@ -159,4 +138,3 @@ lvim.plugins = {
 require "user.plugins.settings.vimwiki"
 ---@diagnostic disable-next-line: different-requires
 require "user.plugins.settings.hlslens"
-require "user.plugins.settings.nvim-tree"

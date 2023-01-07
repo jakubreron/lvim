@@ -1,4 +1,5 @@
-lvim.builtin.illuminate.active = false -- word highlight
+lvim.builtin.illuminate.active = false
+lvim.builtin.nvimtree.setup.view.width = 40
 
 require "user.builtin.bufferline"
 require "user.builtin.lualine"
