@@ -1,1 +1,1 @@
-lvim.builtin.nvimtree.setup.view.width = 45
+lvim.builtin.nvimtree.setup.view.width = 40
