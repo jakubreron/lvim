@@ -3,10 +3,10 @@ local harpoon_mark = require "harpoon.mark"
 
 lvim.keys = {
   normal_mode = {
-    ["Q"] = harpoon_ui.toggle_quick_menu,
+    ["<C-f>"] = harpoon_ui.toggle_quick_menu,
+    ["<C-b>"] = harpoon_mark.add_file,
     ["]c"] = harpoon_ui.nav_next,
     ["[c"] = harpoon_ui.nav_prev,
-    ["<C-f>"] = harpoon_mark.add_file,
 
     -- TODO: find another bind
     -- ["<C-m>"] = "<cmd>MaximizerToggle!<CR>",
