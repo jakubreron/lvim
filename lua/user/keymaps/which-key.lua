@@ -77,3 +77,31 @@ lvim.builtin.which_key.mappings.T = {
   name = "Tests",
   w = { "<cmd>lua require('neotest').run.run({ jestCommand = 'jest --watch ' })<CR>", "Watch" },
 }
+
+local mark = require "harpoon.mark"
+local ui = require "harpoon.ui"
+
+lvim.builtin.which_key.mappings["1"] = {
+  function()
+    ui.nav_file(1)
+  end,
+  "Mark 1",
+}
+lvim.builtin.which_key.mappings["2"] = {
+  function()
+    ui.nav_file(2)
+  end,
+  "Mark 2",
+}
+lvim.builtin.which_key.mappings["3"] = {
+  function()
+    ui.nav_file(3)
+  end,
+  "Mark 3",
+}
+lvim.builtin.which_key.mappings["4"] = {
+  function()
+    ui.nav_file(4)
+  end,
+  "Mark 4",
+}

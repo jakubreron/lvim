@@ -2,8 +2,10 @@ lvim.keys = {
   normal_mode = {
     ["Q"] = "<cmd>BufferKill<CR>", -- kill buffer
 
-    ["<C-f>"] = "<cmd>silent !tmux neww tmux-sessionizer<CR>", -- new tmux session
-    ["<C-b>"] = "mmggVG<Plug>(comment_toggle_linewise_visual)`m", -- comment whole file and preserve the cursor position with mark hack
+    -- ["<C-f>"] = "<cmd>silent !tmux neww tmux-sessionizer<CR>", -- new tmux session
+    -- ["<C-b>"] = "mmggVG<Plug>(comment_toggle_linewise_visual)`m", -- comment whole file and preserve the cursor position with mark hack
+    ["<C-f>"] = require("harpoon.mark").add_file,
+    ["<C-b>"] = require("harpoon.ui").toggle_quick_menu,
 
     -- TODO: find another bind
     -- ["<C-m>"] = "<cmd>MaximizerToggle!<CR>", -- comment whole file and preserve the cursor position with mark hack

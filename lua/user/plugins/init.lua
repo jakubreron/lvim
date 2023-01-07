@@ -33,6 +33,9 @@ lvim.plugins = {
     "stevearc/dressing.nvim",
   }, -- better default nvim interfaces
   {
+    "ThePrimeagen/harpoon",
+  }, -- better file navigation since bufferline is disabled
+  {
     "nvim-neotest/neotest",
     requires = {
       "nvim-lua/plenary.nvim",
