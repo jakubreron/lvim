@@ -36,16 +36,16 @@ lvim.builtin.which_key.mappings["/"] = {
   w = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", "Replace Word" },
 }
 
-lvim.builtin.which_key.mappings.b = {} -- remove all buffers
--- lvim.builtin.which_key.mappings.b.b = nil -- buffer prev (]b)
--- lvim.builtin.which_key.mappings.b.n = nil -- buffer prev ([b)
--- lvim.builtin.which_key.mappings.b.e = nil -- pick buffer to close (:bd number)
--- lvim.builtin.which_key.mappings.b.h = nil -- close to left (not useful)
--- lvim.builtin.which_key.mappings.b.l = nil -- close to right (not useful)
--- lvim.builtin.which_key.mappings.b.j = nil -- buffer jump (:b id_or_name)
--- lvim.builtin.which_key.mappings.b.f = nil -- buffer find (:b id_or_name)
--- lvim.builtin.which_key.mappings.b.D = nil -- soft by directory (not useful)
--- lvim.builtin.which_key.mappings.b.L = nil -- soft by language (not useful)
+lvim.builtin.which_key.mappings.b.b = nil -- buffer prev (]b)
+lvim.builtin.which_key.mappings.b.n = nil -- buffer prev ([b)
+lvim.builtin.which_key.mappings.b.e = nil -- pick buffer to close (:bd number)
+lvim.builtin.which_key.mappings.b.h = nil -- close to left (not useful)
+lvim.builtin.which_key.mappings.b.l = nil -- close to right (not useful)
+lvim.builtin.which_key.mappings.b.j = nil -- buffer jump (:b id_or_name)
+lvim.builtin.which_key.mappings.b.f = nil -- buffer find (:b id_or_name)
+lvim.builtin.which_key.mappings.b.D = nil -- soft by directory (not useful)
+lvim.builtin.which_key.mappings.b.L = nil -- soft by language (not useful)
+lvim.builtin.which_key.mappings.b.c = { "<cmd>BufferKill<CR>", "Close" }
 
 lvim.builtin.which_key.mappings.c = {
   name = "Console",
@@ -78,30 +78,29 @@ lvim.builtin.which_key.mappings.T = {
   w = { "<cmd>lua require('neotest').run.run({ jestCommand = 'jest --watch ' })<CR>", "Watch" },
 }
 
-local mark = require "harpoon.mark"
-local ui = require "harpoon.ui"
+local harpoon_ui = require "harpoon.ui"
 
 lvim.builtin.which_key.mappings["1"] = {
   function()
-    ui.nav_file(1)
+    harpoon_ui.nav_file(1)
   end,
   "Mark 1",
 }
 lvim.builtin.which_key.mappings["2"] = {
   function()
-    ui.nav_file(2)
+    harpoon_ui.nav_file(2)
   end,
   "Mark 2",
 }
 lvim.builtin.which_key.mappings["3"] = {
   function()
-    ui.nav_file(3)
+    harpoon_ui.nav_file(3)
   end,
   "Mark 3",
 }
 lvim.builtin.which_key.mappings["4"] = {
   function()
-    ui.nav_file(4)
+    harpoon_ui.nav_file(4)
   end,
   "Mark 4",
 }
