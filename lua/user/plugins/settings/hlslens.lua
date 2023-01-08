@@ -6,7 +6,9 @@ M.config = function()
     return
   end
 
-  hlslens.setup()
+  hlslens.setup {
+    nearest_only = true,
+  }
 
   local kopts = { noremap = true, silent = true }
 
@@ -28,12 +30,6 @@ M.config = function()
   vim.api.nvim_set_keymap("n", "#", [[#<Cmd>lua require('hlslens').start()<CR>]], kopts)
   vim.api.nvim_set_keymap("n", "g*", [[g*<Cmd>lua require('hlslens').start()<CR>]], kopts)
   vim.api.nvim_set_keymap("n", "g#", [[g#<Cmd>lua require('hlslens').start()<CR>]], kopts)
-
-  -- gitlinker.setup {
-  --   opts = {
-  --     mappings = "<leader>gy",
-  --   },
-  -- }
 end
 
 return M
