@@ -1,5 +1,10 @@
 lvim.plugins = {
-  { "vimwiki/vimwiki" }, -- notes
+  {
+    "vimwiki/vimwiki",
+    config = function()
+      require "user.plugins.settings.vimwiki"
+    end,
+  },
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
   { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
   { "stevearc/dressing.nvim" }, -- better default nvim interfaces
@@ -33,7 +38,7 @@ lvim.plugins = {
   {
     "kevinhwang91/nvim-hlslens",
     config = function()
-      require("hlslens").setup()
+      require("user.plugins.settings.hlslens").config()
     end,
   }, -- highlight search count
   {
@@ -113,12 +118,7 @@ lvim.plugins = {
   {
     "tzachar/cmp-tabnine", -- AI autocompletion
     config = function()
-      local tabnine = require "cmp_tabnine.config"
-      tabnine:setup {
-        max_lines = 1000,
-        max_num_results = 20,
-        sort = true,
-      }
+      require("user.plugins.settings.tabnine").config()
     end,
     run = "./install.sh",
     requires = "hrsh7th/nvim-cmp",
@@ -134,7 +134,3 @@ lvim.plugins = {
   --   "mxsdev/nvim-dap-vscode-js"
   -- },
 }
-
-require "user.plugins.settings.vimwiki"
----@diagnostic disable-next-line: different-requires
-require "user.plugins.settings.hlslens"
