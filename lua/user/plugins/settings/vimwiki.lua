@@ -1,5 +1,6 @@
 local M = {}
 
+-- TODO: add binding to navigate to vw since it's disabled before entering a markdown file
 M.config = function()
   vim.g.vimwiki_list = {
     {

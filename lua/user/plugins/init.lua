@@ -4,6 +4,7 @@ lvim.plugins = {
     config = function()
       require("user.plugins.settings.vimwiki").config()
     end,
+    ft = "markdown",
   },
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
   { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
@@ -19,17 +20,31 @@ lvim.plugins = {
   { "tpope/vim-obsession" }, -- save the session
   { "tpope/vim-unimpaired" }, -- additional mappings
 
+  -- {
+  --   "szw/vim-maximizer",
+  -- }, -- maximize current window
+
   {
-    "nvim-neotest/neotest",
+    "nvim-neotest/neotest", -- run tests directly from the file
     requires = {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
       "haydenmeade/neotest-jest",
-    }, -- run tests directly from the file
+    }, 
     config = function()
       require("user.plugins.settings.neotest").config()
     end,
+    ft = {
+      "javascript",
+      "javascriptreact",
+      "vue",
+      "typescript",
+      "typescriptreact",
+    },
   },
+  -- {
+  --   "mxsdev/nvim-dap-vscode-js"
+  -- },
   {
     "kevinhwang91/nvim-hlslens",
     config = function()
@@ -47,6 +62,12 @@ lvim.plugins = {
     config = function()
       require("user.plugins.settings.colorizer").config()
     end,
+    ft = {
+      "css",
+      "scss",
+      "html",
+      "javascript",
+    },
   },
   {
     "akinsho/git-conflict.nvim",
@@ -55,9 +76,13 @@ lvim.plugins = {
       require("user.plugins.settings.git-conflict").config()
     end,
   }, -- easier conflicts
-  -- {
-  --   "szw/vim-maximizer",
-  -- }, -- maximize current window
+  {
+    "leafOfTree/vim-vue-plugin",
+    config = function()
+      require("user.plugins.settings.vue-plugin").config()
+    end,
+    ft = "vue",
+  },
   {
     "andymass/vim-matchup", -- better "%"
     requires = "leafOfTree/vim-vue-plugin", -- vue syntax highlighting and % fix
@@ -79,6 +104,8 @@ lvim.plugins = {
     config = function()
       require("package-info").setup()
     end,
+    event = "BufRead",
+    ft = "json"
   },
   {
     "kevinhwang91/nvim-bqf", -- better quickfix window (preview, search & replace, etc...)
@@ -109,7 +136,4 @@ lvim.plugins = {
       require("auto-save").setup {}
     end,
   },
-  -- {
-  --   "mxsdev/nvim-dap-vscode-js"
-  -- },
 }

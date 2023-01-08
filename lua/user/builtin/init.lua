@@ -1,5 +1,6 @@
 lvim.builtin.illuminate.active = false
 lvim.builtin.nvimtree.setup.view.width = 40
+lvim.builtin.autopairs.active = true
 
 require "user.builtin.bufferline"
 require "user.builtin.lualine"
