@@ -2,7 +2,7 @@ lvim.plugins = {
   {
     "vimwiki/vimwiki",
     config = function()
-      require "user.plugins.settings.vimwiki"
+      require("user.plugins.settings.vimwiki").config()
     end,
   },
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
@@ -26,14 +26,9 @@ lvim.plugins = {
       "nvim-treesitter/nvim-treesitter",
       "haydenmeade/neotest-jest",
     }, -- run tests directly from the file
-    require("neotest").setup {
-      adapters = {
-        require "neotest-jest" {
-          -- ...
-          -- jestCommand = "jest --watch ",
-        },
-      },
-    },
+    config = function()
+      require("user.plugins.settings.neotest").config()
+    end,
   },
   {
     "kevinhwang91/nvim-hlslens",
@@ -50,30 +45,14 @@ lvim.plugins = {
   {
     "norcalli/nvim-colorizer.lua", -- highlight the hex / rgb colors
     config = function()
-      require("colorizer").setup({ "css", "scss", "html", "javascript" }, {
-        RGB = true, -- #RGB hex codes
-        RRGGBB = true, -- #RRGGBB hex codes
-        RRGGBBAA = true, -- #RRGGBBAA hex codes
-        rgb_fn = true, -- CSS rgb() and rgba() functions
-        hsl_fn = true, -- CSS hsl() and hsla() functions
-        -- css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
-        -- css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
-      })
+      require("user.plugins.settings.colorizer").config()
     end,
   },
   {
     "akinsho/git-conflict.nvim",
     tag = "*",
     config = function()
-      require("git-conflict").setup {
-        default_mappings = true, -- disable buffer local mapping created by this plugin
-        default_commands = false, -- disable commands created by this plugin
-        disable_diagnostics = true, -- This will disable the diagnostics in a buffer whilst it is conflicted
-        highlights = { -- They must have background color, otherwise the default color will be used
-          incoming = "DiffText",
-          current = "DiffAdd",
-        },
-      }
+      require("user.plugins.settings.git-conflict").config()
     end,
   }, -- easier conflicts
   -- {
@@ -84,7 +63,7 @@ lvim.plugins = {
     requires = "leafOfTree/vim-vue-plugin", -- vue syntax highlighting and % fix
     event = "CursorMoved",
     config = function()
-      vim.g.matchup_matchparen_offscreen = { method = "popup" }
+      require("user.plugins.settings.matchup").config()
     end,
   },
   {
