@@ -78,15 +78,7 @@ lvim.plugins = {
     end,
   }, -- easier conflicts
   {
-    "leafOfTree/vim-vue-plugin",
-    config = function()
-      require("user.plugins.settings.vue-plugin").config()
-    end,
-    ft = "vue",
-  },
-  {
     "andymass/vim-matchup", -- better "%"
-    requires = "leafOfTree/vim-vue-plugin", -- vue syntax highlighting and % fix
     event = "CursorMoved",
     config = function()
       require("user.plugins.settings.matchup").config()
