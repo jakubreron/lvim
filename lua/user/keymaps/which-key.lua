@@ -1,6 +1,6 @@
 lvim.builtin.which_key.mappings.d = { "<cmd>cd %:p:h<cr><cmd>pwd<cr>", "Change Directory" }
 lvim.builtin.which_key.mappings.q = { "<cmd>qa!<CR>", "Quit all" } -- force quit all
-lvim.builtin.which_key.mappings.f = nil -- find file (already bound to "sf")
+lvim.builtin.which_key.mappings.f = nil -- git files (remapped to <leader>sg)
 lvim.builtin.which_key.mappings.T = nil -- treesitter (not useful)
 lvim.builtin.which_key.mappings.c = nil -- close buffer (Q)
 lvim.builtin.which_key.mappings.w = nil -- save (not useful because of autosave) + vimwiki took it
@@ -23,6 +23,10 @@ lvim.builtin.which_key.mappings.s.C = nil -- commands (not useful)
 lvim.builtin.which_key.mappings.s.R = nil -- registers (not useful)
 lvim.builtin.which_key.mappings.s.H = nil -- highlight groups (not useful)
 lvim.builtin.which_key.mappings.s.k = nil -- keymaps (not useful)
+lvim.builtin.which_key.mappings.s.t = {
+  "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
+  "Text"
+} -- extended ripgrep search
 lvim.builtin.which_key.mappings.s.p = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings.s.b = { "<cmd>Telescope buffers<CR>", "Buffers" }
 lvim.builtin.which_key.mappings.s.c = {
@@ -30,6 +34,11 @@ lvim.builtin.which_key.mappings.s.c = {
   "Colorscheme",
 }
 lvim.builtin.which_key.mappings.s.r = { "<cmd>Telescope oldfiles<CR>", "Open Recent File" }
+lvim.builtin.which_key.mappings.s.g = {
+  require("lvim.core.telescope.custom-finders").find_project_files,
+  "Git Files"
+} -- project files only
+
 lvim.builtin.which_key.mappings["/"] = {
   name = "Replace",
   ["/"] = { "<cmd>lua require('spectre').open()<CR>", "Replace All" },
@@ -73,10 +82,10 @@ lvim.builtin.which_key.mappings.o = {
   r = { "<cmd>source Session.vim<CR>", "Restore" },
 }
 
-lvim.builtin.which_key.mappings.T = {
-  name = "Tests",
-  w = { "<cmd>lua require('neotest').run.run({ jestCommand = 'jest --watch ' })<CR>", "Watch" },
-}
+-- lvim.builtin.which_key.mappings.T = {
+--   name = "Tests",
+--   r = { "<cmd>require('neotest').run.run({strategy = 'dap'})<CR>", "Run" },
+-- }
 
 local harpoon_ui = require "harpoon.ui"
 

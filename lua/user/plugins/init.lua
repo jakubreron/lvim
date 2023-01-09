@@ -25,16 +25,6 @@ lvim.plugins = {
   -- }, -- maximize current window
 
   {
-    "haydenmeade/neotest-jest",
-    ft = {
-      "javascript",
-      "javascriptreact",
-      "vue",
-      "typescript",
-      "typescriptreact",
-    },
-  },
-  {
     "nvim-neotest/neotest", -- run tests directly from the file
     requires = {
       "nvim-lua/plenary.nvim",
@@ -55,6 +45,7 @@ lvim.plugins = {
   -- {
   --   "mxsdev/nvim-dap-vscode-js"
   -- },
+  -- TODO: find out how to highlight the current search without a plugin
   {
     "kevinhwang91/nvim-hlslens",
     config = function()
@@ -144,6 +135,12 @@ lvim.plugins = {
     "Pocco81/auto-save.nvim",
     config = function()
       require("auto-save").setup {}
+    end,
+  },
+  {
+    "nvim-telescope/telescope-live-grep-args.nvim",
+    config = function()
+      require("telescope").load_extension "live_grep_args"
     end,
   },
 }
