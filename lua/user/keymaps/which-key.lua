@@ -1,11 +1,12 @@
-lvim.builtin.which_key.mappings.d = { "<cmd>cd %:p:h<cr><cmd>pwd<cr>", "Change Directory" }
-lvim.builtin.which_key.mappings.q = { "<cmd>qa!<CR>", "Quit all" } -- force quit all
-lvim.builtin.which_key.mappings.f = nil -- git files (remapped to <leader>sg)
-lvim.builtin.which_key.mappings.T = nil -- treesitter (not useful)
-lvim.builtin.which_key.mappings.c = nil -- close buffer (Q)
-lvim.builtin.which_key.mappings.w = nil -- save (not useful because of autosave) + vimwiki took it
+lvim.builtin.which_key.mappings.f = nil -- git/project files
+lvim.builtin.which_key.mappings.T = nil -- treesitter
+lvim.builtin.which_key.mappings.c = nil -- close buffer
+lvim.builtin.which_key.mappings.w = nil -- save
+lvim.builtin.which_key.mappings.q = { "<cmd>qa!<CR>", "Quit all" }
 
-lvim.builtin.which_key.mappings["l_"] = { "<cmd>LspRestart <CR>", "Restart LSP" }
+lvim.builtin.which_key.mappings.l.j = nil
+lvim.builtin.which_key.mappings.l.k = nil
+lvim.builtin.which_key.mappings["l_"] = { "<cmd>LspRestart <CR>", "Restart" }
 lvim.builtin.which_key.mappings.l.n = {
   name = "NPM",
   f = { "<cmd>lua require('package-info').show({ force = true })<CR>", "Fetch" },
@@ -17,15 +18,14 @@ lvim.builtin.which_key.mappings.l.n = {
   c = { "<cmd>lua require('package-info').change_version()<CR>", "Change version" },
 }
 
-lvim.builtin.which_key.mappings.s.b = nil -- branches (not useful)
-lvim.builtin.which_key.mappings.s.M = nil -- man pages (not useful)
-lvim.builtin.which_key.mappings.s.C = nil -- commands (not useful)
-lvim.builtin.which_key.mappings.s.R = nil -- registers (not useful)
-lvim.builtin.which_key.mappings.s.H = nil -- highlight groups (not useful)
-lvim.builtin.which_key.mappings.s.k = nil -- keymaps (not useful)
+lvim.builtin.which_key.mappings.s.M = nil -- man pages
+lvim.builtin.which_key.mappings.s.C = nil -- commands
+lvim.builtin.which_key.mappings.s.R = nil -- registers
+lvim.builtin.which_key.mappings.s.H = nil -- highlight groups
+lvim.builtin.which_key.mappings.s.k = nil -- keymaps
 lvim.builtin.which_key.mappings.s.t = {
   "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
-  "Text"
+  "Text",
 } -- extended ripgrep search
 lvim.builtin.which_key.mappings.s.p = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings.s.b = { "<cmd>Telescope buffers<CR>", "Buffers" }
@@ -36,8 +36,8 @@ lvim.builtin.which_key.mappings.s.c = {
 lvim.builtin.which_key.mappings.s.r = { "<cmd>Telescope oldfiles<CR>", "Open Recent File" }
 lvim.builtin.which_key.mappings.s.g = {
   require("lvim.core.telescope.custom-finders").find_project_files,
-  "Git File"
-} -- project files only
+  "Git File",
+}
 
 lvim.builtin.which_key.mappings["/"] = {
   name = "Replace",
@@ -45,16 +45,20 @@ lvim.builtin.which_key.mappings["/"] = {
   w = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", "Replace Word" },
 }
 
-lvim.builtin.which_key.mappings.b.b = nil -- buffer prev (]b)
-lvim.builtin.which_key.mappings.b.n = nil -- buffer prev ([b)
-lvim.builtin.which_key.mappings.b.e = nil -- pick buffer to close (:bd number)
-lvim.builtin.which_key.mappings.b.h = nil -- close to left (not useful)
-lvim.builtin.which_key.mappings.b.l = nil -- close to right (not useful)
-lvim.builtin.which_key.mappings.b.j = nil -- buffer jump (:b id_or_name)
-lvim.builtin.which_key.mappings.b.f = nil -- buffer find (:b id_or_name)
-lvim.builtin.which_key.mappings.b.D = nil -- soft by directory (not useful)
-lvim.builtin.which_key.mappings.b.L = nil -- soft by language (not useful)
+lvim.builtin.which_key.mappings.b.b = nil -- buffer prev
+lvim.builtin.which_key.mappings.b.n = nil -- buffer prev
+lvim.builtin.which_key.mappings.b.e = nil -- pick buffer to close
+lvim.builtin.which_key.mappings.b.h = nil -- close to left
+lvim.builtin.which_key.mappings.b.l = nil -- close to right
+lvim.builtin.which_key.mappings.b.j = nil -- buffer jump
+lvim.builtin.which_key.mappings.b.f = nil -- buffer find
+lvim.builtin.which_key.mappings.b.D = nil -- soft by directory
+lvim.builtin.which_key.mappings.b.L = nil -- sort by language
+lvim.builtin.which_key.mappings.b.W = nil -- save without formatting
 lvim.builtin.which_key.mappings.b.c = { "<cmd>BufferKill<CR>", "Close" }
+
+lvim.builtin.which_key.mappings.g.j = nil
+lvim.builtin.which_key.mappings.g.k = nil
 
 lvim.builtin.which_key.mappings.c = {
   name = "Console",
