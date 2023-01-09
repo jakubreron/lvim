@@ -36,7 +36,7 @@ lvim.builtin.which_key.mappings.s.c = {
 lvim.builtin.which_key.mappings.s.r = { "<cmd>Telescope oldfiles<CR>", "Open Recent File" }
 lvim.builtin.which_key.mappings.s.g = {
   require("lvim.core.telescope.custom-finders").find_project_files,
-  "Git Files"
+  "Git File"
 } -- project files only
 
 lvim.builtin.which_key.mappings["/"] = {
