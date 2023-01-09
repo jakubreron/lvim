@@ -8,6 +8,7 @@ lvim.plugins = {
   },
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
   { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
+  { "nvim-treesitter/nvim-treesitter-textobjects" }, -- more movements (if, af, ic, ac, etc...)
   { "stevearc/dressing.nvim" }, -- better default nvim interfaces
   { "ThePrimeagen/harpoon" }, -- better file navigation since bufferline is disabled
 
@@ -45,9 +46,8 @@ lvim.plugins = {
   -- {
   --   "mxsdev/nvim-dap-vscode-js"
   -- },
-  -- TODO: find out how to highlight the current search without a plugin
   {
-    "kevinhwang91/nvim-hlslens",
+    "kevinhwang91/nvim-hlslens", -- TODO: find out how to highlight the current search without a plugin
     config = function()
       require("user.plugins.settings.hlslens").config()
     end,
@@ -105,13 +105,6 @@ lvim.plugins = {
     event = { "BufRead", "BufNew" },
     config = function()
       require("bqf").setup()
-    end,
-  },
-  {
-    "windwp/nvim-ts-autotag", -- complete or replace the open & closing tags
-    event = "InsertEnter",
-    config = function()
-      require("nvim-ts-autotag").setup()
     end,
   },
   {
