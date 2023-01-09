@@ -25,12 +25,22 @@ lvim.plugins = {
   -- }, -- maximize current window
 
   {
+    "haydenmeade/neotest-jest",
+    ft = {
+      "javascript",
+      "javascriptreact",
+      "vue",
+      "typescript",
+      "typescriptreact",
+    },
+  },
+  {
     "nvim-neotest/neotest", -- run tests directly from the file
     requires = {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
       "haydenmeade/neotest-jest",
-    }, 
+    },
     config = function()
       require("user.plugins.settings.neotest").config()
     end,
@@ -105,7 +115,7 @@ lvim.plugins = {
       require("package-info").setup()
     end,
     event = "BufRead",
-    ft = "json"
+    ft = "json",
   },
   {
     "kevinhwang91/nvim-bqf", -- better quickfix window (preview, search & replace, etc...)
