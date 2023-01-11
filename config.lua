@@ -1,6 +1,3 @@
-lvim.format_on_save = false
-lvim.reload_config_on_save = false
-
 require "user.plugins"
 
 require "user.shared"

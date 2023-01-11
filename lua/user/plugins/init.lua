@@ -77,7 +77,7 @@ lvim.plugins = {
   }, -- easier conflicts
   {
     "andymass/vim-matchup", -- better "%"
-    event = "CursorMoved",
+    -- event = "CursorMoved",
     config = function()
       require("user.plugins.settings.matchup").config()
     end,

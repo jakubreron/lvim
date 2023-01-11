@@ -1,3 +1,5 @@
+lvim.reload_config_on_save = false
+
 lvim.builtin.illuminate.active = false
 lvim.builtin.nvimtree.setup.view.width = 40
 lvim.builtin.autopairs.active = true
