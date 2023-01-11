@@ -4,7 +4,6 @@ lvim.plugins = {
     config = function()
       require("user.plugins.settings.vimwiki").config()
     end,
-    ft = "markdown",
   },
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
   { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
@@ -16,7 +15,6 @@ lvim.plugins = {
   { "christoomey/vim-tmux-navigator" }, -- tmux navigation from within nvim
 
   { "tpope/vim-repeat" }, -- better "."
-  -- { "tpope/vim-sleuth" }, -- detect the relevant tabs / shifts
   { "tpope/vim-surround" }, -- surround movement
   { "tpope/vim-obsession" }, -- save the session
   { "tpope/vim-unimpaired" }, -- additional mappings
