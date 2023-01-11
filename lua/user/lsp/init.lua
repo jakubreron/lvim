@@ -1,6 +1,5 @@
 require "user.lsp.linters-formatters"
 require "user.lsp.languages.js-ts"
-require "user.lsp.servers.volar"
 
 lvim.lsp.diagnostics.virtual_text = false
 
