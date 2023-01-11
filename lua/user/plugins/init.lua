@@ -27,7 +27,7 @@ lvim.plugins = {
 
   {
     "nvim-neotest/neotest", -- run tests directly from the file
-    requires = {
+    dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
       "haydenmeade/neotest-jest",
@@ -72,7 +72,7 @@ lvim.plugins = {
   },
   {
     "akinsho/git-conflict.nvim",
-    tag = "*",
+    version = "*",
     config = function()
       require("user.plugins.settings.git-conflict").config()
     end,
@@ -93,7 +93,7 @@ lvim.plugins = {
   },
   {
     "vuki656/package-info.nvim", -- check if the package info is up to date
-    requires = "MunifTanjim/nui.nvim",
+    dependencies = "MunifTanjim/nui.nvim",
     config = function()
       require("package-info").setup()
     end,
@@ -112,8 +112,8 @@ lvim.plugins = {
     config = function()
       require("user.plugins.settings.tabnine").config()
     end,
-    run = "./install.sh",
-    requires = "hrsh7th/nvim-cmp",
+    build = "./install.sh",
+    dependencies = "hrsh7th/nvim-cmp",
     event = "InsertEnter",
   },
   {
