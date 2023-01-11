@@ -9,7 +9,10 @@ lvim.plugins = {
   { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
   { "nvim-treesitter/nvim-treesitter-textobjects" }, -- more movements (if, af, ic, ac, etc...)
   { "stevearc/dressing.nvim" }, -- better default nvim interfaces
-  { "ThePrimeagen/harpoon" }, -- better file navigation since bufferline is disabled
+  {
+    "ThePrimeagen/harpoon",
+    lazy = true,
+  }, -- better file navigation since bufferline is disabled
 
   { "christoomey/vim-titlecase" }, -- "gz" movement to toggle the words case
   { "christoomey/vim-tmux-navigator" }, -- tmux navigation from within nvim
@@ -40,6 +43,7 @@ lvim.plugins = {
       "typescript",
       "typescriptreact",
     },
+    lazy = true,
   },
   -- {
   --   "mxsdev/nvim-dap-vscode-js"
@@ -67,6 +71,7 @@ lvim.plugins = {
       "html",
       "javascript",
     },
+    lazy = true,
   },
   {
     "akinsho/git-conflict.nvim",
@@ -74,6 +79,7 @@ lvim.plugins = {
     config = function()
       require("user.plugins.settings.git-conflict").config()
     end,
+    lazy = true,
   }, -- easier conflicts
   {
     "andymass/vim-matchup", -- better "%"
@@ -88,6 +94,7 @@ lvim.plugins = {
     config = function()
       require("spectre").setup()
     end,
+    lazy = true,
   },
   {
     "vuki656/package-info.nvim", -- check if the package info is up to date
@@ -97,6 +104,7 @@ lvim.plugins = {
     end,
     event = "BufRead",
     ft = "json",
+    lazy = true,
   },
   {
     "kevinhwang91/nvim-bqf", -- better quickfix window (preview, search & replace, etc...)
@@ -104,6 +112,7 @@ lvim.plugins = {
     config = function()
       require("bqf").setup()
     end,
+    lazy = true,
   },
   {
     "tzachar/cmp-tabnine", -- AI autocompletion
@@ -113,6 +122,7 @@ lvim.plugins = {
     build = "./install.sh",
     dependencies = "hrsh7th/nvim-cmp",
     event = "InsertEnter",
+    lazy = true,
   },
   {
     "Pocco81/auto-save.nvim",
@@ -125,5 +135,6 @@ lvim.plugins = {
     config = function()
       require("telescope").load_extension "live_grep_args"
     end,
+    lazy = true,
   },
 }
