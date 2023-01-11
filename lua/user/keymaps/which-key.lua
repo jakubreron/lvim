@@ -7,16 +7,6 @@ lvim.builtin.which_key.mappings.q = { "<cmd>qa!<CR>", "Quit all" }
 lvim.builtin.which_key.mappings.l.j = nil
 lvim.builtin.which_key.mappings.l.k = nil
 lvim.builtin.which_key.mappings["l_"] = { "<cmd>LspRestart <CR>", "Restart" }
-lvim.builtin.which_key.mappings.l.n = {
-  name = "NPM",
-  f = { "<cmd>lua require('package-info').show({ force = true })<CR>", "Fetch" },
-  h = { "<cmd>lua require('package-info').hide()<CR>", "Hide" },
-  d = { "<cmd>lua require('package-info').delete()<CR>", "Delete" },
-  u = { "<cmd>lua require('package-info').update()<CR>", "Update" },
-  i = { "<cmd>lua require('package-info').install()<CR>", "Install" },
-  r = { "<cmd>lua require('package-info').reinstall()<CR>", "Reinstall all" },
-  c = { "<cmd>lua require('package-info').change_version()<CR>", "Change version" },
-}
 
 lvim.builtin.which_key.mappings.s.M = nil -- man pages
 lvim.builtin.which_key.mappings.s.C = nil -- commands

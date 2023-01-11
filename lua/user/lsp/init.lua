@@ -1,3 +1,7 @@
+require "user.lsp.linters-formatters"
+require "user.lsp.languages.js-ts"
+require "user.lsp.servers.volar"
+
 lvim.lsp.diagnostics.virtual_text = false
 
 -- See <https://github.com/neovim/nvim-lspconfig#keybindings-and-completion>
@@ -14,6 +18,3 @@ end
 lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(server)
   return server ~= "emmet_ls"
 end, lvim.lsp.automatic_configuration.skipped_servers)
-
-require "user.lsp.languages.js-ts"
-require "user.lsp.linters-formatters"

@@ -1,3 +1,5 @@
+require "user.keymaps.which-key"
+
 local harpoon_ui = require "harpoon.ui"
 local harpoon_mark = require "harpoon.mark"
 
@@ -29,5 +31,3 @@ lvim.keys = {
     ["<leader>p"] = '"_dP',
   },
 }
-
-require "user.keymaps.which-key"
