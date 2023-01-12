@@ -4,6 +4,7 @@ require "user.builtin.telescope"
 require "user.builtin.treesitter"
 require "user.builtin.which_key"
 require "user.builtin.lir"
+require "user.builtin.nvimtree"
 
 lvim.reload_config_on_save = false
 lvim.format_on_save = {
@@ -13,5 +14,4 @@ lvim.format_on_save = {
 }
 
 lvim.builtin.illuminate.active = false
-lvim.builtin.nvimtree.setup.view.width = 40
 lvim.builtin.autopairs.active = true
