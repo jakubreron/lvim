@@ -7,6 +7,7 @@ lvim.keys = {
   normal_mode = {
     ["<C-f>"] = harpoon_ui.toggle_quick_menu,
     ["<C-b>"] = harpoon_mark.add_file,
+    ["<C-s>"] = "<cmd>w!<CR>",
     -- ["]c"] = harpoon_ui.nav_next,
     -- ["[c"] = harpoon_ui.nav_prev,
 

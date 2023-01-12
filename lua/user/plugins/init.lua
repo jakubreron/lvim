@@ -124,12 +124,12 @@ lvim.plugins = {
     event = "InsertEnter",
     lazy = true,
   },
-  {
-    "Pocco81/auto-save.nvim",
-    config = function()
-      require("auto-save").setup {}
-    end,
-  },
+  -- {
+  --   "Pocco81/auto-save.nvim",
+  --   config = function()
+  --     require("auto-save").setup {}
+  --   end,
+  -- },
   {
     "nvim-telescope/telescope-live-grep-args.nvim",
     config = function()
