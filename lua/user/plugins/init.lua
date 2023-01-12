@@ -1,10 +1,5 @@
 lvim.plugins = {
-  {
-    "vimwiki/vimwiki",
-    config = function()
-      require("user.plugins.settings.vimwiki").config()
-    end,
-  },
+  { "vimwiki/vimwiki" },
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
   { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
   { "nvim-treesitter/nvim-treesitter-textobjects" }, -- more movements (if, af, ic, ac, etc...)
@@ -84,9 +79,6 @@ lvim.plugins = {
   {
     "andymass/vim-matchup", -- better "%"
     -- event = "CursorMoved",
-    config = function()
-      require("user.plugins.settings.matchup").config()
-    end,
   },
   {
     "windwp/nvim-spectre", -- search & replace throughout all the files (without vimgrepping)
@@ -136,5 +128,14 @@ lvim.plugins = {
       require("telescope").load_extension "live_grep_args"
     end,
     lazy = true,
+  },
+}
+
+vim.g.matchup_matchparen_offscreen = { method = "popup" }
+vim.g.vimwiki_list = {
+  {
+    path = vim.fn.expand "$VIMWIKI_DIR",
+    syntax = "markdown",
+    ext = ".md",
   },
 }
