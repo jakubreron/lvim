@@ -16,12 +16,12 @@ local mappings = {
   l = {
     n = {
       name = "NPM",
+      a = { "<cmd>lua require('package-info').install()<CR>", "Add" },
+      r = { "<cmd>lua require('package-info').delete()<CR>", "Remove" },
       f = { "<cmd>lua require('package-info').show({ force = true })<CR>", "Fetch" },
       h = { "<cmd>lua require('package-info').hide()<CR>", "Hide" },
-      d = { "<cmd>lua require('package-info').delete()<CR>", "Delete" },
       u = { "<cmd>lua require('package-info').update()<CR>", "Update" },
-      i = { "<cmd>lua require('package-info').install()<CR>", "Install" },
-      r = { "<cmd>lua require('package-info').reinstall()<CR>", "Reinstall all" },
+      R = { "<cmd>lua require('package-info').reinstall()<CR>", "Reinstall all" },
       c = { "<cmd>lua require('package-info').change_version()<CR>", "Change version" },
     },
   },
