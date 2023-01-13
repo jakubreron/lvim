@@ -131,6 +131,7 @@ lvim.plugins = {
   },
 }
 
+-- TODO: move to separate files and try to make it working (it didn't work with the current config() approach)
 vim.g.matchup_matchparen_offscreen = { method = "popup" }
 
 vim.g.vimwiki_list = {
