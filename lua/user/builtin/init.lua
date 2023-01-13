@@ -7,11 +7,12 @@ require "user.builtin.lir"
 require "user.builtin.nvimtree"
 
 lvim.reload_config_on_save = false
-lvim.format_on_save = {
-  enabled = true,
-  pattern = "*",
-  timeout = 1000,
-}
+lvim.format_on_save.enabled = false
+-- lvim.format_on_save = {
+--   enabled = true,
+--   pattern = "*",
+--   timeout = 1000,
+-- }
 
 lvim.builtin.illuminate.active = false
 lvim.builtin.autopairs.active = true

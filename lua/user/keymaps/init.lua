@@ -11,8 +11,8 @@ lvim.keys = {
     -- ["]c"] = harpoon_ui.nav_next,
     -- ["[c"] = harpoon_ui.nav_prev,
 
-    ["]x"] = "<cmd>lua vim.diagnostic.goto_next()<CR>", -- next diagnostic
-    ["[x"] = "<cmd>lua vim.diagnostic.goto_prev()<CR>", -- prev diagnostic
+    ["]x"] = "<cmd>lua vim.diagnostic.goto_next({ float = false })<CR>", -- next diagnostic
+    ["[x"] = "<cmd>lua vim.diagnostic.goto_prev({ float = false })<CR>", -- prev diagnostic
 
     ["]c"] = "<cmd>lua require'gitsigns'.next_hunk({navigation_message = false})<CR>", -- next change
     ["[c"] = "<cmd>lua require'gitsigns'.prev_hunk({navigation_message = false})<CR>", -- prev change

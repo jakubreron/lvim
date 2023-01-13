@@ -44,6 +44,7 @@ lvim.builtin.which_key.mappings.b.j = nil -- buffer jump
 lvim.builtin.which_key.mappings.b.f = nil -- buffer find
 lvim.builtin.which_key.mappings.b.D = nil -- soft by directory
 lvim.builtin.which_key.mappings.b.L = nil -- sort by language
+lvim.builtin.which_key.mappings.b.W = nil -- write without formatting
 lvim.builtin.which_key.mappings.b.c = { "<cmd>BufferKill<CR>", "Close" }
 
 lvim.builtin.which_key.mappings.g.j = nil
