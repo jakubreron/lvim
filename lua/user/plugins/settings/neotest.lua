@@ -12,6 +12,10 @@ M.config = function()
       open = true,
     },
 
+    summary = {
+      open = "topleft vsplit | vertical resize 50",
+    },
+
     adapters = {
       require "neotest-jest" {
         -- jestCommand = "jest --watch",
