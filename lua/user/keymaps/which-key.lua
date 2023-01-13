@@ -77,12 +77,13 @@ lvim.builtin.which_key.mappings.o = {
 
 lvim.builtin.which_key.mappings.u = {
   name = "Unit Tests",
-  n = { "<cmd>lua require('neotest').run.run()<CR>", "Nearest" },
-  c = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>", "Current file" },
-  s = { "<cmd>lua require('neotest').run.stop()<CR>", "Stop" },
+  r = { "<cmd>lua require('neotest').run.run()<CR>", "Run Nearest" },
+  f = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>", "Run Current File" },
+  s = { "<cmd> lua require('neotest').summary.toggle()<CR>", "Summary Tree" },
+  S = { "<cmd>lua require('neotest').run.stop()<CR>", "Stop" },
   a = { "<cmd>lua require('neotest').run.attach()<CR>", "Attach" },
-  p = { "<cmd>lua require('neotest').output_panel.toggle()<CR>", "Panel toggle" },
-  o = { "<cmd>lua require('neotest').output.open({ enter = true })<CR>", "Panel toggle" },
+  p = { "<cmd>lua require('neotest').output_panel.toggle()<CR>", "Panel Toggle" },
+  o = { "<cmd>lua require('neotest').output.open({ enter = true })<CR>", "Output" },
 }
 
 local harpoon_ui = require "harpoon.ui"
