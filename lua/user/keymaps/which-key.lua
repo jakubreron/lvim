@@ -75,10 +75,15 @@ lvim.builtin.which_key.mappings.o = {
   r = { "<cmd>source Session.vim<CR>", "Restore" },
 }
 
--- lvim.builtin.which_key.mappings.T = {
---   name = "Tests",
---   r = { "<cmd>require('neotest').run.run({strategy = 'dap'})<CR>", "Run" },
--- }
+lvim.builtin.which_key.mappings.u = {
+  name = "Unit Tests",
+  n = { "<cmd>lua require('neotest').run.run()<CR>", "Nearest" },
+  c = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>", "Current file" },
+  s = { "<cmd>lua require('neotest').run.stop()<CR>", "Stop" },
+  a = { "<cmd>lua require('neotest').run.attach()<CR>", "Attach" },
+  p = { "<cmd>lua require('neotest').output_panel.toggle()<CR>", "Panel toggle" },
+  o = { "<cmd>lua require('neotest').output.open({ enter = true })<CR>", "Panel toggle" },
+}
 
 local harpoon_ui = require "harpoon.ui"
 

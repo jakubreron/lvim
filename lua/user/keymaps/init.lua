@@ -11,11 +11,14 @@ lvim.keys = {
     -- ["]c"] = harpoon_ui.nav_next,
     -- ["[c"] = harpoon_ui.nav_prev,
 
-    ["]g"] = "<cmd>lua vim.diagnostic.goto_next()<CR>", -- next diagnostic
-    ["[g"] = "<cmd>lua vim.diagnostic.goto_prev()<CR>", -- prev diagnostic
+    ["]x"] = "<cmd>lua vim.diagnostic.goto_next()<CR>", -- next diagnostic
+    ["[x"] = "<cmd>lua vim.diagnostic.goto_prev()<CR>", -- prev diagnostic
 
     ["]c"] = "<cmd>lua require'gitsigns'.next_hunk({navigation_message = false})<CR>", -- next change
     ["[c"] = "<cmd>lua require'gitsigns'.prev_hunk({navigation_message = false})<CR>", -- prev change
+
+    ["]u"] = "<cmd>lua require('neotest').jump.next({ status = 'failed' })<CR>", -- next failed test
+    ["[u"] = "<cmd>lua require('neotest').jump.prev({ status = 'failed' })<CR>", -- prev failed test
 
     -- TODO: find another bind
     -- ["<C-m>"] = "<cmd>MaximizerToggle!<CR>",
