@@ -78,9 +78,9 @@ lvim.builtin.which_key.mappings.o = {
 lvim.builtin.which_key.mappings.u = {
   name = "Unit Tests",
   r = { "<cmd>lua require('neotest').run.run()<CR>", "Run Nearest" },
-  f = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>", "Run Current File" },
-  s = { "<cmd> lua require('neotest').summary.toggle()<CR>", "Summary Tree" },
-  S = { "<cmd>lua require('neotest').run.stop()<CR>", "Stop" },
+  f = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>", "Run File" },
+  s = { "<cmd>lua require('neotest').run.stop()<CR>", "Stop" },
+  t = { "<cmd>lua require('neotest').summary.toggle()<CR>", "Summary Tree" },
   a = { "<cmd>lua require('neotest').run.attach()<CR>", "Attach" },
   p = { "<cmd>lua require('neotest').output_panel.toggle()<CR>", "Panel Toggle" },
   o = { "<cmd>lua require('neotest').output.open({ enter = true })<CR>", "Output" },

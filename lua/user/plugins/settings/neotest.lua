@@ -9,8 +9,8 @@ M.config = function()
   neotest.setup {
     adapters = {
       require "neotest-jest" {
-        -- ...
-        -- jestCommand = "jest --watch ",
+        jestCommand = "jest --watch",
+        jestConfigFile = "tests/unit/jest.conf.js",
       },
     },
   }
