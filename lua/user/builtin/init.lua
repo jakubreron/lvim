@@ -15,4 +15,4 @@ lvim.format_on_save = {
 
 lvim.builtin.illuminate.active = false
 lvim.builtin.autopairs.active = true
-lvim.builtin.dap.active = false
+lvim.builtin.dap.active = true
