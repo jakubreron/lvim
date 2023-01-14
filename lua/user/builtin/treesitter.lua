@@ -16,6 +16,7 @@ lvim.builtin.treesitter.incremental_selection = {
 lvim.builtin.treesitter.textobjects = {
   select = {
     enable = true,
+    lookahead = true,
     keymaps = {
       ["af"] = "@function.outer",
       ["if"] = "@function.inner",
