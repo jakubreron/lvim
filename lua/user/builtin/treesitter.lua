@@ -3,6 +3,16 @@ lvim.builtin.treesitter.autotag.enable = true
 lvim.builtin.treesitter.ensure_installed = "all"
 lvim.builtin.treesitter.ignore_install = { "phpdoc" }
 
+lvim.builtin.treesitter.incremental_selection = {
+  enable = true,
+  keymaps = {
+    init_selection = "<C-s>",
+    node_incremental = "<C-s>",
+    node_decremental = "<C-c>",
+    scope_incremental = "<C-space>",
+  }
+}
+
 lvim.builtin.treesitter.textobjects = {
   select = {
     enable = true,
