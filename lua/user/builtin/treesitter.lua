@@ -1,7 +1,21 @@
 lvim.builtin.treesitter.auto_install = true
 lvim.builtin.treesitter.autotag.enable = true
-lvim.builtin.treesitter.ensure_installed = "all"
-lvim.builtin.treesitter.ignore_install = { "phpdoc" }
+lvim.builtin.treesitter.ensure_installed = {
+  "tsx",
+  "typescript",
+  "javascript",
+  "css",
+  "scss",
+  "html",
+  "vue",
+  "json",
+  "yaml",
+  "vim",
+  "bash",
+  "c",
+  "lua",
+  "markdown",
+}
 
 lvim.builtin.treesitter.incremental_selection = {
   enable = true,
@@ -10,7 +24,7 @@ lvim.builtin.treesitter.incremental_selection = {
     node_incremental = "<C-s>",
     node_decremental = "<C-c>",
     scope_incremental = "<C-space>",
-  }
+  },
 }
 
 lvim.builtin.treesitter.textobjects = {

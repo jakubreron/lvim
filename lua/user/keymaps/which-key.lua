@@ -93,7 +93,7 @@ lvim.builtin.which_key.mappings["1"] = {
   function()
     harpoon_ui.nav_file(1)
   end,
-  "Mark []",
+  "Mark 1",
 }
 lvim.builtin.which_key.mappings["2"] = {
   function()
