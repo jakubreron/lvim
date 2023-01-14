@@ -9,10 +9,10 @@ lvim.builtin.which_key.mappings.l.k = nil
 lvim.builtin.which_key.mappings["l_"] = { "<cmd>LspRestart <CR>", "Restart" }
 
 lvim.builtin.which_key.mappings.s.M = nil -- man pages
-lvim.builtin.which_key.mappings.s.C = nil -- commands
+-- lvim.builtin.which_key.mappings.s.C = nil -- commands
 lvim.builtin.which_key.mappings.s.R = nil -- registers
 lvim.builtin.which_key.mappings.s.H = nil -- highlight groups
-lvim.builtin.which_key.mappings.s.k = nil -- keymaps
+-- lvim.builtin.which_key.mappings.s.k = nil -- keymaps
 lvim.builtin.which_key.mappings.s.t = {
   "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
   "Text",
