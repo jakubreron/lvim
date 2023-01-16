@@ -14,6 +14,29 @@ M.config = function()
 
     summary = {
       open = "topleft vsplit | vertical resize 50",
+      animated = true,
+      enabled = true,
+      expand_errors = true,
+      follow = true,
+      mappings = {
+        attach = "a",
+        clear_marked = "M",
+        clear_target = "T",
+        debug = "d",
+        debug_marked = "D",
+        expand = { "<CR>", "<2-LeftMouse>" },
+        expand_all = "e",
+        jumpto = { "i", "l" },
+        mark = "m",
+        next_failed = "]x",
+        output = "o",
+        prev_failed = "[x",
+        run = "r",
+        run_marked = "R",
+        short = "O",
+        stop = "u",
+        target = "t",
+      },
     },
 
     adapters = {
