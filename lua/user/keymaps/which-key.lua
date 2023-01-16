@@ -54,7 +54,8 @@ lvim.builtin.which_key.mappings.c = {
   name = "Console",
   s = { "<C-w>s:term<CR>", "[S]plit Horizontal" },
   v = { "<C-w>v:term<CR>", "Split [V]ertical" },
-  d = { "Oconsole.log('%c', 'font-size: 24px; color: skyblue;');<ESC>02fca ", "[D]ebugging console.log" },
+  d = { "Oconsole.debug();<ESC>0f(a", "Jest-compatible console.[d]ebug" },
+  l = { "Oconsole.log('%c', 'font-size: 24px; color: skyblue;');<ESC>02fca ", "Styled console.[l]og" },
   p = {
     "yiwOconst t0 = performance.now();<ESC>oconst t1 = performance.now();<ESC>oconsole.log(`%c <ESC>pa call took ${t1 - t0} milliseconds`, 'font-size: 24px; color: green;');<ESC>dkp",
     "[P]erformance console.log",
