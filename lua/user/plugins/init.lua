@@ -49,12 +49,12 @@ lvim.plugins = {
   -- {
   --   "mxsdev/nvim-dap-vscode-js"
   -- },
-  {
-    "kevinhwang91/nvim-hlslens", -- TODO: find out how to highlight the current search without a plugin
-    config = function()
-      require("user.plugins.settings.hlslens").config()
-    end,
-  }, -- highlight search count
+  -- {
+  --   "kevinhwang91/nvim-hlslens", -- TODO: find out how to highlight the current search without a plugin
+  --   config = function()
+  --     require("user.plugins.settings.hlslens").config()
+  --   end,
+  -- }, -- highlight search count
   {
     "petertriho/nvim-scrollbar",
     config = function()
