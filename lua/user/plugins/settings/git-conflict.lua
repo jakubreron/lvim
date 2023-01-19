@@ -7,9 +7,9 @@ M.config = function()
   end
 
   git_conflict.setup {
-    default_mappings = true, -- disable buffer local mapping created by this plugin
-    default_commands = false, -- disable commands created by this plugin
-    disable_diagnostics = true, -- This will disable the diagnostics in a buffer whilst it is conflicted
+    default_mappings = true,
+    default_commands = false,
+    disable_diagnostics = true,
     highlights = { -- They must have background color, otherwise the default color will be used
       incoming = "DiffText",
       current = "DiffAdd",
@@ -18,4 +18,3 @@ M.config = function()
 end
 
 return M
-

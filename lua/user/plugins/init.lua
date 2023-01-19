@@ -80,11 +80,10 @@ lvim.plugins = {
     config = function()
       require("user.plugins.settings.git-conflict").config()
     end,
-    lazy = true,
   }, -- easier conflicts
   {
     "andymass/vim-matchup", -- better "%"
-    -- event = "CursorMoved",
+    event = "CursorMoved",
   },
   {
     "windwp/nvim-spectre", -- search & replace throughout all the files (without vimgrepping)
