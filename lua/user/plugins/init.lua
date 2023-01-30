@@ -1,13 +1,12 @@
 lvim.plugins = {
   { "vimwiki/vimwiki" },
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
+  { "stevearc/dressing.nvim" }, -- better default nvim interfaces
+  { "Mofiqul/dracula.nvim" }, -- dracula theme
+  { "ThePrimeagen/harpoon", lazy = true }, -- better file navigation since bufferline is disabled
+
   { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
   { "nvim-treesitter/nvim-treesitter-textobjects" }, -- more movements (if, af, ic, ac, etc...)
-  { "stevearc/dressing.nvim" }, -- better default nvim interfaces
-  {
-    "ThePrimeagen/harpoon",
-    lazy = true,
-  }, -- better file navigation since bufferline is disabled
 
   { "christoomey/vim-titlecase" }, -- "gz" movement to toggle the words case
   { "christoomey/vim-tmux-navigator" }, -- tmux navigation from within nvim
