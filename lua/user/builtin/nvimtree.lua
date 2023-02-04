@@ -5,5 +5,4 @@ lvim.builtin.nvimtree.setup.renderer.indent_markers.enable = true
 
 lvim.builtin.nvimtree.setup.filters.custom = {}
 lvim.builtin.nvimtree.setup.disable_netrw = true
-lvim.builtin.nvimtree.setup.open_on_setup = true
 lvim.builtin.nvimtree.setup.auto_reload_on_write = true
