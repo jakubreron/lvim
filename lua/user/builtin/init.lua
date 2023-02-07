@@ -6,7 +6,7 @@ require "user.builtin.which_key"
 require "user.builtin.lir"
 require "user.builtin.nvimtree"
 
-lvim.colorscheme = "dracula"
+-- lvim.colorscheme = "dracula"
 lvim.reload_config_on_save = false
 lvim.format_on_save.enabled = false
 -- lvim.format_on_save = {
