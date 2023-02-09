@@ -1,7 +1,7 @@
 require "user.lsp.linters-formatters"
 require "user.lsp.languages.js-ts"
 
-lvim.lsp.diagnostics.virtual_text = true
+lvim.lsp.diagnostics.virtual_text = false
 
 -- See <https://github.com/neovim/nvim-lspconfig#keybindings-and-completion>
 lvim.lsp.on_attach_callback = function(client, bufnr)
