@@ -20,10 +20,6 @@ lvim.keys = {
     ["]u"] = "<cmd>lua require('neotest').jump.next({ status = 'failed' })<CR>", -- next failed test
     ["[u"] = "<cmd>lua require('neotest').jump.prev({ status = 'failed' })<CR>", -- prev failed test
 
-    -- TODO: find another bind
-    -- ["<C-m>"] = "<cmd>MaximizerToggle!<CR>",
-    -- ["<C-f>"] = "<cmd>silent !tmux neww tmux-sessionizer<CR>",
-
     ["yoea"] = "<cmd>set eventignore=all<CR>",
     ["yoen"] = "<cmd>set eventignore=<CR>",
     ["yoss"] = "<cmd>setlocal spell!<CR>",

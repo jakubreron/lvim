@@ -3,6 +3,7 @@ lvim.builtin.which_key.mappings.T = nil -- treesitter
 lvim.builtin.which_key.mappings.c = nil -- close buffer
 lvim.builtin.which_key.mappings.w = nil -- save
 lvim.builtin.which_key.mappings.q = { "<cmd>qa!<CR>", "Quit all" }
+lvim.builtin.which_key.mappings[" "] = { "<cmd>MaximizerToggle!<CR>", "Maximize" }
 
 lvim.builtin.which_key.mappings.l.j = nil
 lvim.builtin.which_key.mappings.l.k = nil
@@ -61,6 +62,7 @@ lvim.builtin.which_key.mappings.c = {
     "Performance console.log",
   },
 }
+lvim.builtin.which_key.mappings.c.s = { "<cmd>silent !tmux neww tmux-sessionizer<CR>", "New Tmux Session" }
 
 lvim.builtin.which_key.mappings.t = {
   name = "Tab",

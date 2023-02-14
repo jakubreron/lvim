@@ -16,9 +16,9 @@ lvim.plugins = {
   { "tpope/vim-obsession" }, -- save the session
   { "tpope/vim-unimpaired" }, -- additional mappings
 
-  -- {
-  --   "szw/vim-maximizer",
-  -- }, -- maximize current window
+  {
+    "szw/vim-maximizer",
+  }, -- maximize current window
 
   {
     "j-hui/fidget.nvim",
