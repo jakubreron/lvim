@@ -133,25 +133,6 @@ lvim.plugins = {
     end,
     lazy = true,
   },
-  {
-    "JManch/sunset.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {
-      latitude = 50.286400,
-      longitude = 18.877400,
-    },
-    config = function()
-      require("sunset").setup {
-        day_callback = function()
-          vim.cmd("colorscheme tokyonight-day")
-        end,
-        night_callback = function()
-          vim.cmd("colorscheme lunar")
-        end,
-      }
-    end,
-  },
 }
 
 -- TODO: move to separate files and try to make it working (it didn't work with the current config() approach)
