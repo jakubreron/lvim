@@ -69,8 +69,8 @@ lvim.builtin.which_key.mappings.t = {
   n = { "<cmd>tabnew<CR>", "New" },
   c = { "<cmd>tabclose<CR>", "Close" },
   o = { "<cmd>tabonly<CR>", "Only" },
-  m = { ":tabmove", "Move" },
-  e = { ":tabedit <C-r>=expand('%:p:h')<cr>/", "Edit" },
+  m = { ":tabmove", "Move", silent = false },
+  e = { ":tabedit <C-r>=expand('%:p:h')<cr>/", "Edit", silent = false },
 }
 
 lvim.builtin.which_key.mappings.o = {
