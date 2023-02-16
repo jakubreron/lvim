@@ -123,7 +123,9 @@ lvim.plugins = {
   {
     "nvim-telescope/telescope-live-grep-args.nvim",
     config = function()
-      require("telescope").load_extension "live_grep_args"
+      lvim.builtin.telescope.on_config_done = function(telescope)
+        pcall(telescope.load_extension, "telescope")
+      end
     end,
     lazy = true,
   },
