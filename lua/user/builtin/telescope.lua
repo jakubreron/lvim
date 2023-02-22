@@ -12,6 +12,7 @@ telescope.setup {
         i = {
           ["<C-q>"] = lga_actions.quote_prompt(),
           ["<C-g>"] = lga_actions.quote_prompt { postfix = " --iglob " },
+          ["<C-s>"] = lga_actions.quote_prompt { postfix = " --iglob *.spec.js" },
         },
       },
     },
