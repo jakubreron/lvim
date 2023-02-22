@@ -51,12 +51,16 @@ lvim.builtin.which_key.mappings.b.c = { "<cmd>BufferKill<CR>", "Close" }
 lvim.builtin.which_key.mappings.g.j = nil
 lvim.builtin.which_key.mappings.g.k = nil
 
+local console_log = "console.log('%c', 'font-size: 24px; color: skyblue;');<ESC>02fca "
+local console_debug = "console.debug();<ESC>0f(a"
 lvim.builtin.which_key.mappings.c = {
   name = "Console",
   s = { "<C-w>s:term<CR>", "Split Horizontal" },
   v = { "<C-w>v:term<CR>", "Split Vertical" },
-  d = { "Oconsole.debug();<ESC>0f(a", "Jest-compatible console.debug" },
-  l = { "Oconsole.log('%c', 'font-size: 24px; color: skyblue;');<ESC>02fca ", "Styled console.log" },
+  D = { "O" .. console_debug, "Jest-compatible console.debug above" },
+  d = { "o" .. console_debug, "Jest-compatible console.debug below" },
+  L = { "O" .. console_log, "Styled console.log above" },
+  l = { "o" .. console_log, "Styled console.log below" },
   p = {
     "yiwOconst t0 = performance.now();<ESC>oconst t1 = performance.now();<ESC>oconsole.log(`%c <ESC>pa call took ${t1 - t0} milliseconds`, 'font-size: 24px; color: green;');<ESC>dkp",
     "Performance console.log",
