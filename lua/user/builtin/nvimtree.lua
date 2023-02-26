@@ -1,5 +1,3 @@
-lvim.builtin.nvimtree.setup.view.width = 40
-
 lvim.builtin.nvimtree.setup.renderer.full_name = true
 lvim.builtin.nvimtree.setup.renderer.indent_markers.enable = true
 
