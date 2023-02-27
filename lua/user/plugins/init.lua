@@ -17,9 +17,7 @@ lvim.plugins = {
   { "tpope/vim-obsession" }, -- save the session
   { "tpope/vim-unimpaired" }, -- additional mappings
 
-  {
-    "szw/vim-maximizer",
-  }, -- maximize current window
+  { "szw/vim-maximizer" }, -- maximize current window
 
   {
     "j-hui/fidget.nvim",
@@ -37,13 +35,7 @@ lvim.plugins = {
     config = function()
       require("user.plugins.settings.neotest").config()
     end,
-    ft = {
-      "javascript",
-      "javascriptreact",
-      "vue",
-      "typescript",
-      "typescriptreact",
-    },
+    event = "BufWinEnter *.spec.*",
     lazy = true,
   },
   -- {
@@ -93,8 +85,7 @@ lvim.plugins = {
     config = function()
       require("package-info").setup()
     end,
-    event = "BufRead",
-    ft = "json",
+    event = "BufWinEnter package.json",
     lazy = true,
   },
   {
