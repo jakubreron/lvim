@@ -43,9 +43,7 @@ lvim.plugins = {
   -- },
   {
     "petertriho/nvim-scrollbar",
-    config = function()
-      require("scrollbar").setup()
-    end,
+    config = true,
   },
   {
     "norcalli/nvim-colorizer.lua", -- highlight the hex / rgb colors
@@ -74,26 +72,20 @@ lvim.plugins = {
   {
     "windwp/nvim-spectre", -- search & replace throughout all the files (without vimgrepping)
     event = "BufRead",
-    config = function()
-      require("spectre").setup()
-    end,
+    config = true,
     lazy = true,
   },
   {
     "vuki656/package-info.nvim", -- check if the package info is up to date
     dependencies = "MunifTanjim/nui.nvim",
-    config = function()
-      require("package-info").setup()
-    end,
+    config = true,
     event = "BufWinEnter package.json",
     lazy = true,
   },
   {
     "kevinhwang91/nvim-bqf", -- better quickfix window (preview, search & replace, etc...)
     event = { "BufRead", "BufNew" },
-    config = function()
-      require("bqf").setup()
-    end,
+    config = true,
     lazy = true,
   },
   {
@@ -108,9 +100,7 @@ lvim.plugins = {
   },
   {
     "Pocco81/auto-save.nvim",
-    config = function()
-      require("auto-save").setup {}
-    end,
+    config = true,
   },
   {
     "nvim-telescope/telescope-live-grep-args.nvim",
