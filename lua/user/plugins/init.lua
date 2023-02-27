@@ -20,12 +20,6 @@ lvim.plugins = {
   { "szw/vim-maximizer" }, -- maximize current window
 
   {
-    "j-hui/fidget.nvim",
-    config = function()
-      require("fidget").setup()
-    end,
-  },
-  {
     "nvim-neotest/neotest", -- run tests directly from the file
     dependencies = {
       "nvim-lua/plenary.nvim",
