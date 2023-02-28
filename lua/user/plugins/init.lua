@@ -2,7 +2,7 @@ lvim.plugins = {
   { "vimwiki/vimwiki" },
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
   { "stevearc/dressing.nvim" }, -- better default nvim interfaces
-  -- { "Mofiqul/dracula.nvim" }, -- theme
+  { "Mofiqul/dracula.nvim" }, -- theme
   { "folke/tokyonight.nvim" }, -- theme
   { "ThePrimeagen/harpoon", lazy = true }, -- better file navigation since bufferline is disabled
 
