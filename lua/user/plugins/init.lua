@@ -110,7 +110,8 @@ lvim.plugins = {
     config = function()
       require("user.plugins.settings.rust-tools").config()
     end,
-    lazy = true,
+    ft = "rust",
+    lazy = true
   },
   {
     "saecki/crates.nvim",
@@ -119,6 +120,8 @@ lvim.plugins = {
     config = function()
       require("user.plugins.settings.crates").config()
     end,
+    ft = "rust",
+    lazy = true
   },
 }
 
