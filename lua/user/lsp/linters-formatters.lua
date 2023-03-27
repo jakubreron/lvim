@@ -28,6 +28,9 @@ local filetypes = {
   lua = {
     "lua",
   },
+  rust = {
+    "rust"
+  },
 }
 
 local shared_servers = {
@@ -54,6 +57,7 @@ local shared_servers = {
 local formater_servers = {
   stylua = { command = "stylua", filetypes = filetypes.lua },
   prettier = { command = "prettierd", filetypes = filetypes.prettier },
+  rust = { command = "rustfmt", filetypes = filetypes.rust }
 }
 
 local linter_servers = {
@@ -75,6 +79,7 @@ formatters.setup {
   shared_servers.markdown,
   formater_servers.stylua,
   formater_servers.prettier,
+  formater_servers.rust,
 }
 
 linters.setup {

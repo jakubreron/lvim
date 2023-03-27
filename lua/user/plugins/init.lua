@@ -105,6 +105,21 @@ lvim.plugins = {
     end,
     lazy = true,
   },
+  {
+    "simrat39/rust-tools.nvim",
+    config = function()
+      require("user.plugins.settings.rust-tools").config()
+    end,
+    lazy = true,
+  },
+  {
+    "saecki/crates.nvim",
+    version = "v0.3.0",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("user.plugins.settings.crates").config()
+    end,
+  },
 }
 
 -- TODO: move to separate files and try to make it working (it didn't work with the current config() approach)
