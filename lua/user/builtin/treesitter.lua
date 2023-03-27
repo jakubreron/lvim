@@ -16,6 +16,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "lua",
   "markdown",
   "rust",
+  "toml",
 }
 
 lvim.builtin.treesitter.incremental_selection = {
