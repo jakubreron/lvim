@@ -111,7 +111,7 @@ lvim.plugins = {
       require("user.plugins.settings.rust-tools").config()
     end,
     ft = "rust",
-    lazy = true
+    lazy = true,
   },
   {
     "saecki/crates.nvim",
@@ -121,50 +121,12 @@ lvim.plugins = {
       require("user.plugins.settings.crates").config()
     end,
     ft = "rust",
-    lazy = true
+    lazy = true,
   },
-}
-
--- TODO: move to separate files and try to make it working (it didn't work with the current config() approach)
-vim.g.matchup_matchparen_offscreen = { method = "popup" }
-
-vim.g.vimwiki_list = {
   {
-    path = vim.fn.expand "$VIMWIKI_DIR",
-    syntax = "markdown",
-    ext = ".md",
+    "j-hui/fidget.nvim",
+    config = true,
   },
 }
 
--- remove unnecessary unimpaired mappings
-vim.g.nremap = {
-  ["[u"] = "",
-  ["[uu"] = "",
-  ["v_[u"] = "",
-
-  ["]u"] = "",
-  ["]uu"] = "",
-  ["v_]u"] = "",
-
-  ["[x"] = "",
-  ["[xx"] = "",
-  ["v_[x"] = "",
-
-  ["]x"] = "",
-  ["]xx"] = "",
-  ["v_]x"] = "",
-
-  ["[y"] = "",
-  ["[yy"] = "",
-  ["v_[y"] = "",
-  ["[C"] = "",
-  ["[CC"] = "",
-  ["v_[C"] = "",
-
-  ["]y"] = "",
-  ["]yy"] = "",
-  ["v_]y"] = "",
-  ["]C"] = "",
-  ["]CC"] = "",
-  ["v_]C"] = "",
-}
+require "user.plugins.settings.global"
