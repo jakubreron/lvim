@@ -1,23 +1,23 @@
 lvim.plugins = {
   { "vimwiki/vimwiki" },
-  { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
-  { "stevearc/dressing.nvim" }, -- better default nvim interfaces
-  { "Mofiqul/dracula.nvim" }, -- theme
-  { "folke/tokyonight.nvim" }, -- theme
-  { "ThePrimeagen/harpoon", lazy = true }, -- better file navigation since bufferline is disabled
+  { "AndrewRadev/splitjoin.vim" },                               -- gJ, gS movements
+  { "stevearc/dressing.nvim" },                                  -- better default nvim interfaces
+  { "Mofiqul/dracula.nvim" },                                    -- theme
+  { "folke/tokyonight.nvim" },                                   -- theme
+  { "ThePrimeagen/harpoon",                       lazy = true }, -- better file navigation since bufferline is disabled
 
-  { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
-  { "nvim-treesitter/nvim-treesitter-textobjects" }, -- more movements (if, af, ic, ac, etc...)
+  { "nvim-treesitter/nvim-treesitter-context" },                 -- sticky scroll context
+  { "nvim-treesitter/nvim-treesitter-textobjects" },             -- more movements (if, af, ic, ac, etc...)
 
-  { "christoomey/vim-titlecase" }, -- "gz" movement to toggle the words case
-  { "christoomey/vim-tmux-navigator" }, -- tmux navigation from within nvim
+  { "christoomey/vim-titlecase" },                               -- "gz" movement to toggle the words case
+  { "christoomey/vim-tmux-navigator" },                          -- tmux navigation from within nvim
 
-  { "tpope/vim-repeat" }, -- better "."
-  { "tpope/vim-surround" }, -- surround movement
-  { "tpope/vim-obsession" }, -- save the session
-  { "tpope/vim-unimpaired" }, -- additional mappings
+  { "tpope/vim-repeat" },                                        -- better "."
+  { "tpope/vim-surround" },                                      -- surround movement
+  { "tpope/vim-obsession" },                                     -- save the session
+  { "tpope/vim-unimpaired" },                                    -- additional mappings
 
-  { "szw/vim-maximizer" }, -- maximize current window
+  { "szw/vim-maximizer" },                                       -- maximize current window
 
   {
     "nvim-neotest/neotest", -- run tests directly from the file
@@ -58,7 +58,7 @@ lvim.plugins = {
     config = function()
       require("user.plugins.settings.git-conflict").config()
     end,
-  }, -- easier conflicts
+  },                        -- easier conflicts
   {
     "andymass/vim-matchup", -- better "%"
     event = "CursorMoved",
@@ -127,6 +127,11 @@ lvim.plugins = {
     "j-hui/fidget.nvim",
     config = true,
   },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
+    config = true,
+  }
 }
 
 require "user.plugins.settings.global"
