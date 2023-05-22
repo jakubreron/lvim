@@ -92,6 +92,20 @@ lvim.plugins = {
     event = "InsertEnter",
     lazy = true,
   },
+  -- {
+  --   "jackMort/ChatGPT.nvim",
+  --   event = "VeryLazy",
+  --   config = function()
+  --     require("chatgpt").setup({
+  --       api_key_cmd = "gpg --decrypt ~/.config/.chatgpt.gpg 2>/dev/null"
+  --     })
+  --   end,
+  --   dependencies = {
+  --     "MunifTanjim/nui.nvim",
+  --     "nvim-lua/plenary.nvim",
+  --     "nvim-telescope/telescope.nvim",
+  --   },
+  -- },
   {
     "Pocco81/auto-save.nvim",
     config = true,
