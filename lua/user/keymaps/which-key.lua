@@ -57,6 +57,7 @@ lvim.builtin.which_key.mappings.c = {
   name = "Console",
   s = { "<C-w>s:term<CR>", "Split Horizontal" },
   v = { "<C-w>v:term<CR>", "Split Vertical" },
+  n = { "<cmd>silent !tmux neww tmux-sessionizer<CR>", "New Tmux Session" },
   D = { "O" .. console_debug, "Jest-compatible console.debug above" },
   d = { "o" .. console_debug, "Jest-compatible console.debug below" },
   L = { "O" .. console_log, "Styled console.log above" },
@@ -66,7 +67,6 @@ lvim.builtin.which_key.mappings.c = {
     "Performance console.log",
   },
 }
-lvim.builtin.which_key.mappings.c.s = { "<cmd>silent !tmux neww tmux-sessionizer<CR>", "New Tmux Session" }
 
 lvim.builtin.which_key.mappings.t = {
   name = "Tab",
