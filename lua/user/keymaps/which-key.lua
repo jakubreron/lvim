@@ -1,7 +1,6 @@
 lvim.builtin.which_key.mappings.f = nil -- git/project files
 lvim.builtin.which_key.mappings.T = nil -- treesitter
 lvim.builtin.which_key.mappings.c = nil -- close buffer
-lvim.builtin.which_key.mappings.w = nil -- save
 lvim.builtin.which_key.mappings.q = { "<cmd>qa!<CR>", "Quit all" }
 lvim.builtin.which_key.mappings[" "] = { "<cmd>MaximizerToggle!<CR>", "Maximize" }
 
@@ -117,27 +116,11 @@ lvim.builtin.which_key.mappings["r"] = {
 
 local harpoon_ui = require "harpoon.ui"
 
-lvim.builtin.which_key.mappings["1"] = {
-  function()
-    harpoon_ui.nav_file(1)
-  end,
-  "Mark 1",
-}
-lvim.builtin.which_key.mappings["2"] = {
-  function()
-    harpoon_ui.nav_file(2)
-  end,
-  "Mark 2",
-}
-lvim.builtin.which_key.mappings["3"] = {
-  function()
-    harpoon_ui.nav_file(3)
-  end,
-  "Mark 3",
-}
-lvim.builtin.which_key.mappings["4"] = {
-  function()
-    harpoon_ui.nav_file(4)
-  end,
-  "Mark 4",
-}
+for i = 1, 4 do
+  lvim.builtin.which_key.mappings[tostring(i)] = {
+    function()
+      harpoon_ui.nav_file(i)
+    end,
+    "Mark " .. i,
+  }
+end
