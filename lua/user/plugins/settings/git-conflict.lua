@@ -8,7 +8,7 @@ M.config = function()
 
   git_conflict.setup {
     default_mappings = true,
-    default_commands = false,
+    default_commands = true,
     disable_diagnostics = true,
     highlights = { -- They must have background color, otherwise the default color will be used
       incoming = "DiffText",

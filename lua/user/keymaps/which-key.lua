@@ -47,8 +47,17 @@ lvim.builtin.which_key.mappings.b.L = nil -- sort by language
 lvim.builtin.which_key.mappings.b.W = nil -- write without formatting
 lvim.builtin.which_key.mappings.b.c = { "<cmd>BufferKill<CR>", "Close" }
 
-lvim.builtin.which_key.mappings.g.j = nil
-lvim.builtin.which_key.mappings.g.k = nil
+lvim.builtin.which_key.mappings.g.j = nil -- jump change up
+lvim.builtin.which_key.mappings.g.k = nil -- jump change down
+lvim.builtin.which_key.mappings.g.b = nil -- checkout branch
+lvim.builtin.which_key.mappings.g.c = { -- checkout commit by default
+  "<cmd>Telescope git_bcommits<cr>",
+  "Checkout commit(for current file)",
+}
+lvim.builtin.which_key.mappings.g.C = {
+  "<cmd>GitConflictListQf<cr>",
+  "Conflicts",
+}
 
 local console_log = "console.log('%c', 'font-size: 24px; color: skyblue;');<ESC>02fca "
 local console_debug = "console.debug();<ESC>0f(a"
