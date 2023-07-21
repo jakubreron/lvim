@@ -17,7 +17,7 @@ local mappings = {
     n = {
       name = "NPM",
       a = { "<cmd>lua require('package-info').install()<CR>", "Add" },
-      r = { "<cmd>lua require('package-info').delete()<CR>", "Remove" },
+      d = { "<cmd>lua require('package-info').delete()<CR>", "Delete" },
       f = { "<cmd>lua require('package-info').show({ force = true })<CR>", "Fetch" },
       h = { "<cmd>lua require('package-info').hide()<CR>", "Hide" },
       u = { "<cmd>lua require('package-info').update()<CR>", "Update" },
