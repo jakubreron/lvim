@@ -36,19 +36,13 @@ lvim.plugins = {
   --   "mxsdev/nvim-dap-vscode-js"
   -- },
   {
-    "petertriho/nvim-scrollbar",
-    config = true,
-  },
-  {
     "norcalli/nvim-colorizer.lua", -- highlight the hex / rgb colors
     config = function()
       require("user.plugins.settings.colorizer").config()
     end,
     ft = {
       "css",
-      "scss",
-      "html",
-      "javascript",
+      "scss"
     },
     lazy = true,
   },
@@ -137,10 +131,10 @@ lvim.plugins = {
     ft = "rust",
     lazy = true,
   },
-  {
-    "j-hui/fidget.nvim",
-    config = true,
-  },
+  -- {
+  --   "j-hui/fidget.nvim",
+  --   config = true,
+  -- },
   {
     "folke/todo-comments.nvim",
     dependencies = "nvim-lua/plenary.nvim",
