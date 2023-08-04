@@ -62,11 +62,7 @@ local linter_servers = {
     runtime_condition = nls_cache.by_bufnr(function(params)
       return path.exists(path.join(params.root, ".luacheckrc"))
     end),
-  },
-  tflint = {
-    command = "tflint",
-    filetypes = { "terraform" },
-  },
+  }
 }
 
 formatters.setup {
@@ -83,7 +79,6 @@ linters.setup {
   shared_servers.stylelint,
   shared_servers.markdown,
   linter_servers.luacheck,
-  linter_servers.tflint,
 }
 
 lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(server)
