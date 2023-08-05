@@ -76,16 +76,16 @@ lvim.plugins = {
     config = true,
     lazy = true,
   },
-  {
-    "tzachar/cmp-tabnine", -- AI autocompletion
-    config = function()
-      require("user.plugins.settings.tabnine").config()
-    end,
-    build = "./install.sh",
-    dependencies = "hrsh7th/nvim-cmp",
-    event = "InsertEnter",
-    lazy = true,
-  },
+  -- {
+  --   "tzachar/cmp-tabnine", -- AI autocompletion
+  --   config = function()
+  --     require("user.plugins.settings.tabnine").config()
+  --   end,
+  --   build = "./install.sh",
+  --   dependencies = "hrsh7th/nvim-cmp",
+  --   event = "InsertEnter",
+  --   lazy = true,
+  -- },
   -- {
   --   "jackMort/ChatGPT.nvim",
   --   event = "VeryLazy",
