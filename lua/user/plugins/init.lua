@@ -111,7 +111,6 @@ lvim.plugins = {
         pcall(telescope.load_extension, "telescope")
       end
     end,
-    lazy = true,
   },
   {
     "simrat39/rust-tools.nvim",
