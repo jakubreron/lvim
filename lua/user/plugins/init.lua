@@ -53,10 +53,10 @@ lvim.plugins = {
       require("user.plugins.settings.git-conflict").config()
     end,
   }, -- easier conflicts
-  {
-    "andymass/vim-matchup", -- better "%"
-    event = "CursorMoved",
-  },
+  -- {
+  --   "andymass/vim-matchup", -- better "%"
+  --   event = "CursorMoved",
+  -- },
   {
     "windwp/nvim-spectre", -- search & replace throughout all the files (without vimgrepping)
     event = "BufRead",
