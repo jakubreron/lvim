@@ -8,12 +8,14 @@ lvim.builtin.which_key.mappings[" "] = { "<cmd>MaximizerToggle!<CR>", "Maximize"
 lvim.builtin.which_key.mappings.l.j = nil
 lvim.builtin.which_key.mappings.l.k = nil
 lvim.builtin.which_key.mappings["l_"] = { "<cmd>LspRestart <CR>", "Restart" }
+lvim.builtin.which_key.mappings.l.I = nil
+lvim.builtin.which_key.mappings.l.m = { "<cmd>Mason<cr>", "Mason Info" }
 
 lvim.builtin.which_key.mappings.s.M = nil -- man pages
 -- lvim.builtin.which_key.mappings.s.C = nil -- commands
 lvim.builtin.which_key.mappings.s.R = nil -- registers
 lvim.builtin.which_key.mappings.s.H = nil -- highlight groups
--- lvim.builtin.which_key.mappings.s.k = nil -- keymaps
+lvim.builtin.which_key.mappings.s.k = nil -- keymaps
 lvim.builtin.which_key.mappings.s.t = {
   "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
   "Text",
@@ -67,10 +69,10 @@ lvim.builtin.which_key.mappings.c = {
   s = { "<C-w>s:term<CR>", "Split Horizontal" },
   v = { "<C-w>v:term<CR>", "Split Vertical" },
   n = { "<cmd>silent !tmux neww tmux-sessionizer<CR>", "New Tmux Session" },
-  D = { "O" .. console_debug, "Jest-compatible console.debug above" },
-  d = { "o" .. console_debug, "Jest-compatible console.debug below" },
-  L = { "O" .. console_log, "Styled console.log above" },
-  l = { "o" .. console_log, "Styled console.log below" },
+  D = { "O" .. console_debug, "console.debug above" },
+  d = { "o" .. console_debug, "console.debug below" },
+  L = { "O" .. console_log, "console.log above" },
+  l = { "o" .. console_log, "console.log below" },
   p = {
     "yiwOconst t0 = performance.now();<ESC>oconst t1 = performance.now();<ESC>oconsole.log(`%c <ESC>pa call took ${t1 - t0} milliseconds`, 'font-size: 24px; color: green;');<ESC>dkp",
     "Performance console.log",
