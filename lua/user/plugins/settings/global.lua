@@ -8,6 +8,8 @@ vim.g.vimwiki_list = {
   },
 }
 
+vim.g.tmux_navigator_no_wrap = 1
+
 -- remove unnecessary unimpaired mappings
 vim.g.nremap = {
   ["[u"] = "",
