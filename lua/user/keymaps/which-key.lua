@@ -62,8 +62,9 @@ lvim.builtin.which_key.mappings.g.C = {
   "Conflicts",
 }
 
-local console_log = "console.log('%c', 'font-size: 24px; color: skyblue;');<ESC>02fca "
-local console_debug = "console.debug();<ESC>0f(a"
+local console_log = "console.log('%c', 'font-size: 24px; color: skyblue;')<ESC>02f'i "
+local console_debug = "console.debug()<ESC>0f(a"
+
 lvim.builtin.which_key.mappings.c = {
   name = "Console",
   s = { "<C-w>s:term<CR>", "Split Horizontal" },
