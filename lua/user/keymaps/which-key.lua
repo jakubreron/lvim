@@ -9,7 +9,7 @@ lvim.builtin.which_key.mappings.l.j = nil
 lvim.builtin.which_key.mappings.l.k = nil
 lvim.builtin.which_key.mappings["l_"] = { "<cmd>LspRestart <CR>", "Restart" }
 lvim.builtin.which_key.mappings.l.I = nil
-lvim.builtin.which_key.mappings.l.m = { "<cmd>Mason<cr>", "Mason Info" }
+lvim.builtin.which_key.mappings.l.m = { "<cmd>Mason<CR>", "Mason Info" }
 
 lvim.builtin.which_key.mappings.s.M = nil -- man pages
 -- lvim.builtin.which_key.mappings.s.C = nil -- commands
@@ -23,7 +23,7 @@ lvim.builtin.which_key.mappings.s.t = {
 lvim.builtin.which_key.mappings.s.p = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings.s.b = { "<cmd>Telescope buffers<CR>", "Buffers" }
 lvim.builtin.which_key.mappings.s.c = {
-  "<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>",
+  "<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<CR>",
   "Colorscheme",
 }
 lvim.builtin.which_key.mappings.s.r = { "<cmd>Telescope oldfiles<CR>", "Recent File" }
@@ -50,15 +50,20 @@ lvim.builtin.which_key.mappings.b.L = nil -- sort by language
 lvim.builtin.which_key.mappings.b.W = nil -- write without formatting
 lvim.builtin.which_key.mappings.b.c = { "<cmd>BufferKill<CR>", "Close" }
 
+lvim.builtin.which_key.mappings.g.g = {
+  "<cmd>tabnew<CR><cmd>term<CR>ilazygit<CR><cmd>setlocal norelativenumber nonumber",
+  "Lazygit"
+} -- rebound lazygit
+
 lvim.builtin.which_key.mappings.g.j = nil -- jump change up
 lvim.builtin.which_key.mappings.g.k = nil -- jump change down
 lvim.builtin.which_key.mappings.g.b = nil -- checkout branch
 lvim.builtin.which_key.mappings.g.c = { -- checkout commit by default
-  "<cmd>Telescope git_bcommits<cr>",
+  "<cmd>Telescope git_bcommits<CR>",
   "Checkout commit(for current file)",
 }
 lvim.builtin.which_key.mappings.g.C = {
-  "<cmd>GitConflictListQf<cr>",
+  "<cmd>GitConflictListQf<CR>",
   "Conflicts",
 }
 
@@ -86,7 +91,7 @@ lvim.builtin.which_key.mappings.t = {
   c = { "<cmd>tabclose<CR>", "Close" },
   o = { "<cmd>tabonly<CR>", "Only" },
   m = { ":tabmove", "Move", silent = false },
-  e = { ":tabedit <C-r>=expand('%:p:h')<cr>/", "Edit", silent = false },
+  e = { ":tabedit <C-r>=expand('%:p:h')<CR>/", "Edit", silent = false },
 }
 
 lvim.builtin.which_key.mappings.o = {
@@ -108,23 +113,23 @@ lvim.builtin.which_key.mappings.u = {
 
 lvim.builtin.which_key.mappings["r"] = {
   name = "Rust",
-  r = { "<cmd>RustRunnables<Cr>", "Runnables" },
-  t = { "<cmd>lua _CARGO_TEST()<cr>", "Cargo Test" },
-  m = { "<cmd>RustExpandMacro<Cr>", "Expand Macro" },
-  c = { "<cmd>RustOpenCargo<Cr>", "Open Cargo" },
-  p = { "<cmd>RustParentModule<Cr>", "Parent Module" },
-  d = { "<cmd>RustDebuggables<Cr>", "Debuggables" },
-  v = { "<cmd>RustViewCrateGraph<Cr>", "View Crate Graph" },
+  r = { "<cmd>RustRunnables<CR>", "Runnables" },
+  t = { "<cmd>lua _CARGO_TEST()<CR>", "Cargo Test" },
+  m = { "<cmd>RustExpandMacro<CR>", "Expand Macro" },
+  c = { "<cmd>RustOpenCargo<CR>", "Open Cargo" },
+  p = { "<cmd>RustParentModule<CR>", "Parent Module" },
+  d = { "<cmd>RustDebuggables<CR>", "Debuggables" },
+  v = { "<cmd>RustViewCrateGraph<CR>", "View Crate Graph" },
   R = {
-    "<cmd>lua require('rust-tools/workspace_refresh')._reload_workspace_from_cargo_toml()<Cr>",
+    "<cmd>lua require('rust-tools/workspace_refresh')._reload_workspace_from_cargo_toml()<CR>",
     "Reload Workspace",
   },
-  o = { "<cmd>RustOpenExternalDocs<Cr>", "Open External Docs" },
-  y = { "<cmd>lua require'crates'.open_repository()<cr>", "[crates] open repository" },
-  P = { "<cmd>lua require'crates'.show_popup()<cr>", "[crates] show popup" },
-  i = { "<cmd>lua require'crates'.show_crate_popup()<cr>", "[crates] show info" },
-  f = { "<cmd>lua require'crates'.show_features_popup()<cr>", "[crates] show features" },
-  D = { "<cmd>lua require'crates'.show_dependencies_popup()<cr>", "[crates] show dependencies" },
+  o = { "<cmd>RustOpenExternalDocs<CR>", "Open External Docs" },
+  y = { "<cmd>lua require'crates'.open_repository()<CR>", "[crates] open repository" },
+  P = { "<cmd>lua require'crates'.show_popup()<CR>", "[crates] show popup" },
+  i = { "<cmd>lua require'crates'.show_crate_popup()<CR>", "[crates] show info" },
+  f = { "<cmd>lua require'crates'.show_features_popup()<CR>", "[crates] show features" },
+  D = { "<cmd>lua require'crates'.show_dependencies_popup()<CR>", "[crates] show dependencies" },
 }
 
 local harpoon_ui = require "harpoon.ui"
