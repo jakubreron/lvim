@@ -20,6 +20,7 @@ lvim.builtin.illuminate.active = false
 lvim.builtin.alpha.active = false
 lvim.builtin.terminal.active = false
 lvim.builtin.lir.active = false
+lvim.builtin.indentlines.active = false
 
 lvim.builtin.autopairs.active = true
 lvim.builtin.dap.active = true
