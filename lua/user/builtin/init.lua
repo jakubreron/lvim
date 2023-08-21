@@ -16,5 +16,7 @@ lvim.format_on_save.enabled = false
 -- }
 
 lvim.builtin.illuminate.active = false
+lvim.builtin.alpha.active = false
+
 lvim.builtin.autopairs.active = true
 lvim.builtin.dap.active = true
