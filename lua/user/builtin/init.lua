@@ -15,9 +15,11 @@ lvim.format_on_save.enabled = false
 --   timeout = 1000,
 -- }
 
+lvim.builtin.bufferline.active = false
 lvim.builtin.illuminate.active = false
 lvim.builtin.alpha.active = false
 lvim.builtin.terminal.active = false
+lvim.builtin.lir.active = false
 
 lvim.builtin.autopairs.active = true
 lvim.builtin.dap.active = true
