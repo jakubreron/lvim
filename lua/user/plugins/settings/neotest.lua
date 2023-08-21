@@ -58,6 +58,13 @@ M.config = function()
       types = true,
     },
   }
+
+  vim.keymap.set("n", "]u", "<cmd>lua require('neotest').jump.next({ status = 'failed' })<CR>", {
+    desc = "Next failed unit test",
+  })
+  vim.keymap.set("n", "[u", "<cmd>lua require('neotest').jump.prev({ status = 'failed' })<CR>", {
+    desc = "Previous failed unit test",
+  })
 end
 
 return M

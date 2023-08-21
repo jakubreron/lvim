@@ -87,7 +87,11 @@ M.config = function()
     }
   end
 
-  vim.api.nvim_set_keymap("n", "<m-d>", "<cmd>RustOpenExternalDocs<Cr>", { noremap = true, silent = true })
+  vim.keymap.set("n", "<m-d>", "<cmd>RustOpenExternalDocs<Cr>", {
+    noremap = true,
+    silent = true,
+    desc = "Open external docs"
+  })
 end
 
 return M

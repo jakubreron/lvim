@@ -4,6 +4,7 @@ lvim.plugins = {
   { "stevearc/dressing.nvim" }, -- better default nvim interfaces
   { "Mofiqul/dracula.nvim" }, -- theme
   { "folke/tokyonight.nvim" }, -- theme
+  { "folke/todo-comments.nvim", config = true }, -- todo comments highlight
   { "ThePrimeagen/harpoon", lazy = true }, -- better file navigation since bufferline is disabled
 
   { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
@@ -42,7 +43,7 @@ lvim.plugins = {
     end,
     ft = {
       "css",
-      "scss"
+      "scss",
     },
     lazy = true,
   },
@@ -86,32 +87,9 @@ lvim.plugins = {
   --   event = "InsertEnter",
   --   lazy = true,
   -- },
-  -- {
-  --   "jackMort/ChatGPT.nvim",
-  --   event = "VeryLazy",
-  --   config = function()
-  --     require("chatgpt").setup({
-  --       api_key_cmd = "gpg --decrypt ~/.config/.chatgpt.gpg 2>/dev/null"
-  --     })
-  --   end,
-  --   dependencies = {
-  --     "MunifTanjim/nui.nvim",
-  --     "nvim-lua/plenary.nvim",
-  --     "nvim-telescope/telescope.nvim",
-  --   },
-  -- },
-  {
-    "Pocco81/auto-save.nvim",
-    config = true,
-  },
-  {
-    "nvim-telescope/telescope-live-grep-args.nvim",
-    config = function()
-      lvim.builtin.telescope.on_config_done = function(telescope)
-        pcall(telescope.load_extension, "telescope")
-      end
-    end,
-  },
+  { "Pocco81/auto-save.nvim", config = true },
+  { "nvim-telescope/telescope-live-grep-args.nvim" },
+
   {
     "simrat39/rust-tools.nvim",
     config = function()
@@ -134,11 +112,6 @@ lvim.plugins = {
   --   "j-hui/fidget.nvim",
   --   config = true,
   -- },
-  {
-    "folke/todo-comments.nvim",
-    dependencies = "nvim-lua/plenary.nvim",
-    config = true,
-  },
 }
 
 require "user.plugins.settings.global"
