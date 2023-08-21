@@ -20,3 +20,13 @@ lvim.builtin.alpha.active = false
 
 lvim.builtin.autopairs.active = true
 lvim.builtin.dap.active = true
+
+local cmp_mapping = require "cmp.config.mapping"
+local luasnip = require("lvim.utils.modules").require_on_index "luasnip"
+lvim.builtin.cmp.mapping["<Tab>"] = cmp_mapping(function(fallback)
+  if luasnip.expand_or_locally_jumpable() then
+    luasnip.expand_or_jump()
+  else
+    fallback()
+  end
+end, { "i", "s" })
