@@ -51,7 +51,7 @@ lvim.builtin.which_key.mappings.b.W = nil -- write without formatting
 lvim.builtin.which_key.mappings.b.c = { "<cmd>BufferKill<CR>", "Close" }
 
 lvim.builtin.which_key.mappings.g.g = {
-  "<cmd>tabnew<CR><cmd>term<CR>ilazygit<CR><cmd>setlocal norelativenumber nonumber",
+  "<cmd>tabnew<CR><cmd>term<CR>ilazygit<CR><cmd>setlocal norelativenumber nonumber<CR>",
   "Lazygit"
 } -- rebound lazygit
 
