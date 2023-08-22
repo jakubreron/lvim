@@ -50,11 +50,6 @@ lvim.builtin.which_key.mappings.b.L = nil -- sort by language
 lvim.builtin.which_key.mappings.b.W = nil -- write without formatting
 lvim.builtin.which_key.mappings.b.c = { "<cmd>BufferKill<CR>", "Close" }
 
-lvim.builtin.which_key.mappings.g.g = {
-  "<cmd>tabnew<CR><cmd>term<CR>ilazygit<CR><cmd>setlocal norelativenumber nonumber<CR>",
-  "Lazygit"
-} -- rebound lazygit
-
 lvim.builtin.which_key.mappings.g.j = nil -- jump change up
 lvim.builtin.which_key.mappings.g.k = nil -- jump change down
 lvim.builtin.which_key.mappings.g.b = nil -- checkout branch

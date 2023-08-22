@@ -18,7 +18,6 @@ lvim.format_on_save.enabled = false
 lvim.builtin.bufferline.active = false
 lvim.builtin.illuminate.active = false
 lvim.builtin.alpha.active = false
-lvim.builtin.terminal.active = false
 lvim.builtin.lir.active = false
 lvim.builtin.indentlines.active = false
 
