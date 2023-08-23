@@ -69,6 +69,7 @@ lvim.builtin.which_key.mappings.c = {
   name = "Console",
   s = { "<C-w>s:term<CR>", "Split Horizontal" },
   v = { "<C-w>v:term<CR>", "Split Vertical" },
+  t = { "<cmd>tabnew<CR><cmd>term<CR><cmd>setlocal nonumber norelativenumber<CR>", "New Tab" },
   n = { "<cmd>silent !tmux neww tmux-sessionizer<CR>", "New Tmux Session" },
   D = { "O" .. console_debug, "console.debug above" },
   d = { "o" .. console_debug, "console.debug below" },
