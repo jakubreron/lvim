@@ -3,6 +3,7 @@ lvim.plugins = {
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
   { "stevearc/dressing.nvim" }, -- better default nvim interfaces
   { "Mofiqul/dracula.nvim" }, -- theme
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   { "folke/tokyonight.nvim" }, -- theme
   { "folke/todo-comments.nvim", config = true }, -- todo comments highlight
   { "ThePrimeagen/harpoon", lazy = true }, -- better file navigation since bufferline is disabled
