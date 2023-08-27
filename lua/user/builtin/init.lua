@@ -7,7 +7,7 @@ require "user.builtin.lir"
 require "user.builtin.nvimtree"
 
 lvim.colorscheme = "catppuccin-mocha"
-lvim.reload_config_on_save = false
+lvim.reload_config_on_save = true
 lvim.format_on_save.enabled = false
 -- lvim.format_on_save = {
 --   enabled = true,
