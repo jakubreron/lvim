@@ -6,6 +6,7 @@ require "user.builtin.which-key"
 require "user.builtin.lir"
 require "user.builtin.nvimtree"
 
+lvim.transparent_window = true
 lvim.colorscheme = "catppuccin-mocha"
 lvim.reload_config_on_save = true
 lvim.format_on_save.enabled = false
