@@ -90,14 +90,8 @@ lvim.plugins = {
   --   event = "InsertEnter",
   --   lazy = true,
   -- },
-
+  { "Pocco81/auto-save.nvim", config = true },
   { "nvim-telescope/telescope-live-grep-args.nvim" },
-
-  {
-    "okuuva/auto-save.nvim",
-    cmd = "ASToggle", -- optional for lazy loading on command
-    event = { "InsertLeave", "TextChanged" }, -- optional for lazy loading on trigger events
-  },
 
   {
     "simrat39/rust-tools.nvim",
