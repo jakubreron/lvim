@@ -1,7 +1,7 @@
 lvim.plugins = {
   { "vimwiki/vimwiki" },
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
-  { "stevearc/dressing.nvim" }, -- better default nvim interfaces
+  -- { "stevearc/dressing.nvim" }, -- better default nvim interfaces
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
   -- { "Mofiqul/dracula.nvim" }, -- theme
@@ -37,7 +37,7 @@ lvim.plugins = {
     lazy = true,
   },
   -- {
-  --   "mxsdev/nvim-dap-vscode-js"
+  --   "mxsdev/nvim-dap-vscode-js" -- debugger adapter
   -- },
   {
     "norcalli/nvim-colorizer.lua", -- highlight the hex / rgb colors
@@ -90,6 +90,8 @@ lvim.plugins = {
   --   event = "InsertEnter",
   --   lazy = true,
   -- },
+
+  -- TODO: migrate to maintained plugin after it starts working on macos https://github.com/okuuva/auto-save.nvim
   { "Pocco81/auto-save.nvim", config = true },
   { "nvim-telescope/telescope-live-grep-args.nvim" },
 
