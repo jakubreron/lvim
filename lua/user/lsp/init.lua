@@ -14,6 +14,11 @@ end
 local lspconfig = require('lspconfig')
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
+lspconfig.tsserver.setup {
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascriptreact", "javascript" },
+  cmd = { "typescript-language-server", "--stdio" }
+} 
+
 -- TODO: add vue when it's fixed and doesn't insert html inside the script
 lspconfig.emmet_ls.setup({
     -- on_attach = on_attach,
