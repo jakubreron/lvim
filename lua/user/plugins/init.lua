@@ -1,7 +1,7 @@
 lvim.plugins = {
   { "vimwiki/vimwiki" },
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
-  -- { "stevearc/dressing.nvim" }, -- better default nvim interfaces
+  { "stevearc/dressing.nvim" }, -- better default nvim interfaces
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
   -- { "Mofiqul/dracula.nvim" }, -- theme
@@ -80,16 +80,16 @@ lvim.plugins = {
     config = true,
     lazy = true,
   },
-  -- {
-  --   "tzachar/cmp-tabnine", -- AI autocompletion
-  --   config = function()
-  --     require("user.plugins.settings.tabnine").config()
-  --   end,
-  --   build = "./install.sh",
-  --   dependencies = "hrsh7th/nvim-cmp",
-  --   event = "InsertEnter",
-  --   lazy = true,
-  -- },
+  {
+    "tzachar/cmp-tabnine", -- AI autocompletion
+    config = function()
+      require("user.plugins.settings.tabnine").config()
+    end,
+    build = "./install.sh",
+    dependencies = "hrsh7th/nvim-cmp",
+    event = "InsertEnter",
+    lazy = true,
+  },
 
   -- TODO: migrate to maintained plugin after it starts working on macos https://github.com/okuuva/auto-save.nvim
   { "Pocco81/auto-save.nvim", config = true },
@@ -113,10 +113,10 @@ lvim.plugins = {
     ft = "rust",
     lazy = true,
   },
-  -- {
-  --   "j-hui/fidget.nvim",
-  --   config = true,
-  -- },
+  {
+    "j-hui/fidget.nvim",
+    config = true,
+  },
 }
 
 require "user.plugins.settings.global"
