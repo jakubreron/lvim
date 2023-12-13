@@ -130,7 +130,7 @@ lvim.builtin.which_key.mappings["r"] = {
 
 local harpoon_ui = require "harpoon.ui"
 
-for i = 1, 4 do
+for i = 1, 6 do
   lvim.builtin.which_key.mappings[tostring(i)] = {
     function()
       harpoon_ui.nav_file(i)
