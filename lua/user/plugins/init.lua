@@ -113,10 +113,10 @@ lvim.plugins = {
     ft = "rust",
     lazy = true,
   },
-  {
-    "j-hui/fidget.nvim",
-    config = true,
-  },
+  -- {
+  --   "j-hui/fidget.nvim",
+  --   config = true,
+  -- },
 }
 
 require "user.plugins.settings.global"
