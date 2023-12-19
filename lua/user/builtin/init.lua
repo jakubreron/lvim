@@ -21,7 +21,7 @@ if string.find(vim.fn.getcwd(), "work") ~= nil then
 end
 
 lvim.builtin.bufferline.active = false
-lvim.builtin.illuminate.active = false
+-- lvim.builtin.illuminate.active = false
 lvim.builtin.alpha.active = false
 lvim.builtin.lir.active = false
 lvim.builtin.indentlines.active = false
