@@ -10,13 +10,14 @@ lvim.plugins = {
   { "folke/todo-comments.nvim", config = true }, -- todo comments highlight
   { "ThePrimeagen/harpoon", lazy = true }, -- better file navigation since bufferline is disabled
 
-  { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
+  -- { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
   { "nvim-treesitter/nvim-treesitter-textobjects" }, -- more movements (if, af, ic, ac, etc...)
 
   { "christoomey/vim-titlecase" }, -- "gz" movement to toggle the words case
   { "christoomey/vim-tmux-navigator" }, -- tmux navigation from within nvim
 
   { "tpope/vim-repeat" }, -- better "."
+  { "tpope/vim-sleuth" }, -- set buffer tabs/spaces and everything else
   { "tpope/vim-surround" }, -- surround movement
   { "tpope/vim-obsession" }, -- save the session
   { "tpope/vim-unimpaired" }, -- additional mappings
@@ -92,7 +93,7 @@ lvim.plugins = {
   },
 
   -- TODO: migrate to maintained plugin after it starts working on macos https://github.com/okuuva/auto-save.nvim
-  { "Pocco81/auto-save.nvim", config = true },
+  -- { "Pocco81/auto-save.nvim", config = true },
   { "nvim-telescope/telescope-live-grep-args.nvim" },
 
   {
