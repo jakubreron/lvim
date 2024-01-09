@@ -2,8 +2,8 @@ lvim.plugins = {
   { "vimwiki/vimwiki" },
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
   { "stevearc/dressing.nvim" }, -- better default nvim interfaces
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   -- { "Mofiqul/dracula.nvim" }, -- theme
   -- { "folke/tokyonight.nvim" }, -- theme
 
@@ -58,10 +58,6 @@ lvim.plugins = {
       require("user.plugins.settings.git-conflict").config()
     end,
   }, -- easier conflicts
-  -- {
-  --   "andymass/vim-matchup", -- better "%"
-  --   event = "CursorMoved",
-  -- },
   {
     "windwp/nvim-spectre", -- search & replace throughout all the files (without vimgrepping)
     event = "BufRead",
