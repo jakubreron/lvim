@@ -20,16 +20,6 @@ lvim.builtin.treesitter.ensure_installed = {
   "toml",
 }
 
-lvim.builtin.treesitter.incremental_selection = {
-  enable = true,
-  keymaps = {
-    init_selection = "<C-s>",
-    node_incremental = "<C-s>",
-    node_decremental = "<C-c>",
-    scope_incremental = "<C-space>",
-  },
-}
-
 lvim.builtin.treesitter.textobjects = {
   select = {
     enable = true,
@@ -38,16 +28,16 @@ lvim.builtin.treesitter.textobjects = {
       ["af"] = "@function.outer",
       ["if"] = "@function.inner",
 
-			["ac"] = "@call.outer",
-			["ic"] = "@call.inner",
-			["aa"] = "@parameter.outer",
-			["ia"] = "@parameter.inner",
-			["al"] = "@loop.outer",
-			["il"] = "@loop.inner",
-			["ai"] = "@conditional.outer",
-			["ii"] = "@conditional.inner",
-			["a/"] = "@comment.outer",
-			["i/"] = "@comment.inner",
+      ["ac"] = "@call.outer",
+      ["ic"] = "@call.inner",
+      ["aa"] = "@parameter.outer",
+      ["ia"] = "@parameter.inner",
+      ["al"] = "@loop.outer",
+      ["il"] = "@loop.inner",
+      ["ai"] = "@conditional.outer",
+      ["ii"] = "@conditional.inner",
+      ["a/"] = "@comment.outer",
+      ["i/"] = "@comment.inner",
     },
   },
   move = {
