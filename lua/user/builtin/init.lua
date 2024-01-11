@@ -9,7 +9,7 @@ require "user.builtin.nvimtree"
 lvim.transparent_window = true
 lvim.colorscheme = "catppuccin-mocha"
 lvim.reload_config_on_save = true
-lvim.format_on_save.enabled = false
+lvim.format_on_save.enabled = true
 -- lvim.format_on_save = {
 --   enabled = true,
 --   pattern = "*",
@@ -23,7 +23,6 @@ end
 lvim.builtin.bufferline.active = false
 lvim.builtin.alpha.active = false
 lvim.builtin.lir.active = false
-lvim.builtin.indentlines.active = false
-
+lvim.builtin.indentlines.active = true
 lvim.builtin.autopairs.active = true
 lvim.builtin.dap.active = true
