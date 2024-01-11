@@ -62,7 +62,7 @@ local linter_servers = {
     runtime_condition = nls_cache.by_bufnr(function(params)
       return path.exists(path.join(params.root, ".luacheckrc"))
     end),
-  }
+  },
 }
 
 formatters.setup {
