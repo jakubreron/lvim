@@ -88,8 +88,6 @@ lvim.plugins = {
     lazy = true,
   },
 
-  -- TODO: migrate to maintained plugin after it starts working on macos https://github.com/okuuva/auto-save.nvim
-  -- { "Pocco81/auto-save.nvim", config = true },
   { "nvim-telescope/telescope-live-grep-args.nvim" },
 
   {
