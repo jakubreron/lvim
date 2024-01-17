@@ -23,6 +23,8 @@ end
 lvim.builtin.bufferline.active = false
 lvim.builtin.alpha.active = false
 lvim.builtin.lir.active = false
+lvim.builtin.breadcrumbs.active = false
+lvim.builtin.dap.active = false
+
 lvim.builtin.indentlines.active = true
 lvim.builtin.autopairs.active = true
-lvim.builtin.dap.active = true

@@ -51,13 +51,13 @@ lvim.plugins = {
     },
     lazy = true,
   },
-  {
-    "akinsho/git-conflict.nvim",
-    version = "*",
-    config = function()
-      require("user.plugins.settings.git-conflict").config()
-    end,
-  }, -- easier conflicts
+  -- {
+  --   "akinsho/git-conflict.nvim",
+  --   version = "*",
+  --   config = function()
+  --     require("user.plugins.settings.git-conflict").config()
+  --   end,
+  -- }, -- easier conflicts
   {
     "windwp/nvim-spectre", -- search & replace throughout all the files (without vimgrepping)
     event = "BufRead",
@@ -90,24 +90,24 @@ lvim.plugins = {
 
   { "nvim-telescope/telescope-live-grep-args.nvim" },
 
-  {
-    "simrat39/rust-tools.nvim",
-    config = function()
-      require("user.plugins.settings.rust-tools").config()
-    end,
-    ft = "rust",
-    lazy = true,
-  },
-  {
-    "saecki/crates.nvim",
-    version = "v0.3.0",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    config = function()
-      require("user.plugins.settings.crates").config()
-    end,
-    ft = "rust",
-    lazy = true,
-  },
+  -- {
+  --   "simrat39/rust-tools.nvim",
+  --   config = function()
+  --     require("user.plugins.settings.rust-tools").config()
+  --   end,
+  --   ft = "rust",
+  --   lazy = true,
+  -- },
+  -- {
+  --   "saecki/crates.nvim",
+  --   version = "v0.3.0",
+  --   dependencies = { "nvim-lua/plenary.nvim" },
+  --   config = function()
+  --     require("user.plugins.settings.crates").config()
+  --   end,
+  --   ft = "rust",
+  --   lazy = true,
+  -- },
   -- {
   --   "j-hui/fidget.nvim",
   --   config = true,
