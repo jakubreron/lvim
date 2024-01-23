@@ -10,7 +10,7 @@ lvim.plugins = {
   { "folke/todo-comments.nvim", config = true }, -- todo comments highlight
   { "ThePrimeagen/harpoon", lazy = true }, -- better file navigation since bufferline is disabled
 
-  -- { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
+  { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
   { "nvim-treesitter/nvim-treesitter-textobjects" }, -- more movements (if, af, ic, ac, etc...)
 
   { "christoomey/vim-titlecase" }, -- "gz" movement to toggle the words case
