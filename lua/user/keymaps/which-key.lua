@@ -106,6 +106,13 @@ lvim.builtin.which_key.mappings.u = {
   f = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>", "Run File" },
   s = { "<cmd>lua require('neotest').run.stop()<CR>", "Stop" },
   t = { "<cmd>lua require('neotest').summary.toggle()<CR>", "Summary Tree" },
+  c = {
+    function()
+      vim.cmd "lua require('neotest').summary.toggle()"
+      vim.cmd "lua require('neotest').output_panel.toggle()"
+    end,
+    "Summary Tree + Output Panel Combo",
+  },
   a = { "<cmd>lua require('neotest').run.attach()<CR>", "Attach" },
   p = { "<cmd>lua require('neotest').output_panel.toggle()<CR>", "Panel Toggle" },
   o = { "<cmd>lua require('neotest').output.open({ enter = true })<CR>", "Output" },

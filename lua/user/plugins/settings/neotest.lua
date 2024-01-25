@@ -38,6 +38,10 @@ M.config = function()
         target = "t",
       },
     },
+    output_panel = {
+      enabled = true,
+      open = "rightbelow vsplit | resize 75"
+    },
 
     adapters = {
       require "neotest-jest" {
