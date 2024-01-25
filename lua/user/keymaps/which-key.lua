@@ -22,6 +22,7 @@ lvim.builtin.which_key.mappings.s.t = {
   "Text",
 } -- extended ripgrep search
 lvim.builtin.which_key.mappings.s.w = { "<cmd>Telescope grep_string<CR>", "Word under cursor" }
+lvim.builtin.which_key.mappings.s.h = { "<cmd>Telescope search_history<CR>", "History" }
 
 lvim.builtin.which_key.mappings.s.p = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings.s.b = { "<cmd>Telescope buffers<CR>", "Buffers" }
