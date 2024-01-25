@@ -17,7 +17,7 @@ lvim.plugins = {
   { "christoomey/vim-tmux-navigator" }, -- tmux navigation from within nvim
 
   { "tpope/vim-repeat" }, -- better "."
-  { "tpope/vim-sleuth" }, -- set buffer tabs/spaces and everything else
+  -- { "tpope/vim-sleuth" }, -- set buffer tabs/spaces and everything else
   { "tpope/vim-surround" }, -- surround movement
   { "tpope/vim-obsession" }, -- save the session
   { "tpope/vim-unimpaired" }, -- additional mappings
