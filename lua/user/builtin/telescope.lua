@@ -1,6 +1,6 @@
 local lga_actions = require "telescope-live-grep-args.actions"
 
-lvim.builtin.telescope.theme = "ivy"
+lvim.builtin.telescope.theme = "dropdown"
 lvim.builtin.telescope.defaults.file_ignore_patterns = { "**/*.snap", "**/*.svg" }
 lvim.builtin.telescope.extensions = {
   fzf = {

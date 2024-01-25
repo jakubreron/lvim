@@ -16,10 +16,13 @@ lvim.builtin.which_key.mappings.s.M = nil -- man pages
 lvim.builtin.which_key.mappings.s.R = nil -- registers
 lvim.builtin.which_key.mappings.s.H = nil -- highlight groups
 lvim.builtin.which_key.mappings.s.k = nil -- keymaps
+
 lvim.builtin.which_key.mappings.s.t = {
   "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
   "Text",
 } -- extended ripgrep search
+lvim.builtin.which_key.mappings.s.w = { "<cmd>Telescope grep_string<CR>", "Word under cursor" }
+
 lvim.builtin.which_key.mappings.s.p = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings.s.b = { "<cmd>Telescope buffers<CR>", "Buffers" }
 lvim.builtin.which_key.mappings.s.c = {
