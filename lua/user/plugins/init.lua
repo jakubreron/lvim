@@ -11,7 +11,7 @@ lvim.plugins = {
   { "ThePrimeagen/harpoon", lazy = true }, -- better file navigation since bufferline is disabled
 
   { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
-  { "nvim-treesitter/nvim-treesitter-textobjects" }, -- more movements (if, af, ic, ac, etc...)
+  -- { "nvim-treesitter/nvim-treesitter-textobjects" }, -- more movements (if, af, ic, ac, etc...)
 
   { "christoomey/vim-titlecase" }, -- "gz" movement to toggle the words case
   { "christoomey/vim-tmux-navigator" }, -- tmux navigation from within nvim
