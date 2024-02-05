@@ -96,8 +96,10 @@ lvim.builtin.which_key.mappings.t = {
 
 lvim.builtin.which_key.mappings.o = {
   name = "Obsession",
-  t = { "<cmd>Obsession<CR>", "Track" },
-  r = { "<cmd>source Session.vim<CR>", "Restore" },
+  t = { "<cmd>Obsession<CR>", "Track Session.vim" },
+  T = { ":Obsession Session-.vim<LEFT><LEFT><LEFT><LEFT>", "Track Custom Session" },
+  r = { "<cmd>source Session.vim<CR>", "Restore Session.vim" },
+  R = { ":source Session-", "Restore Custom Session" },
 }
 
 lvim.builtin.which_key.mappings.u = {
