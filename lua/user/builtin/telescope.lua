@@ -20,3 +20,9 @@ lvim.builtin.telescope.extensions = {
     },
   },
 }
+
+  if lvim.builtin.telescope.extensions and lvim.builtin.telescope.extensions.live_grep_args then
+    pcall(function()
+      require("telescope").load_extension "live_grep_args"
+    end)
+  end
