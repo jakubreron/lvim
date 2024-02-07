@@ -88,7 +88,12 @@ lvim.plugins = {
     lazy = true,
   },
 
-  { "nvim-telescope/telescope-live-grep-args.nvim" },
+  {
+    "nvim-telescope/telescope-live-grep-args.nvim",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+    },
+  },
 
   -- {
   --   "simrat39/rust-tools.nvim",
