@@ -94,6 +94,11 @@ lvim.plugins = {
       "nvim-telescope/telescope.nvim",
     },
   },
+  {
+    "b0o/incline.nvim",
+    opts = {},
+    event = "VeryLazy",
+  },
 
   -- {
   --   "simrat39/rust-tools.nvim",
