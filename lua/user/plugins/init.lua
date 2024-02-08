@@ -1,29 +1,26 @@
 lvim.plugins = {
   { "vimwiki/vimwiki" },
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
-  { "stevearc/dressing.nvim" }, -- better default nvim interfaces
-
+  { "szw/vim-maximizer" }, -- maximize current window
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  -- { "Mofiqul/dracula.nvim" }, -- theme
-  -- { "folke/tokyonight.nvim" }, -- theme
-
+  -- { "stevearc/dressing.nvim" }, -- better default nvim interfaces
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+    },
+  },
   { "folke/todo-comments.nvim", config = true }, -- todo comments highlight
   { "ThePrimeagen/harpoon", lazy = true }, -- better file navigation since bufferline is disabled
-
   { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
   -- { "nvim-treesitter/nvim-treesitter-textobjects" }, -- more movements (if, af, ic, ac, etc...)
-
   { "christoomey/vim-titlecase" }, -- "gz" movement to toggle the words case
   { "christoomey/vim-tmux-navigator" }, -- tmux navigation from within nvim
-
   { "tpope/vim-repeat" }, -- better "."
-  -- { "tpope/vim-sleuth" }, -- set buffer tabs/spaces and everything else
   { "tpope/vim-surround" }, -- surround movement
   { "tpope/vim-obsession" }, -- save the session
   { "tpope/vim-unimpaired" }, -- additional mappings
-
-  { "szw/vim-maximizer" }, -- maximize current window
-
   {
     "nvim-neotest/neotest", -- run tests directly from the file
     dependencies = {
@@ -87,7 +84,6 @@ lvim.plugins = {
     event = "InsertEnter",
     lazy = true,
   },
-
   {
     "nvim-telescope/telescope-live-grep-args.nvim",
     dependencies = {
@@ -96,8 +92,26 @@ lvim.plugins = {
   },
   {
     "b0o/incline.nvim",
-    opts = {},
-    event = "VeryLazy",
+    dependencies = { "craftzdog/solarized-osaka.nvim" },
+    event = "BufReadPre",
+    priority = 1200,
+    config = function()
+      require("incline").setup {
+        window = { margin = { vertical = 0, horizontal = 1 } },
+        hide = {
+          cursorline = true,
+        },
+        render = function(props)
+          local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ":t")
+          if vim.bo[props.buf].modified then
+            filename = "[+] " .. filename
+          end
+
+          local icon, color = require("nvim-web-devicons").get_icon_color(filename)
+          return { { icon, guifg = color }, { " " }, { filename } }
+        end,
+      }
+    end,
   },
 
   -- {
@@ -117,10 +131,6 @@ lvim.plugins = {
   --   end,
   --   ft = "rust",
   --   lazy = true,
-  -- },
-  -- {
-  --   "j-hui/fidget.nvim",
-  --   config = true,
   -- },
 }
 
