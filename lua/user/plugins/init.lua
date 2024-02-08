@@ -3,14 +3,22 @@ lvim.plugins = {
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
   { "szw/vim-maximizer" }, -- maximize current window
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  -- { "stevearc/dressing.nvim" }, -- better default nvim interfaces
-  {
-    "folke/noice.nvim",
-    event = "VeryLazy",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-    },
-  },
+  { "stevearc/dressing.nvim" }, -- better default nvim interfaces
+  -- {
+  --   "folke/noice.nvim",
+  --   event = "VeryLazy",
+  --   opts = {
+  --     -- add any options here
+  --   },
+  --   dependencies = {
+  --     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+  --     "MunifTanjim/nui.nvim",
+  --     -- OPTIONAL:
+  --     --   `nvim-notify` is only needed, if you want to use the notification view.
+  --     --   If not available, we use `mini` as the fallback
+  --     -- "rcarriga/nvim-notify",
+  --   }
+  -- },
   { "folke/todo-comments.nvim", config = true }, -- todo comments highlight
   { "ThePrimeagen/harpoon", lazy = true }, -- better file navigation since bufferline is disabled
   { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
