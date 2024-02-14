@@ -83,15 +83,20 @@ lvim.plugins = {
     lazy = true,
   },
   {
-    "tzachar/cmp-tabnine", -- AI autocompletion
-    config = function()
-      require("user.plugins.settings.tabnine").config()
-    end,
-    build = "./install.sh",
-    dependencies = "hrsh7th/nvim-cmp",
-    event = "InsertEnter",
-    lazy = true,
+    "chentoast/marks.nvim",
+    event = "BufReadPre",
+    config = true,
   },
+  -- {
+  --   "tzachar/cmp-tabnine", -- AI autocompletion
+  --   config = function()
+  --     require("user.plugins.settings.tabnine").config()
+  --   end,
+  --   build = "./install.sh",
+  --   dependencies = "hrsh7th/nvim-cmp",
+  --   event = "InsertEnter",
+  --   lazy = true,
+  -- },
   {
     "nvim-telescope/telescope-live-grep-args.nvim",
     dependencies = {
