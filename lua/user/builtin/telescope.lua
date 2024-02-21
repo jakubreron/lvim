@@ -15,7 +15,7 @@ lvim.builtin.telescope.extensions = {
       i = {
         ["<C-q>"] = lga_actions.quote_prompt(),
         ["<C-g>"] = lga_actions.quote_prompt { postfix = " --iglob " },
-        ["<C-s>"] = lga_actions.quote_prompt { postfix = " --iglob *.spec." },
+        ["<C-s>"] = lga_actions.quote_prompt { postfix = " --iglob *.spec.*" },
       },
     },
   },
