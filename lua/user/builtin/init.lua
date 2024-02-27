@@ -1,4 +1,3 @@
-require "user.builtin.bufferline"
 require "user.builtin.lualine"
 require "user.builtin.telescope"
 require "user.builtin.treesitter"

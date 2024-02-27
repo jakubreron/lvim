@@ -3,9 +3,8 @@ require "user.lsp.languages.js-ts"
 
 vim.diagnostic.config { virtual_text = false }
 
--- See <https://github.com/neovim/nvim-lspconfig#keybindings-and-completion>
 lvim.lsp.on_attach_callback = function(client)
-  if client.name == "tsserver" or client.name == "jsonls" then
+  if client.name == "jsonls" then
     client.server_capabilities.document_formatting = false
     client.server_capabilities.document_range_formatting = false
   end
@@ -14,13 +13,13 @@ end
 local lspconfig = require "lspconfig"
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
+lspconfig.jsonls.setup {}
 lspconfig.lua_ls.setup {}
-lspconfig.tsserver.setup {
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascriptreact", "javascript" },
-  cmd = { "typescript-language-server", "--stdio" },
-}
+-- lspconfig.tsserver.setup {
+--   filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascriptreact", "javascript" },
+--   cmd = { "typescript-language-server", "--stdio" },
+-- }
 
--- WARNING: emmet_ls for vue might insert html inside the script
 lspconfig.emmet_ls.setup {
   -- on_attach = on_attach,
   capabilities = capabilities,
