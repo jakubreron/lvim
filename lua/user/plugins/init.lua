@@ -34,7 +34,11 @@ lvim.plugins = {
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
-      "haydenmeade/neotest-jest",
+      {
+        "haydenmeade/neotest-jest",
+        commit = "c2118446d770fedb360a91b1d91a7025db86d4f1",
+        pin = true,
+      },
     },
     config = function()
       require("user.plugins.settings.neotest").config()
@@ -120,7 +124,7 @@ lvim.plugins = {
     "pmizio/typescript-tools.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     opts = {},
-  }
+  },
 
   -- {
   --   "simrat39/rust-tools.nvim",
@@ -152,6 +156,5 @@ require("typescript-tools").setup {
     },
   },
 }
-
 
 require "user.plugins.settings.global"
