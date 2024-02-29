@@ -7,7 +7,7 @@ local linters = require "lvim.lsp.null-ls.linters"
 
 local shared_servers = {
   eslint = {
-    command = "eslint",
+    command = "eslint", -- singularity = eslint, RFB = eslint_d
     filetypes = {
       "javascript",
       "javascriptreact",
