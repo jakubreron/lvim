@@ -4,7 +4,7 @@ require "user.lsp.languages.js-ts"
 vim.diagnostic.config { virtual_text = false }
 
 lvim.lsp.on_attach_callback = function(client)
-  if client.name == "jsonls" then
+  if client.name == "jsonls" or client.name == "tsserver" or client.name == "typescript-tools" then
     client.server_capabilities.document_formatting = false
     client.server_capabilities.document_range_formatting = false
   end
