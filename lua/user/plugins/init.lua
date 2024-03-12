@@ -42,7 +42,12 @@ lvim.plugins = {
     lazy = true,
   }, -- better file navigation since bufferline is disabled
 
-  { "nvim-treesitter/nvim-treesitter-context" }, -- sticky scroll context
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    opts = {
+      max_lines = 10, -- How many lines the window should span. Values
+    }
+  }, -- sticky scroll context
   -- { "nvim-treesitter/nvim-treesitter-textobjects" }, -- more movements (if, af, ic, ac, etc...)
 
   { "christoomey/vim-titlecase" }, -- "gz" movement to toggle the words case
@@ -167,15 +172,5 @@ lvim.plugins = {
   -- },
 }
 
-require("typescript-tools").setup {
-  settings = {
-    tsserver_plugins = {
-      -- for TypeScript v4.9+
-      "@styled/typescript-styled-plugin",
-      -- or for older TypeScript versions
-      -- "typescript-styled-plugin",
-    },
-  },
-}
 
 require "user.plugins.settings.global"
