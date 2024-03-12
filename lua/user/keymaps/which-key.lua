@@ -10,6 +10,7 @@ lvim.builtin.which_key.mappings.l.k = nil
 lvim.builtin.which_key.mappings["l_"] = { "<cmd>LspRestart <CR>", "Restart" }
 lvim.builtin.which_key.mappings.l.I = nil
 lvim.builtin.which_key.mappings.l.m = { "<cmd>Mason<CR>", "Mason Info" }
+lvim.builtin.which_key.mappings.l.D = { "<cmd>Telescope diagnostics<CR>", "Diagnostics for all buffers" }
 
 lvim.builtin.which_key.mappings.s.M = nil -- man pages
 -- lvim.builtin.which_key.mappings.s.C = nil -- commands
