@@ -1,6 +1,8 @@
 lvim.plugins = {
   { "vimwiki/vimwiki" },
 
+  { "sangdol/mintabline.vim" },
+
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
 
   { "szw/vim-maximizer" }, -- maximize current window
@@ -46,7 +48,7 @@ lvim.plugins = {
     "nvim-treesitter/nvim-treesitter-context",
     opts = {
       max_lines = 10, -- How many lines the window should span. Values
-    }
+    },
   }, -- sticky scroll context
   -- { "nvim-treesitter/nvim-treesitter-textobjects" }, -- more movements (if, af, ic, ac, etc...)
 
@@ -171,6 +173,5 @@ lvim.plugins = {
   --   lazy = true,
   -- },
 }
-
 
 require "user.plugins.settings.global"
