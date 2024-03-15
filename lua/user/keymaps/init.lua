@@ -8,8 +8,12 @@ vim.keymap.set("n", "<C-f>", harpoon_ui.toggle_quick_menu, {
 vim.keymap.set("n", "<C-b>", harpoon_mark.add_file, {
   desc = "Add file to harpoon",
 })
--- ["]c"] = harpoon_ui.nav_next,
--- ["[c"] = harpoon_ui.nav_prev,
+vim.keymap.set("n", "]h", harpoon_ui.nav_next, {
+  desc = "Next harpoon file"
+})
+vim.keymap.set("n", "[h", harpoon_ui.nav_prev, {
+  desc = "Prev harpoon file"
+})
 
 -- TODO: if project has git, use next/prev git change, if not, then use changelist
 vim.keymap.set("n", "]c", "<cmd>lua require'gitsigns'.next_hunk({navigation_message = false})<CR>", {
@@ -19,10 +23,10 @@ vim.keymap.set("n", "[c", "<cmd>lua require'gitsigns'.prev_hunk({navigation_mess
   desc = "Prev git change",
 })
 
-local todo_comments = require "todo-comments"
-vim.keymap.set("n", "]t", todo_comments.jump_next, {
-  desc = "Next todo comment",
-})
-vim.keymap.set("n", "[t", todo_comments.jump_prev, {
-  desc = "Previous todo comment",
-})
+-- local todo_comments = require "todo-comments"
+-- vim.keymap.set("n", "]t", todo_comments.jump_next, {
+--   desc = "Next todo comment",
+-- })
+-- vim.keymap.set("n", "[t", todo_comments.jump_prev, {
+--   desc = "Previous todo comment",
+-- })

@@ -1,11 +1,23 @@
 lvim.plugins = {
   { "vimwiki/vimwiki" },
 
-  { "sangdol/mintabline.vim" },
+  { "sangdol/mintabline.vim" }, -- tabs with numbers & icons
 
   { "AndrewRadev/splitjoin.vim" }, -- gJ, gS movements
 
-  { "szw/vim-maximizer" }, -- maximize current window
+  -- TODO: refactor the keys like in vim-maximizer/outline
+  {
+    "szw/vim-maximizer",
+    lazy = true,
+    cmd = { "MaximizerToggle" },
+    keys = {
+      {
+        "<leader><leader>",
+        "<cmd>MaximizerToggle!<CR>",
+        desc = "Maximize",
+      },
+    },
+  }, -- maximize current window
 
   {
     "catppuccin/nvim",
@@ -14,30 +26,38 @@ lvim.plugins = {
   },
 
   {
+    "hedyhli/outline.nvim",
+    lazy = true,
+    cmd = { "Outline", "OutlineOpen" },
+    keys = {
+      {
+        "<leader>lfo",
+        "<cmd>Outline<CR>",
+        desc = "Toggle outline",
+      },
+    },
+    opts = {
+      -- Your setup opts here
+    },
+  },
+
+  {
     "stevearc/dressing.nvim",
     opts = {},
   }, -- better default nvim interfaces
-  -- {
-  --   "folke/noice.nvim",
-  --   event = "VeryLazy",
-  --   opts = {
-  --     -- add any options here
-  --   },
-  --   dependencies = {
-  --     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-  --     "MunifTanjim/nui.nvim",
-  --     -- OPTIONAL:
-  --     --   `nvim-notify` is only needed, if you want to use the notification view.
-  --     --   If not available, we use `mini` as the fallback
-  --     -- "rcarriga/nvim-notify",
-  --   }
-  -- },
 
-  {
-    "folke/todo-comments.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {},
-  }, -- todo comments highlight
+  -- {
+  --   "folke/todo-comments.nvim",
+  --   dependencies = { "nvim-lua/plenary.nvim" },
+  --   opts = {},
+  -- }, -- todo comments highlight
+  -- local todo_comments = require "todo-comments"
+  -- vim.keymap.set("n", "]t", todo_comments.jump_next, {
+  --   desc = "Next todo comment",
+  -- })
+  -- vim.keymap.set("n", "[t", todo_comments.jump_prev, {
+  --   desc = "Previous todo comment",
+  -- })
 
   {
     "ThePrimeagen/harpoon",

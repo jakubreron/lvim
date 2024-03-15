@@ -3,7 +3,6 @@ lvim.builtin.which_key.mappings.T = nil -- treesitter
 lvim.builtin.which_key.mappings.c = nil -- close buffer
 lvim.builtin.which_key.mappings.h = nil -- nohighlight (already bound to esc)
 lvim.builtin.which_key.mappings.q = nil -- no point, we have ZZ, ZQ
-lvim.builtin.which_key.mappings[" "] = { "<cmd>MaximizerToggle!<CR>", "Maximize" }
 
 lvim.builtin.which_key.mappings.l.j = nil
 lvim.builtin.which_key.mappings.l.k = nil
