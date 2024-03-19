@@ -100,15 +100,21 @@ lvim.plugins = {
   {
     "nvim-neotest/neotest", -- run tests directly from the file
     dependencies = {
+      "nvim-neotest/nvim-nio",
       "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
       "nvim-treesitter/nvim-treesitter",
-      "haydenmeade/neotest-jest",
     },
     config = function()
       require("user.plugins.settings.neotest").config()
     end,
     event = "BufWinEnter *.spec.*",
     lazy = true,
+  },
+  {
+    "haydenmeade/neotest-jest",
+    pin = true,
+    commit = "c2118446d770fedb360a91b1d91a7025db86d4f1",
   },
 
   -- {
