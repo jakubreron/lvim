@@ -7,6 +7,7 @@ lvim.builtin.which_key.mappings.q = nil -- no point, we have ZZ, ZQ
 lvim.builtin.which_key.mappings.l.j = nil
 lvim.builtin.which_key.mappings.l.k = nil
 lvim.builtin.which_key.mappings["l_"] = { "<cmd>LspRestart <CR>", "Restart" }
+lvim.builtin.which_key.mappings.l.f.f = { "<cmd>lua require('lvim.lsp.utils').format()<cr>", "Format" }
 lvim.builtin.which_key.mappings.l.I = nil
 lvim.builtin.which_key.mappings.l.m = { "<cmd>Mason<CR>", "Mason Info" }
 lvim.builtin.which_key.mappings.l.D = { "<cmd>Telescope diagnostics<CR>", "Diagnostics for all buffers" }
