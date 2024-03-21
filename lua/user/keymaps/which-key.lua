@@ -68,9 +68,6 @@ lvim.builtin.which_key.mappings.g.C = {
   "Conflicts",
 }
 
-lvim.builtin.which_key.mappings.t.name = "Tab"
-lvim.builtin.which_key.mappings.c.name = "Console"
-
 lvim.builtin.which_key.mappings.o = {
   name = "Obsession",
   t = { "<cmd>Obsession<CR>", "Track Session.vim" },
@@ -78,14 +75,3 @@ lvim.builtin.which_key.mappings.o = {
   r = { "<cmd>source Session.vim<CR>", "Restore Session.vim" },
   R = { ":source Session-", "Restore Custom Session" },
 }
-
-local harpoon_ui = require "harpoon.ui"
-
-for i = 1, 9 do
-  lvim.builtin.which_key.mappings[tostring(i)] = {
-    function()
-      harpoon_ui.nav_file(i)
-    end,
-    "Mark " .. i,
-  }
-end

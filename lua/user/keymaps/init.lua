@@ -1,19 +1,42 @@
 require "user.keymaps.which-key"
 
-local harpoon_ui = require "harpoon.ui"
-local harpoon_mark = require "harpoon.mark"
-vim.keymap.set("n", "<C-f>", harpoon_ui.toggle_quick_menu, {
+local harpoon = require "harpoon"
+-- REQUIRED
+harpoon:setup()
+-- REQUIRED
+
+vim.keymap.set("n", "<C-f>", function()
+  harpoon.ui:toggle_quick_menu(harpoon:list())
+end, {
   desc = "Toggle harpoon quick menu",
 })
-vim.keymap.set("n", "<C-b>", harpoon_mark.add_file, {
+
+vim.keymap.set("n", "<C-b>", function()
+  harpoon:list():append()
+end, {
   desc = "Add file to harpoon",
 })
-vim.keymap.set("n", "]h", harpoon_ui.nav_next, {
-  desc = "Next harpoon file"
+
+vim.keymap.set("n", "]h", function()
+  harpoon:list():next()
+end, {
+  desc = "Next harpoon file",
 })
-vim.keymap.set("n", "[h", harpoon_ui.nav_prev, {
-  desc = "Prev harpoon file"
+
+vim.keymap.set("n", "[h", function()
+  harpoon:list():prev()
+end, {
+  desc = "Prev harpoon file",
 })
+
+for i = 1, 9 do
+  lvim.builtin.which_key.mappings[tostring(i)] = {
+    function()
+      harpoon:list():select(i)
+    end,
+    "Mark " .. i,
+  }
+end
 
 -- TODO: if project has git, use next/prev git change, if not, then use changelist
 vim.keymap.set("n", "]c", "<cmd>lua require'gitsigns'.next_hunk({navigation_message = false})<CR>", {

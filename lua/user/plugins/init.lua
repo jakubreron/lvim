@@ -61,8 +61,9 @@ lvim.plugins = {
 
   {
     "ThePrimeagen/harpoon",
-    lazy = true,
-  }, -- better file navigation since bufferline is disabled
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" }
+  },
 
   {
     "nvim-treesitter/nvim-treesitter-context",
@@ -180,12 +181,12 @@ lvim.plugins = {
     opts = {},
   },
 
-  {
-    "okuuva/auto-save.nvim",
-    cmd = "ASToggle", -- optional for lazy loading on command
-    event = { "InsertLeave", "TextChanged" }, -- optional for lazy loading on trigger events
-    opts = {},
-  },
+  -- {
+  --   "okuuva/auto-save.nvim",
+  --   cmd = "ASToggle", -- optional for lazy loading on command
+  --   event = { "InsertLeave", "TextChanged" }, -- optional for lazy loading on trigger events
+  --   opts = {},
+  -- },
 
   -- {
   --   "simrat39/rust-tools.nvim",
