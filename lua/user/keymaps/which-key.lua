@@ -6,7 +6,6 @@ lvim.builtin.which_key.mappings.q = nil -- no point, we have ZZ, ZQ
 
 lvim.builtin.which_key.mappings.l.j = nil
 lvim.builtin.which_key.mappings.l.k = nil
-lvim.builtin.which_key.mappings["l_"] = { "<cmd>LspRestart <CR>", "Restart" }
 lvim.builtin.which_key.mappings.l.f.f = { "<cmd>lua require('lvim.lsp.utils').format()<cr>", "Format" }
 lvim.builtin.which_key.mappings.l.I = nil
 lvim.builtin.which_key.mappings.l.m = { "<cmd>Mason<CR>", "Mason Info" }
@@ -69,22 +68,8 @@ lvim.builtin.which_key.mappings.g.C = {
   "Conflicts",
 }
 
-lvim.builtin.which_key.mappings.c = {
-  name = "Console",
-  s = { "<C-w>s:term<CR>", "Split Horizontal" },
-  v = { "<C-w>v:term<CR>", "Split Vertical" },
-  t = { "<cmd>tabnew<CR><cmd>term<CR><cmd>setlocal nonumber norelativenumber<CR>", "New Tab" },
-  n = { "<cmd>silent !tmux neww tmux-sessionizer<CR>", "New Tmux Session" },
-}
-
-lvim.builtin.which_key.mappings.t = {
-  name = "Tab",
-  n = { "<cmd>tabnew<CR>", "New" },
-  c = { "<cmd>tabclose<CR>", "Close" },
-  o = { "<cmd>tabonly<CR>", "Only" },
-  m = { ":tabmove", "Move", silent = false },
-  e = { ":tabedit <C-r>=expand('%:p:h')<CR>/", "Edit", silent = false },
-}
+lvim.builtin.which_key.mappings.t.name = "Tab"
+lvim.builtin.which_key.mappings.c.name = "Console"
 
 lvim.builtin.which_key.mappings.o = {
   name = "Obsession",
@@ -96,7 +81,7 @@ lvim.builtin.which_key.mappings.o = {
 
 local harpoon_ui = require "harpoon.ui"
 
-for i = 1, 6 do
+for i = 1, 9 do
   lvim.builtin.which_key.mappings[tostring(i)] = {
     function()
       harpoon_ui.nav_file(i)
