@@ -52,7 +52,6 @@ lvim.builtin.which_key.mappings.b.f = nil -- buffer find
 lvim.builtin.which_key.mappings.b.D = nil -- soft by directory
 lvim.builtin.which_key.mappings.b.L = nil -- sort by language
 lvim.builtin.which_key.mappings.b.W = nil -- write without formatting
-lvim.builtin.which_key.mappings.b.c = { "<cmd>BufferKill<CR>", "Close" }
 
 lvim.builtin.which_key.mappings.p.r = { "<cmd>Lazy restore<cr>", "Restore" }
 
@@ -62,10 +61,6 @@ lvim.builtin.which_key.mappings.g.b = nil -- checkout branch
 lvim.builtin.which_key.mappings.g.c = { -- checkout commit by default
   "<cmd>Telescope git_bcommits<CR>",
   "Checkout commit(for current file)",
-}
-lvim.builtin.which_key.mappings.g.C = {
-  "<cmd>GitConflictListQf<CR>",
-  "Conflicts",
 }
 
 lvim.builtin.which_key.mappings.o = {
