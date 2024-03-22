@@ -45,11 +45,3 @@ vim.keymap.set("n", "]c", "<cmd>lua require'gitsigns'.next_hunk({navigation_mess
 vim.keymap.set("n", "[c", "<cmd>lua require'gitsigns'.prev_hunk({navigation_message = false})<CR>", {
   desc = "Prev git change",
 })
-
--- local todo_comments = require "todo-comments"
--- vim.keymap.set("n", "]t", todo_comments.jump_next, {
---   desc = "Next todo comment",
--- })
--- vim.keymap.set("n", "[t", todo_comments.jump_prev, {
---   desc = "Previous todo comment",
--- })
