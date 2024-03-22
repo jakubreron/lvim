@@ -9,7 +9,7 @@ M.config = function()
   neotest.setup {
     quickfix = {
       enabled = false,
-      open = true,
+      open = false,
     },
 
     summary = {
@@ -46,7 +46,7 @@ M.config = function()
     adapters = {
       require "neotest-jest" {
         -- jestCommand = "jest --watch",
-        jestConfigFile = "tests/unit/jest.conf.js",
+        -- jestConfigFile = "tests/unit/jest.conf.js",
       },
     },
   }

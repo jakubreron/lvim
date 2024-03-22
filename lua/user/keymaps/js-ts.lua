@@ -15,10 +15,30 @@ local M = {
   },
   u = {
     name = "Unit Tests",
-    r = { "<cmd>lua require('neotest').run.run()<CR>", "Run Nearest" },
-    f = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>", "Run File" },
+    r = {
+      function()
+        vim.cmd "lua require('neotest').output_panel.clear()"
+        vim.cmd "lua require('neotest').run.run()"
+      end,
+      "Run Nearest",
+    },
+    f = {
+      function()
+        vim.cmd "lua require('neotest').output_panel.clear()"
+        vim.cmd "lua require('neotest').run.run(vim.fn.expand('%'))"
+      end,
+      "Run File",
+    },
+    l = {
+      function()
+        vim.cmd "lua require('neotest').output_panel.clear()"
+        vim.cmd "lua require('neotest').run.run_last()"
+      end,
+      "Run last",
+    },
     s = { "<cmd>lua require('neotest').run.stop()<CR>", "Stop" },
     t = { "<cmd>lua require('neotest').summary.toggle()<CR>", "Summary Tree" },
+    w = { "<cmd>lua require('neotest').run.run({ jestCommand = 'jest --watch ' })<cr>", "Run & Watch" },
     c = {
       function()
         vim.cmd "lua require('neotest').summary.toggle()"
