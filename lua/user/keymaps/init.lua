@@ -29,7 +29,7 @@ end, {
   desc = "Prev harpoon file",
 })
 
-for i = 1, 9 do
+for i = 1, 6 do
   lvim.builtin.which_key.mappings[tostring(i)] = {
     function()
       harpoon:list():select(i)
