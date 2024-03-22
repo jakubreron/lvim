@@ -1,7 +1,7 @@
 local lga_actions = require "telescope-live-grep-args.actions"
 
 lvim.builtin.telescope.theme = "ivy"
-lvim.builtin.telescope.defaults.file_ignore_patterns = { "**/*.snap", "**/*.svg", "**/.next/**" }
+lvim.builtin.telescope.defaults.file_ignore_patterns = { "*.snap", "*.svg", ".next/*" }
 lvim.builtin.telescope.extensions = {
   fzf = {
     fuzzy = true, -- false will only do exact matching
