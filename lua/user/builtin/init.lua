@@ -2,7 +2,6 @@ require "user.builtin.lualine"
 require "user.builtin.telescope"
 require "user.builtin.treesitter"
 require "user.builtin.which-key"
-require "user.builtin.lir"
 require "user.builtin.nvimtree"
 
 lvim.transparent_window = true
