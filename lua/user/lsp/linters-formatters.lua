@@ -5,16 +5,28 @@ local nls_cache = require("null-ls.helpers").cache
 local formatters = require "lvim.lsp.null-ls.formatters"
 local linters = require "lvim.lsp.null-ls.linters"
 
+local js_filetypes = {
+  "javascript",
+  "javascriptreact",
+  "vue",
+  "typescript",
+  "typescriptreact",
+}
+
 local shared_servers = {
-  eslint = {
-    command = "eslint", -- singularity = eslint (name: eslint-lsp), RFB = eslint_d (name: eslint_d)
-    filetypes = {
-      "javascript",
-      "javascriptreact",
-      "vue",
-      "typescript",
-      "typescriptreact",
-    },
+  eslint_d = {
+    command = "eslint_d",
+    filetypes = js_filetypes,
+    condition = function(utils)
+      return not utils.root_has_file "nx.json"
+    end,
+  },
+  eslint_lsp = {
+    command = "eslint", -- monorepos (it works for some reason)
+    filetypes = js_filetypes,
+    condition = function(utils)
+      return utils.root_has_file "nx.json"
+    end,
   },
   stylelint = {
     command = "stylelint",
@@ -66,7 +78,8 @@ local linter_servers = {
 }
 
 formatters.setup {
-  shared_servers.eslint,
+  shared_servers.eslint_d,
+  shared_servers.eslint_lsp,
   shared_servers.stylelint,
   shared_servers.markdown,
   formater_servers.stylua,
@@ -75,7 +88,8 @@ formatters.setup {
 }
 
 linters.setup {
-  shared_servers.eslint,
+  shared_servers.eslint_d,
+  shared_servers.eslint_lsp,
   shared_servers.stylelint,
   shared_servers.markdown,
   linter_servers.luacheck,
