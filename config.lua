@@ -1,10 +1,10 @@
 vim.cmd [[
-  source ~/.config/nvim/shared/general.lua
-  source ~/.config/nvim/shared/autocmds.lua
-  source ~/.config/nvim/shared/iabbrev.lua
-  source ~/.config/nvim/shared/keymaps.lua
-  source ~/.config/nvim/shared/netrw.lua
-  source ~/.config/nvim/shared/shortcuts.vim
+  source ~/.config/nvim.old/shared/general.lua
+  source ~/.config/nvim.old/shared/autocmds.lua
+  source ~/.config/nvim.old/shared/iabbrev.lua
+  source ~/.config/nvim.old/shared/keymaps.lua
+  source ~/.config/nvim.old/shared/netrw.lua
+  source ~/.config/nvim.old/shared/shortcuts.vim
 ]]
 
 require "user.plugins"
