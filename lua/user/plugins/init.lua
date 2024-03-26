@@ -36,20 +36,15 @@ lvim.plugins = {
         desc = "Toggle outline",
       },
     },
-    opts = {
-      -- Your setup opts here
-    },
   },
 
   {
     "stevearc/dressing.nvim",
-    opts = {},
   }, -- better default nvim interfaces
 
   -- {
   --   "folke/todo-comments.nvim",
   --   dependencies = { "nvim-lua/plenary.nvim" },
-  --   opts = {},
   -- }, -- todo comments highlight
   -- local todo_comments = require "todo-comments"
   -- vim.keymap.set("n", "]t", todo_comments.jump_next, {
@@ -86,7 +81,7 @@ lvim.plugins = {
   {
     "nvim-treesitter/nvim-treesitter-context",
     opts = {
-      max_lines = 10, -- How many lines the window should span. Values
+      max_lines = 5, -- How many lines the window should span. Values
     },
   }, -- sticky scroll context
   -- { "nvim-treesitter/nvim-treesitter-textobjects" }, -- more movements (if, af, ic, ac, etc...)
@@ -196,14 +191,12 @@ lvim.plugins = {
       "typescript",
       "typescriptreact",
     },
-    opts = {},
   },
 
   -- {
   --   "okuuva/auto-save.nvim",
   --   cmd = "ASToggle", -- optional for lazy loading on command
   --   event = { "InsertLeave", "TextChanged" }, -- optional for lazy loading on trigger events
-  --   opts = {},
   -- },
 
   -- {
