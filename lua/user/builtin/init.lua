@@ -40,7 +40,7 @@ lvim.builtin.bigfile.config = {
     -- "lsp",
     -- "treesitter",
     "syntax",
-    "vimopts",
+    -- "vimopts",
     -- "filetype",
   },
 }
