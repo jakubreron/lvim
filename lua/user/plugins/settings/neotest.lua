@@ -7,16 +7,15 @@ M.config = function()
   end
 
   neotest.setup {
-    quickfix = {
-      enabled = false,
-      open = false,
+    jump = {
+      enabled = false
     },
 
     summary = {
       open = "topleft vsplit | vertical resize 50",
       animated = true,
       enabled = true,
-      expand_errors = true,
+      expand_errors = false,
       follow = true,
       mappings = {
         attach = "a",
