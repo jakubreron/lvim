@@ -36,6 +36,7 @@ lvim.plugins = {
         desc = "Toggle outline",
       },
     },
+    opts = {}
   },
 
   {
@@ -182,6 +183,7 @@ lvim.plugins = {
       "typescript",
       "typescriptreact",
     },
+    opts = {}
   },
 
   -- {
