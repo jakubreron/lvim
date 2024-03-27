@@ -21,44 +21,45 @@ lvim.builtin.treesitter.ensure_installed = {
   "toml",
 }
 
-lvim.builtin.treesitter.textobjects = {
-  select = {
-    enable = true,
-    lookahead = true,
-    keymaps = {
-      ["af"] = "@function.outer",
-      ["if"] = "@function.inner",
+-- NOTE: uncomment when treesitter textobjects fixes their stuff
+-- lvim.builtin.treesitter.textobjects = {
+--   select = {
+--     enable = true,
+--     lookahead = true,
+--     keymaps = {
+--       ["af"] = "@function.outer",
+--       ["if"] = "@function.inner",
 
-      ["ac"] = "@call.outer",
-      ["ic"] = "@call.inner",
-      ["aa"] = "@parameter.outer",
-      ["ia"] = "@parameter.inner",
-      ["al"] = "@loop.outer",
-      ["il"] = "@loop.inner",
-      ["ai"] = "@conditional.outer",
-      ["ii"] = "@conditional.inner",
-      ["a/"] = "@comment.outer",
-      ["i/"] = "@comment.inner",
-    },
-  },
-  move = {
-    enable = true,
-    set_jumps = true, -- whether to set jumps in the jumplist
-    goto_next_start = {
-      ["]m"] = "@function.outer",
-      ["]]"] = "@class.outer",
-    },
-    goto_next_end = {
-      ["]M"] = "@function.outer",
-      ["]["] = "@class.outer",
-    },
-    goto_previous_start = {
-      ["[m"] = "@function.outer",
-      ["[["] = "@class.outer",
-    },
-    goto_previous_end = {
-      ["[M"] = "@function.outer",
-      ["[]"] = "@class.outer",
-    },
-  },
-}
+--       ["ac"] = "@call.outer",
+--       ["ic"] = "@call.inner",
+--       ["aa"] = "@parameter.outer",
+--       ["ia"] = "@parameter.inner",
+--       ["al"] = "@loop.outer",
+--       ["il"] = "@loop.inner",
+--       ["ai"] = "@conditional.outer",
+--       ["ii"] = "@conditional.inner",
+--       ["a/"] = "@comment.outer",
+--       ["i/"] = "@comment.inner",
+--     },
+--   },
+--   move = {
+--     enable = true,
+--     set_jumps = true, -- whether to set jumps in the jumplist
+--     goto_next_start = {
+--       ["]m"] = "@function.outer",
+--       ["]]"] = "@class.outer",
+--     },
+--     goto_next_end = {
+--       ["]M"] = "@function.outer",
+--       ["]["] = "@class.outer",
+--     },
+--     goto_previous_start = {
+--       ["[m"] = "@function.outer",
+--       ["[["] = "@class.outer",
+--     },
+--     goto_previous_end = {
+--       ["[M"] = "@function.outer",
+--       ["[]"] = "@class.outer",
+--     },
+--   },
+-- }

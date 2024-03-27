@@ -36,7 +36,7 @@ lvim.plugins = {
         desc = "Toggle outline",
       },
     },
-    opts = {}
+    opts = {},
   },
 
   {
@@ -76,6 +76,7 @@ lvim.plugins = {
       max_lines = 5, -- How many lines the window should span. Values
     },
   }, -- sticky scroll context
+
   -- { "nvim-treesitter/nvim-treesitter-textobjects" }, -- more movements (if, af, ic, ac, etc...)
 
   { "christoomey/vim-titlecase" }, -- "gz" movement to toggle the words case
@@ -98,6 +99,7 @@ lvim.plugins = {
     },
   }, -- tmux navigation from within nvim
 
+  { "tpope/vim-sleuth" }, -- Detect tabstop and shiftwidth automatically
   { "tpope/vim-repeat" }, -- better "."
   { "tpope/vim-surround" }, -- surround movement
   { "tpope/vim-obsession" }, -- save the session
@@ -127,25 +129,17 @@ lvim.plugins = {
   --   "mxsdev/nvim-dap-vscode-js" -- debugger adapter
   -- },
 
-  {
-    "norcalli/nvim-colorizer.lua", -- highlight the hex / rgb colors
-    config = function()
-      require("user.plugins.settings.colorizer").config()
-    end,
-    ft = {
-      "css",
-      "scss",
-    },
-    lazy = true,
-  },
-
   -- {
-  --   "akinsho/git-conflict.nvim",
-  --   version = "*",
+  --   "norcalli/nvim-colorizer.lua", -- highlight the hex / rgb colors
   --   config = function()
-  --     require("user.plugins.settings.git-conflict").config()
+  --     require("user.plugins.settings.colorizer").config()
   --   end,
-  -- }, -- easier conflicts
+  --   ft = {
+  --     "css",
+  --     "scss",
+  --   },
+  --   lazy = true,
+  -- },
 
   {
     "windwp/nvim-spectre", -- search & replace throughout all the files (without vimgrepping)
@@ -183,33 +177,8 @@ lvim.plugins = {
       "typescript",
       "typescriptreact",
     },
-    opts = {}
+    opts = {},
   },
-
-  -- {
-  --   "okuuva/auto-save.nvim",
-  --   cmd = "ASToggle", -- optional for lazy loading on command
-  --   event = { "InsertLeave", "TextChanged" }, -- optional for lazy loading on trigger events
-  -- },
-
-  -- {
-  --   "simrat39/rust-tools.nvim",
-  --   config = function()
-  --     require("user.plugins.settings.rust-tools").config()
-  --   end,
-  --   ft = "rust",
-  --   lazy = true,
-  -- },
-  -- {
-  --   "saecki/crates.nvim",
-  --   version = "v0.3.0",
-  --   dependencies = { "nvim-lua/plenary.nvim" },
-  --   config = function()
-  --     require("user.plugins.settings.crates").config()
-  --   end,
-  --   ft = "rust",
-  --   lazy = true,
-  -- },
 }
 
 require "user.plugins.settings.global"

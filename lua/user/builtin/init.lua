@@ -14,10 +14,6 @@ lvim.format_on_save.enabled = false
 --   timeout = 1000,
 -- }
 
-if string.find(vim.fn.getcwd(), "work") ~= nil then
-  lvim.builtin.project.patterns = { "package.json", "project.json" }
-end
-
 lvim.builtin.bufferline.active = false
 lvim.builtin.alpha.active = false
 lvim.builtin.lir.active = false
@@ -45,5 +41,13 @@ lvim.builtin.bigfile.config = {
   },
 }
 
-lvim.builtin.indentlines.active = true
-lvim.builtin.autopairs.active = true
+-- NOTE: ideally I would want them on but the lvim performance in big project is too bad
+lvim.builtin.indentlines.active = false
+lvim.builtin.autopairs.active = false
+lvim.builtin.illuminate.active = false
+lvim.builtin.terminal.active = false
+lvim.builtin.project.active = false
+
+-- if string.find(vim.fn.getcwd(), "work") ~= nil then
+--   lvim.builtin.project.patterns = { "package.json", "project.json" }
+-- end
