@@ -20,6 +20,10 @@ lvim.builtin.lir.active = false
 lvim.builtin.dap.active = false
 lvim.builtin.breadcrumbs.active = false
 
+if string.find(vim.fn.getcwd(), "work") ~= nil then
+  lvim.builtin.project.patterns = { "package.json", "project.json" }
+end
+
 lvim.builtin.bigfile.config = {
   filesize = 1, -- size of the file in MiB, the plugin round file sizes to the closest MiB
   pattern = function(bufnr, filesize_mib)
@@ -46,8 +50,3 @@ lvim.builtin.indentlines.active = false
 lvim.builtin.autopairs.active = false
 lvim.builtin.illuminate.active = false
 lvim.builtin.terminal.active = false
-lvim.builtin.project.active = false
-
--- if string.find(vim.fn.getcwd(), "work") ~= nil then
---   lvim.builtin.project.patterns = { "package.json", "project.json" }
--- end
