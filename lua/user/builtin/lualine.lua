@@ -24,7 +24,6 @@ lvim.builtin.lualine.sections.lualine_c = {
     end,
   },
   components.filename,
-  "harpoon2",
   components.diff,
   components.python_env,
   package_info,
